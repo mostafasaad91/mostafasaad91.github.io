@@ -18,12 +18,40 @@ const TRANSLATIONS = {
   en: {
     nav_data_track: 'Data & BI Track',
     nav_foot_track: 'Football Lab',
+    nav_insights: 'Insights',
     nav_exp: 'Experience',
     nav_contact: 'Contact',
     nav_cta: 'Hire / Collaborate',
-    hero_badge: 'AL JIZAH, EGYPT · OPEN TO REMOTE & ON-SITE ROLES',
-    hero_title_1: 'Mostafa Saad — Turning Business & Football Data into',
+    hero_badge: 'AL JIZAH, EGYPT · OPEN TO REMOTE & ON-SITE',
+    hero_title_1: 'Turning Business & Football Data into',
     hero_title_2: 'Actionable Intelligence',
+    cv_data_short: '⬇ Data CV (PDF)',
+    cv_foot_short: '⬇ Football CV (PDF)',
+    cv_data_btn: '⬇ Data Analyst CV (PDF)',
+    cv_foot_btn: '⬇ Football Analyst CV (PDF)',
+    pbi_gallery_hint: 'ALL 6 DASHBOARD PAGES (CLICK ANY PAGE TO ZOOM):',
+    posters_eyebrow: '// VISUAL OUTPUT · 4:5 AMOLED POSTER SUITE',
+    posters_title: 'Automated AMOLED Match Posters Gallery',
+    posters_desc:
+      'Click any 4:5 poster board to inspect full resolution — showcasing the AMOLED visual language of my Football-Match-Analysis toolkit.',
+    pos_1: 'Shot Map & xG Race',
+    pos_2: 'Passing Sonar & Field Tilt',
+    pos_3: 'PPDA & Possession Funnel',
+    pos_4: 'Player Role Percentiles',
+    ins_eyebrow: '// ANALYTICAL WRITING & BREAKDOWNS',
+    ins_title: 'Data & Tactical Insights',
+    ins_desc:
+      'Concise methodology notes and evidence-led write-ups connecting SQL/ML rigor with executive and coaching clarity.',
+    art_1_t: 'Where Does $110M Leak? Point-in-Time Margins & 90x Basket Lift',
+    art_1_d:
+      'Why using current standard cost distorts historical profit margins, and how writing Python K-Means RFM clusters directly back into SQL Server creates one source of truth for Power BI.',
+    art_2_t: 'Beyond Shot Counts: Reading Control via xG, xT/100, PPDA & Field Tilt',
+    art_2_d:
+      'How combining territorial dominance (Field Tilt), pressing aggression (PPDA), and Expected Threat per 100 touches separates sustainable match control from noisy scorelines.',
+    art_3_t: 'Bulletproof Coding Systems: Auditing Multi-Source Archival Datasets',
+    art_3_d:
+      'Practical lessons from 7+ research & heritage datasets: designing base-ID keys, catching silent duplicate/typo traps, and turning messy spreadsheets into reliable SQL models.',
+    read_article: 'Read Breakdown →',
     hero_subtitle:
       'Data Analyst with 6+ years of experience operating across two specialized tracks: Enterprise BI, SQL & Machine Learning systems, and independent Football Data & Performance Analytics.',
     track_switch_lbl: 'CHOOSE PORTFOLIO VIEW:',
@@ -110,12 +138,40 @@ const TRANSLATIONS = {
   ar: {
     nav_data_track: 'مسار البيانات و BI',
     nav_foot_track: 'معمل كرة القدم',
+    nav_insights: 'مقالات وتحليلات',
     nav_exp: 'الخبرات',
     nav_contact: 'تواصل معي',
     nav_cta: 'تواصل للعمل',
-    hero_badge: 'الجيزة، مصر · متاح للعمل عن بُعد أو الحضوري',
-    hero_title_1: 'مصطفى سعد — أحوّل بيانات الأعمال وكرة القدم إلى',
+    hero_badge: 'الجيزة، مصر · متاح عن بُعد أو حضوري',
+    hero_title_1: 'أحوّل بيانات الأعمال وكرة القدم إلى',
     hero_title_2: 'ذكاء تحليلي وقرارات دقيقة',
+    cv_data_short: '⬇ CV محلل بيانات (PDF)',
+    cv_foot_short: '⬇ CV محلل كرة قدم (PDF)',
+    cv_data_btn: '⬇ تحميل CV محلل البيانات (PDF)',
+    cv_foot_btn: '⬇ تحميل CV محلل كرة القدم (PDF)',
+    pbi_gallery_hint: 'جميع صفحات لوحة Power BI الست (اضغط على أي صفحة للتكبير):',
+    posters_eyebrow: '// مخرجات بصرية · بوسترات 4:5 AMOLED',
+    posters_title: 'معرض بوسترات تحليل المباريات (AMOLED)',
+    posters_desc:
+      'اضغط على أي بوستر لعرضه بالحجم الكامل — يعكس الهوية البصرية لبرنامج Football-Match-Analysis.',
+    pos_1: 'خريطة التسديدات وسباق xG',
+    pos_2: 'سونار التمريرات و Field Tilt',
+    pos_3: 'شدة الضغط PPDA وقمع الاستحواذ',
+    pos_4: 'ملف ومئويات دور اللاعب',
+    ins_eyebrow: '// مقالات وتحليلات مختصرة',
+    ins_title: 'مقالات وتحليلات في البيانات وكرة القدم',
+    ins_desc:
+      'خلاصات منهجية وتحليلات مبنية على الأدلة تربط دقة SQL وتعلم الآلة بوضوح القرار التنفيذي والتكتيكي.',
+    art_1_t: 'أين تتسرب أرباح $110M؟ الهوامش التاريخية وحزم البيع المتقاطع 90x',
+    art_1_d:
+      'لماذا يشوّه استخدام التكلفة الحالية حساب الأرباح التاريخية، وكيف يؤدي حفظ نتائج K-Means RFM من Python مباشرة في SQL Server لبناء مصدر بيانات واحد لـ Power BI.',
+    art_2_t: 'ما وراء عدد التسديدات: قراءة السيطرة عبر xG و xT و PPDA و Field Tilt',
+    art_2_d:
+      'كيف يكشف الدمج بين السيطرة الميدانية وشراسة الضغط والتهديد المتوقع لكل 100 لمسة حقيقة الأداء بعيداً عن ضجيج النتيجة النهائية.',
+    art_3_t: 'تصميم أنظمة تكويد محصّنة: دروس من تدقيق +7 قواعد بيانات أرشيفية',
+    art_3_d:
+      'خبرة عملية من قواعد بيانات التراث والأبحاث: بناء المفاتيح الأساسية، اكتشاف التكرارات والأخطاء الصامتة، وتحويل الجداول المتفرقة لنماذج SQL موثوقة.',
+    read_article: 'اقرأ التحليل ←',
     hero_subtitle:
       'محلل بيانات بخبرة +6 سنوات أعمل عبر مسارين متخصصين منفصلين: أنظمة ذكاء الأعمال وقواعد البيانات وتعلم الآلة (SQL / Python / Power BI)، ومعمل تحليل بيانات وأداء كرة القدم.',
     track_switch_lbl: 'اختر مجال العرض:',
@@ -928,6 +984,19 @@ function initTiltCards() {
 let currentLang = 'en';
 let selectHeroModeGlobal = null;
 
+function syncSmartCvBtn(track) {
+  const btn = document.getElementById('smartCvBtn');
+  const lbl = document.getElementById('smartCvLabel');
+  if (!btn || !lbl) return;
+  if (track === 'football') {
+    btn.href = 'cv/Mostafa_Saad_Football_Analyst_CV.pdf';
+    lbl.textContent = TRANSLATIONS[currentLang].cv_foot_short;
+  } else {
+    btn.href = 'cv/Mostafa_Saad_Data_Analyst_CV.pdf';
+    lbl.textContent = TRANSLATIONS[currentLang].cv_data_short;
+  }
+}
+
 function applyTrackMode(track, scrollToTrack = false) {
   const valid = ['all', 'data', 'football'].includes(track) ? track : 'all';
   document.documentElement.setAttribute('data-track', valid);
@@ -938,6 +1007,7 @@ function applyTrackMode(track, scrollToTrack = false) {
 
   // Ensure reveal zones become visible immediately when switched
   document.querySelectorAll('.track-zone').forEach((z) => z.classList.add('visible'));
+  syncSmartCvBtn(valid);
 
   // Sync hero telemetry preview with selected track
   if (selectHeroModeGlobal) {
@@ -971,6 +1041,7 @@ function applyLanguage(lang) {
 
   const pill = document.querySelector('.lang-pill');
   if (pill) pill.textContent = lang === 'en' ? 'عربي' : 'EN';
+  syncSmartCvBtn(document.documentElement.getAttribute('data-track') || 'all');
   computeXG();
 }
 
@@ -1029,6 +1100,111 @@ function openCaseModal(idx) {
 
 function closeCaseModal() {
   const modal = document.getElementById('projectModal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+const ARTICLES = [
+  {
+    tag: { en: 'DATA & BI BREAKDOWN · ADVENTUREWORKS', ar: 'تحليل بيانات و BI · AdventureWorks' },
+    title: {
+      en: 'Where Does $110M Leak? Point-in-Time Margins, K-Means RFM & 90x Basket Lift',
+      ar: 'أين تتسرب أرباح $110M؟ الهوامش التاريخية وتقسيم K-Means وحزم 90x',
+    },
+    body: {
+      en: `
+        <p>When analyzing a multi-year sales database like AdventureWorks 2022 ($110M across 72 OLTP tables), the most dangerous mistake is joining sales lines to <strong>current</strong> product standard cost. Doing so retroactively rewrites historical profit margins.</p>
+        <div class="article-callout"><strong>Key Architecture Principle:</strong> Build a reusable SQL view (<code>Sales.vw_LineProfit</code>) joining each order date to <code>ProductCostHistory</code> at the exact time of sale — then feed SQL, Python, and Power BI from one single source of truth.</div>
+        <h4>1. Closing the Loop Between SQL &amp; Python ML</h4>
+        <p>Instead of exporting CSVs and letting notebooks drift out of sync, Python reads directly via <code>pyodbc</code>, log-transforms heavily right-skewed Frequency/Monetary distributions, runs K-Means clustering (k=4 chosen via elbow method), and writes business-labeled segments (VIP, At Risk, Hibernating, New-Promising) straight back into <code>dbo.CustomerSegments</code>.</p>
+        <h4>2. Actionable Growth Findings</h4>
+        <p>Cohort retention heatmaps independently confirmed a ~345-day median repurchase window found in T-SQL, while Market Basket Affinity exposed drivetrain component bundles with <strong>lift &gt; 90x</strong> — immediate, zero-guesswork cross-sell packages surfaced inside the 6-page live Power BI dashboard.</p>
+      `,
+      ar: `
+        <p>عند تحليل قاعدة بيانات مبيعات تمتد لعدة سنوات مثل AdventureWorks 2022 (بإيرادات $110M عبر 72 جدولاً)، أخطر خطأ تحليلي هو ربط الفواتير القديمة بالتكلفة القياسية <strong>الحالية</strong> للمنتج — لأن ذلك يشوّه هوامش الربح التاريخية بالكامل.</p>
+        <div class="article-callout"><strong>المبدأ الهندسي الأساسي:</strong> بناء View موحّد في SQL (<code>Sales.vw_LineProfit</code>) يربط تاريخ كل فاتورة بالتكلفة التاريخية وقت البيع من جدول <code>ProductCostHistory</code>، لتغذية SQL و Python و Power BI من مصدر حقيقة واحد.</div>
+        <h4>1. إغلاق الحلقة بين SQL وتعلم الآلة في Python</h4>
+        <p>بدلاً من تصدير ملفات CSV منفصلة، يتصل Python مباشرة بـ SQL Server عبر <code>pyodbc</code>، يعالج التواء التوزيع بالتحويل اللوغاريتمي، يطبّق خوارزمية K-Means (k=4)، ثم يعيد كتابة شرائح العملاء (VIP / معرض للمغادرة / خامل / واعد) داخل جدول <code>dbo.CustomerSegments</code>.</p>
+        <h4>2. نتائج عملية للنمو</h4>
+        <p>أثبتت خرائط الاحتفاظ بالأفواج (Cohorts) دورة إعادة شراء متوسطها ~345 يوماً، بينما كشف تحليل سلة المشتريات حزم مكونات دراجات بمعامل رفع يتجاوز <strong>90 ضعفاً (Lift &gt; 90x)</strong>، معروضة جميعها في لوحة Power BI التفاعلية من 6 صفحات.</p>
+      `,
+    },
+  },
+  {
+    tag: { en: 'FOOTBALL ANALYTICS · TACTICAL METHODOLOGY', ar: 'معمل كرة القدم · المنهجية التكتيكية' },
+    title: {
+      en: 'Beyond Shot Counts: Reading Match Control via xG, xT/100, PPDA & Field Tilt',
+      ar: 'ما وراء عدد التسديدات: قراءة السيطرة عبر xG و xT و PPDA و Field Tilt',
+    },
+    body: {
+      en: `
+        <p>Raw shot totals and headline possession percentages routinely mislead post-match reviews. A team can hold 62% possession in sterile zones while conceding high-value transitions, or register 16 low-angle shots worth less than 0.80 combined xG.</p>
+        <div class="article-callout"><strong>Four-Lens Match Control Framework:</strong> Combine <em>Field Tilt</em> (final-third pass share), <em>PPDA</em> (pressing intensity), <em>xT per 100 touches</em> (ball progression threat), and <em>calibrated xG</em> (finishing chance quality).</div>
+        <h4>Why Provenance &amp; Role Context Matter</h4>
+        <p>In my open-source <code>Football-Match-Analysis</code> toolkit, player percentile dots are strictly gated on having at least 8 eligible same-role peers—preventing noisy comparisons between a deep-lying #6 and a touchline winger. Every automated run also writes a <code>package_manifest.json</code> recording metric versions and model limitations.</p>
+        <h4>Dual-Theme Communication for Coaches &amp; Social Media</h4>
+        <p>Analysis only creates value when coaches and fans can read it instantly: that's why the pipeline exports both an <strong>AMOLED #000000</strong> edition and a print-ready light copy with adaptive kit-color contrast lifting so team identities never vanish against the canvas.</p>
+      `,
+      ar: `
+        <p>الأرقام التقليدية مثل إجمالي التسديدات أو نسبة الاستحواذ العامة غالباً ما تكون مضللة؛ فقد يمتلك فريق 62% استحواذاً سلبياً بينما يتلقى تحولات خطيرة، أو يسدد 16 كرة من زوايا صعبة بقيمة إجمالية أقل من 0.80 xG.</p>
+        <div class="article-callout"><strong>إطار قراءة السيطرة من 4 عدسات:</strong> الدمج بين <em>Field Tilt</em> (حصة التمريرات في الثلث الأخير)، و <em>PPDA</em> (شراسة الضغط)، و <em>xT لكل 100 لمسة</em> (التهديد التقدمي)، و <em>xG المعايَر</em> (جودة الفرص).</div>
+        <h4>لماذا يهم سياق الدور والشفافية الإحصائية؟</h4>
+        <p>في أداة <code>Football-Match-Analysis</code> مفتوحة المصدر، لا تُعرض مئويات اللاعب إلا عند توفر 8 لاعبين على الأقل في نفس الدور التكتيكي لتجنب المقارنات المضللة، كما يُسجَّل كل تشغيل في ملف <code>package_manifest.json</code> لتوثيق إصدار المقاييس وحدود النموذج.</p>
+        <h4>تصميم مزدوج لخدمة المدربين والنشر السريع</h4>
+        <p>التحليل لا يصنع فرقاً إلا إذا كان واضحاً فور صافرة النهاية؛ لذلك يصدّر النظام نسخة <strong>AMOLED سوداء (#000000)</strong> ونسخة فاتحة للطباعة مع ضبط ذكي لتباين ألوان قمصان الفرق تلقائياً.</p>
+      `,
+    },
+  },
+  {
+    tag: { en: 'DATA QUALITY & GOVERNANCE', ar: 'جودة البيانات وهيكلة الأرشيف' },
+    title: {
+      en: 'Bulletproof Coding Systems: Auditing Multi-Source Archival Datasets',
+      ar: 'تصميم أنظمة تكويد محصّنة: دروس من تدقيق +7 قواعد بيانات أرشيفية',
+    },
+    body: {
+      en: `
+        <p>Across 6+ years managing institutional, cultural heritage, and social-research datasets at NADIM Foundation and Daftar Ahwal, I learned that 80% of downstream dashboard errors originate in silent ID inconsistencies—not formula bugs.</p>
+        <div class="article-callout"><strong>Audit Rule #1:</strong> Separate your <em>Primary Base Entity ID</em> from secondary attribute suffixes (such as Face A/B or Left/Right components) before reconciling cross-table joins.</div>
+        <h4>Catching Silent Data Traps Automatically</h4>
+        <p>Manual spreadsheet review misses transposed digits (e.g., Monument 385 vs 358), code drift (<code>MN</code> vs <code>MB</code>), and duplicate keys disguised by trailing whitespace. Automated Python/SQL audit checks catch 100% of schema drift in seconds and generate clean exception Excel logs for domain specialists.</p>
+      `,
+      ar: `
+        <p>خلال أكثر من 6 سنوات في إدارة قواعد بيانات التراث الثقافي والأبحاث الاجتماعية في مؤسسة نديم ومعهد دفتر أحوال، تأكدت أن 80% من أخطاء اللوحات والتقارير سببها تعارضات صامتة في أكواد الربط (IDs) وليس أخطاء في المعادلات.</p>
+        <div class="article-callout"><strong>القاعدة الذهبية للتدقيق:</strong> افصل دائماً <em>الرقم الأساسي للكيان (Base ID)</em> عن اللواحق الثانوية (مثل الوجه A/B أو الضلفة يمين/شمال) قبل مطابقة الجداول.</div>
+        <h4>اكتشاف الأخطاء الصامتة آلياً</h4>
+        <p>المراجعة اليدوية تفوّت الأرقام المقلوبة (مثل 385 بدلاً من 358)، أو اختلاف أكواد التصنيف (<code>MN</code> مقابل <code>MB</code>)، أو التكرارات الخفية. استخدام سكريبتات فحص تلقائي بـ Python و SQL يكشف كل التعارضات في ثوانٍ ويصدر ملف إكسيل واضح للمراجعة الفورية.</p>
+      `,
+    },
+  },
+];
+
+function openLightbox(src, caption) {
+  const modal = document.getElementById('lightboxModal');
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCap').textContent = caption || '';
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeLightbox() {
+  const modal = document.getElementById('lightboxModal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+function openArticleModal(idx) {
+  const art = ARTICLES[idx];
+  if (!art) return;
+  const modal = document.getElementById('articleModal');
+  document.getElementById('aTag').textContent = art.tag[currentLang];
+  document.getElementById('aTitle').textContent = art.title[currentLang];
+  document.getElementById('aBody').innerHTML = art.body[currentLang];
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeArticleModal() {
+  const modal = document.getElementById('articleModal');
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
 }
@@ -1155,7 +1331,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('loadPbiBtn')?.addEventListener('click', mountPowerBI);
   document.getElementById('loadPbiOverlayBtn')?.addEventListener('click', mountPowerBI);
 
-  // Modal
+  // Modals (Case Study + Lightbox + Article Reader)
   document.querySelectorAll('.open-modal').forEach((btn) => {
     btn.addEventListener('click', () => openCaseModal(Number(btn.dataset.project)));
   });
@@ -1163,8 +1339,29 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('projectModal').addEventListener('click', (e) => {
     if (e.target.id === 'projectModal') closeCaseModal();
   });
+
+  document.querySelectorAll('.lightbox-trigger').forEach((btn) => {
+    btn.addEventListener('click', () => openLightbox(btn.dataset.src, btn.dataset.cap));
+  });
+  document.getElementById('lightboxClose')?.addEventListener('click', closeLightbox);
+  document.getElementById('lightboxModal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'lightboxModal') closeLightbox();
+  });
+
+  document.querySelectorAll('.open-article').forEach((btn) => {
+    btn.addEventListener('click', () => openArticleModal(Number(btn.dataset.article)));
+  });
+  document.getElementById('articleClose')?.addEventListener('click', closeArticleModal);
+  document.getElementById('articleModal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'articleModal') closeArticleModal();
+  });
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeCaseModal();
+    if (e.key === 'Escape') {
+      closeCaseModal();
+      closeLightbox();
+      closeArticleModal();
+    }
   });
 
   // Copy Email

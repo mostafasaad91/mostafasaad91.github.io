@@ -44,6 +44,7 @@
       <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#data-track" class="nav-data-link" data-i18n="nav_data_track">Data &amp; BI Track</a>
         <a href="#football-track" class="nav-foot-link" data-i18n="nav_foot_track">Football Lab</a>
+        <a href="#insights" data-i18n="nav_insights">Insights</a>
         <a href="#experience" data-i18n="nav_exp">Experience</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
@@ -70,13 +71,22 @@
 
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="status-badge">
-            <span class="pulse-dot"></span>
-            <span class="mono" data-i18n="hero_badge">AL JIZAH, EGYPT · OPEN TO REMOTE &amp; ON-SITE ROLES</span>
+          <div class="hero-identity">
+            <div class="avatar-ring">
+              <img src="assets/profile.jpg" alt="Mostafa Saad" class="hero-avatar" />
+              <span class="avatar-online" aria-hidden="true"></span>
+            </div>
+            <div class="identity-meta">
+              <div class="identity-name">Mostafa Saad</div>
+              <div class="status-badge compact">
+                <span class="pulse-dot"></span>
+                <span class="mono" data-i18n="hero_badge">AL JIZAH, EGYPT · OPEN TO REMOTE &amp; ON-SITE</span>
+              </div>
+            </div>
           </div>
 
           <h1 class="hero-title">
-            <span data-i18n="hero_title_1">Mostafa Saad — Turning Business &amp; Football Data into</span>
+            <span data-i18n="hero_title_1">Turning Business &amp; Football Data into</span>
             <span class="gradient-text animated-gradient" data-i18n="hero_title_2">Actionable Intelligence</span>
           </h1>
 
@@ -108,8 +118,8 @@
             <a href="#football-track" class="btn btn-emerald btn-lg">
               <span data-i18n="hero_btn_foot">Enter Football Lab ⚽</span>
             </a>
-            <a href="https://github.com/mostafasaad91" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-              <span>GitHub ↗</span>
+            <a href="cv/Mostafa_Saad_Data_Analyst_CV.pdf" download id="smartCvBtn" class="btn btn-ghost btn-lg mono">
+              <span id="smartCvLabel" data-i18n="cv_data_short">⬇ Data CV (PDF)</span>
             </a>
           </div>
         </div>
@@ -244,6 +254,7 @@
             </p>
           </div>
           <div class="tb-actions">
+            <a href="cv/Mostafa_Saad_Data_Analyst_CV.pdf" download class="btn btn-sm btn-primary mono" data-i18n="cv_data_btn">⬇ Data Analyst CV (PDF)</a>
             <button class="btn btn-sm btn-ghost copy-track-link mono" data-copy-track="data" type="button" data-i18n="copy_data_url">🔗 Copy Data-Only Link</button>
           </div>
         </div>
@@ -362,6 +373,35 @@
               </div>
             </div>
           </div>
+
+          <!-- 6-Page Power BI Screenshot Gallery Strip (Click to Zoom) -->
+          <div class="pbi-thumbs-head mono" data-i18n="pbi_gallery_hint">ALL 6 DASHBOARD PAGES (CLICK ANY PAGE TO ZOOM):</div>
+          <div class="pbi-thumbs-grid">
+            <button class="thumb-card lightbox-trigger" type="button" data-src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/01_executive_overview.png" data-cap="Page 01 · Executive Overview ($110M Revenue & YoY Growth)">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/01_executive_overview.png" alt="Executive Overview" loading="lazy" />
+              <span class="mono">01 · Executive Overview</span>
+            </button>
+            <button class="thumb-card lightbox-trigger" type="button" data-src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/02_product_profitability.png" data-cap="Page 02 · Product Profitability & Point-in-Time Cost Margins">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/02_product_profitability.png" alt="Product Profitability" loading="lazy" />
+              <span class="mono">02 · Profitability</span>
+            </button>
+            <button class="thumb-card lightbox-trigger" type="button" data-src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/03_customer_segments.png" data-cap="Page 03 · K-Means RFM Customer Segments (k=4)">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/03_customer_segments.png" alt="Customer Segments" loading="lazy" />
+              <span class="mono">03 · K-Means RFM</span>
+            </button>
+            <button class="thumb-card lightbox-trigger" type="button" data-src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/04_territory_team.png" data-cap="Page 04 · Territory Growth & Sales Rep Quota Attainment">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/04_territory_team.png" alt="Territory & Team" loading="lazy" />
+              <span class="mono">04 · Territory &amp; Team</span>
+            </button>
+            <button class="thumb-card lightbox-trigger" type="button" data-src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/05_customer_behavior.png" data-cap="Page 05 · Cohort Retention & Market Basket Affinity">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/05_customer_behavior.png" alt="Customer Behavior" loading="lazy" />
+              <span class="mono">05 · Cohorts &amp; Basket</span>
+            </button>
+            <button class="thumb-card lightbox-trigger" type="button" data-src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/06_discounts_operations.png" data-cap="Page 06 · Discount Leakage, Scrap & Shipping Operations">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/06_discounts_operations.png" alt="Discounts & Operations" loading="lazy" />
+              <span class="mono">06 · Discounts &amp; Ops</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -381,14 +421,18 @@
     <section class="section track-zone track-football-zone reveal" id="football-track" data-zone="football">
       <div class="container">
         <div class="track-banner foot-banner glass">
-          <div class="tb-left">
-            <span class="tb-pill mono emerald-pill">TRACK 02 · FOOTBALL DATA &amp; PERFORMANCE LAB</span>
-            <h2 class="section-title" data-i18n="foot_zone_title">Football Analytics, xG/xT Models &amp; Tactical Scouting</h2>
-            <p class="section-desc" data-i18n="foot_zone_desc">
-              Turning Opta / WhoScored match-event data into automated tactical match reports, AMOLED visual posters, player role profiles, and recruitment intelligence — backed by FA, PFSA &amp; FP Academy credentials.
-            </p>
+          <div class="tb-left foot-tb-brand">
+            <img src="assets/tactical-logo.jpg" alt="Tactical — Football Data & Analysis" class="tactical-emblem" />
+            <div>
+              <span class="tb-pill mono emerald-pill">TRACK 02 · FOOTBALL DATA &amp; PERFORMANCE LAB</span>
+              <h2 class="section-title" data-i18n="foot_zone_title">Football Analytics, xG/xT Models &amp; Tactical Scouting</h2>
+              <p class="section-desc" data-i18n="foot_zone_desc">
+                Turning Opta / WhoScored match-event data into automated tactical match reports, AMOLED visual posters, player role profiles, and recruitment intelligence — backed by FA, PFSA &amp; FP Academy credentials.
+              </p>
+            </div>
           </div>
           <div class="tb-actions">
+            <a href="cv/Mostafa_Saad_Football_Analyst_CV.pdf" download class="btn btn-sm btn-emerald mono" data-i18n="cv_foot_btn">⬇ Football Analyst CV (PDF)</a>
             <button class="btn btn-sm btn-ghost copy-track-link mono" data-copy-track="football" type="button" data-i18n="copy_foot_url">🔗 Copy Football-Only Link</button>
           </div>
         </div>
@@ -471,6 +515,46 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- AMOLED 4:5 TACTICAL MATCH POSTER GALLERY -->
+        <div class="sim-header-inline">
+          <span class="section-eyebrow mono" style="color:var(--emerald)" data-i18n="posters_eyebrow">// VISUAL OUTPUT · 4:5 AMOLED POSTER SUITE</span>
+          <h3 class="sub-section-title" data-i18n="posters_title">Automated AMOLED Match Posters Gallery</h3>
+          <p class="section-desc" data-i18n="posters_desc">
+            Click any 4:5 poster board to inspect full resolution — showcasing the AMOLED visual language of my Football-Match-Analysis toolkit.
+          </p>
+        </div>
+
+        <div class="posters-grid">
+          <button class="poster-card glass tilt-card lightbox-trigger" type="button" data-src="assets/posters/poster_1_xg_shotmap.png" data-cap="Poster 01 · Shot Map, Touch-Density Heatmap & Cumulative xG Race (4:5 AMOLED)">
+            <img src="assets/posters/poster_1_xg_shotmap.png" alt="Poster 01 Shot Map and xG Race" loading="lazy" />
+            <div class="poster-meta">
+              <span class="mono emerald">POSTER 01</span>
+              <strong data-i18n="pos_1">Shot Map &amp; xG Race</strong>
+            </div>
+          </button>
+          <button class="poster-card glass tilt-card lightbox-trigger" type="button" data-src="assets/posters/poster_2_passing_sonar.png" data-cap="Poster 02 · Passing Sonar, Field Tilt & Final-Third Entry Lanes (4:5 AMOLED)">
+            <img src="assets/posters/poster_2_passing_sonar.png" alt="Poster 02 Passing Sonar and Field Tilt" loading="lazy" />
+            <div class="poster-meta">
+              <span class="mono cyan">POSTER 02</span>
+              <strong data-i18n="pos_2">Passing Sonar &amp; Field Tilt</strong>
+            </div>
+          </button>
+          <button class="poster-card glass tilt-card lightbox-trigger" type="button" data-src="assets/posters/poster_3_pressing_ppda.png" data-cap="Poster 03 · Rolling PPDA Pressing Intensity & Nested Possession Funnel (4:5 AMOLED)">
+            <img src="assets/posters/poster_3_pressing_ppda.png" alt="Poster 03 Pressing PPDA and Possession Funnel" loading="lazy" />
+            <div class="poster-meta">
+              <span class="mono violet">POSTER 03</span>
+              <strong data-i18n="pos_3">PPDA &amp; Possession Funnel</strong>
+            </div>
+          </button>
+          <button class="poster-card glass tilt-card lightbox-trigger" type="button" data-src="assets/posters/poster_4_player_profile.png" data-cap="Poster 04 · Player Role Profile (xGChain, xGBuildup & xT/100 Touches, n>=8 peers)">
+            <img src="assets/posters/poster_4_player_profile.png" alt="Poster 04 Player Role Percentile Profile" loading="lazy" />
+            <div class="poster-meta">
+              <span class="mono emerald">POSTER 04</span>
+              <strong data-i18n="pos_4">Player Role Percentiles</strong>
+            </div>
+          </button>
         </div>
 
         <!-- LIVE INTERACTIVE xG ML SIMULATOR (Inside Football Lab) -->
@@ -575,6 +659,59 @@
           <div class="cert-pill glass"><span class="cert-dot cyan"></span><div><strong>Intro to Football Scouting</strong><span class="muted">PFSA</span></div></div>
           <div class="cert-pill glass"><span class="cert-dot violet"></span><div><strong>Intro to Coaching Football</strong><span class="muted">The FA</span></div></div>
           <div class="cert-pill glass"><span class="cert-dot amber"></span><div><strong>EE Playmaker</strong><span class="muted">England Football</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TACTICAL & DATA INSIGHTS (ARTICLES / BREAKDOWNS)
+         ===================================================== -->
+    <section class="section reveal" id="insights">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow mono" data-i18n="ins_eyebrow">// ANALYTICAL WRITING &amp; BREAKDOWNS</span>
+          <h2 class="section-title" data-i18n="ins_title">Data &amp; Tactical Insights</h2>
+          <p class="section-desc" data-i18n="ins_desc">
+            Concise methodology notes and evidence-led write-ups connecting SQL/ML rigor with executive and coaching clarity.
+          </p>
+        </div>
+
+        <div class="insights-grid">
+          <article class="insight-card glass tilt-card" data-insight-track="data">
+            <div class="ins-top">
+              <span class="tl-badge mono data-tag">DATA &amp; BI</span>
+              <span class="mono muted">4 min read</span>
+            </div>
+            <h3 data-i18n="art_1_t">Where Does $110M Leak? Point-in-Time Margins &amp; 90x Basket Lift</h3>
+            <p data-i18n="art_1_d">
+              Why using current standard cost distorts historical profit margins, and how writing Python K-Means RFM clusters directly back into SQL Server creates one source of truth for Power BI.
+            </p>
+            <button class="text-link open-article" data-article="0" type="button" data-i18n="read_article">Read Breakdown →</button>
+          </article>
+
+          <article class="insight-card glass tilt-card" data-insight-track="football">
+            <div class="ins-top">
+              <span class="tl-badge mono foot-tag">FOOTBALL LAB</span>
+              <span class="mono muted">5 min read</span>
+            </div>
+            <h3 data-i18n="art_2_t">Beyond Shot Counts: Reading Control via xG, xT/100, PPDA &amp; Field Tilt</h3>
+            <p data-i18n="art_2_d">
+              How combining territorial dominance (Field Tilt), pressing aggression (PPDA), and Expected Threat per 100 touches separates sustainable match control from noisy scorelines.
+            </p>
+            <button class="text-link open-article" data-article="1" type="button" data-i18n="read_article">Read Breakdown →</button>
+          </article>
+
+          <article class="insight-card glass tilt-card" data-insight-track="data">
+            <div class="ins-top">
+              <span class="tl-badge mono data-tag">DATA QUALITY</span>
+              <span class="mono muted">3 min read</span>
+            </div>
+            <h3 data-i18n="art_3_t">Bulletproof Coding Systems: Auditing Multi-Source Archival Datasets</h3>
+            <p data-i18n="art_3_d">
+              Practical lessons from 7+ research &amp; heritage datasets: designing base-ID keys, catching silent duplicate/typo traps, and turning messy spreadsheets into reliable SQL models.
+            </p>
+            <button class="text-link open-article" data-article="2" type="button" data-i18n="read_article">Read Breakdown →</button>
+          </article>
         </div>
       </div>
     </section>
@@ -728,6 +865,25 @@
       </div>
       <div class="chip-row small" id="mTags"></div>
       <div class="modal-footer-links" id="mLinks"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Posters & Power BI Screenshots -->
+  <div class="modal-backdrop lightbox-backdrop" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox-box glass">
+      <button class="modal-close" id="lightboxClose" type="button" aria-label="Close">✕</button>
+      <img id="lightboxImg" src="" alt="Full resolution preview" />
+      <p class="mono lightbox-cap" id="lightboxCap"></p>
+    </div>
+  </div>
+
+  <!-- Article Reader Modal -->
+  <div class="modal-backdrop" id="articleModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-box article-modal-box glass">
+      <button class="modal-close" id="articleClose" type="button" aria-label="Close">✕</button>
+      <span class="mono modal-cat" id="aTag"></span>
+      <h3 class="modal-title" id="aTitle"></h3>
+      <div class="article-body" id="aBody"></div>
     </div>
   </div>
 
