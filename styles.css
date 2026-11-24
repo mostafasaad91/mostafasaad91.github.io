@@ -1315,3 +1315,350 @@ html[dir="rtl"] .floating-badge { left: auto; right: -22px; }
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* =========================================================
+   DUAL-TRACK ARCHITECTURE (DATA & BI vs FOOTBALL LAB)
+   ========================================================= */
+
+/* Navbar Accent Links */
+.nav-data-link:hover { color: var(--cyan) !important; }
+.nav-foot-link:hover { color: var(--emerald) !important; }
+
+/* Emerald CTA Button */
+.btn-emerald {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 28px -6px rgba(16, 185, 129, 0.48);
+}
+.btn-emerald:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -4px rgba(16, 185, 129, 0.55);
+}
+
+/* Hero Track Switcher */
+.track-switcher {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+.switcher-lbl {
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+  color: var(--text-dim);
+}
+.switcher-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.track-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.83rem;
+  font-weight: 600;
+  padding: 0.46rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.track-btn:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.3); }
+.track-btn.active {
+  background: rgba(0, 229, 255, 0.16);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.track-btn.data-btn.active {
+  background: rgba(0, 229, 255, 0.16);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.track-btn.foot-btn.active {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+/* Track Filtering Mode Visibility */
+html[data-track="data"] .track-football-zone,
+html[data-track="data"] .track-divider {
+  display: none;
+}
+html[data-track="football"] .track-data-zone,
+html[data-track="football"] .track-divider {
+  display: none;
+}
+
+/* Track Banner Header */
+.track-banner {
+  border-radius: 22px;
+  padding: 2rem 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.data-banner {
+  border-color: rgba(0, 229, 255, 0.3);
+  background: radial-gradient(circle at 95% 15%, rgba(0, 229, 255, 0.12), var(--surface) 60%);
+}
+.foot-banner {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: radial-gradient(circle at 95% 15%, rgba(16, 185, 129, 0.14), var(--surface) 60%);
+}
+.tb-left { max-width: 740px; }
+.tb-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+.cyan-pill {
+  color: var(--cyan);
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+}
+.emerald-pill {
+  color: var(--emerald);
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.38);
+}
+
+/* Track 1 Mini Pillars */
+.mini-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+  margin-bottom: 2rem;
+}
+.pillar-pill {
+  border-radius: 14px;
+  padding: 1.15rem 1.3rem;
+}
+.pillar-pill span {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+.pillar-pill p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* GitHub Repo Cards Enhancements */
+.repo-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.45rem;
+}
+.repo-top-row .proj-cat { margin-bottom: 0; }
+.star-badge {
+  font-size: 0.69rem;
+  font-weight: 700;
+  padding: 0.2rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.32);
+  color: var(--cyan);
+  white-space: nowrap;
+}
+.emerald-star {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: var(--emerald);
+}
+.featured-repo { border-color: rgba(0, 229, 255, 0.28); }
+.foot-featured { border-color: rgba(16, 185, 129, 0.35); }
+.viz-emerald-soft {
+  background: radial-gradient(circle at 80% 10%, rgba(16, 185, 129, 0.15), var(--surface-inset));
+}
+
+.multi-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.repo-link {
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.38rem 0.82rem;
+  border-radius: 9px;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--cyan);
+  transition: transform 0.2s, background 0.2s;
+}
+.repo-link:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 229, 255, 0.2);
+}
+.repo-link.live-bi {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--amber);
+}
+.repo-link.emerald-link {
+  border-color: rgba(16, 185, 129, 0.45);
+  background: rgba(16, 185, 129, 0.14);
+  color: var(--emerald);
+}
+
+/* Live Embedded Power BI Card */
+.pbi-embed-card {
+  margin-top: 2rem;
+  border-radius: 20px;
+  padding: 1.5rem;
+  border-color: rgba(0, 229, 255, 0.26);
+}
+.pbi-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+.pbi-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.pbi-stage {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000000;
+  min-height: 440px;
+}
+.pbi-preview {
+  position: relative;
+  width: 100%;
+  height: 460px;
+}
+.pbi-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  filter: blur(1px);
+  transition: opacity 0.3s, transform 0.4s;
+}
+.pbi-preview:hover img { opacity: 0.56; transform: scale(1.015); }
+.pbi-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8));
+}
+.pbi-sub { font-size: 0.76rem; color: var(--text-muted); }
+.pbi-iframe {
+  width: 100%;
+  height: 580px;
+  border: none;
+  display: block;
+}
+
+/* Track Divider */
+.track-divider { padding: 0.5rem 0; }
+.divider-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+.div-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
+.div-badge {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  white-space: nowrap;
+}
+
+/* Inline Simulator Header inside Football Track */
+.sim-header-inline { margin: 3rem 0 1.4rem; max-width: 700px; }
+.sub-section-title { font-family: var(--font-display); font-size: clamp(1.45rem, 2.5vw, 1.95rem); margin-bottom: 0.45rem; }
+
+/* Football Certifications Strip */
+.foot-certs-strip {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.cert-pill {
+  border-radius: 14px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+.cert-pill strong { display: block; font-size: 0.88rem; }
+.cert-pill span.muted { font-size: 0.78rem; }
+
+/* Experience Badges & Smart Share Links */
+.tl-badge {
+  font-size: 0.67rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.data-tag { color: var(--cyan); background: rgba(0, 229, 255, 0.1); border: 1px solid rgba(0, 229, 255, 0.25); }
+.foot-tag { color: var(--emerald); background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); }
+.foot-tl { border-inline-start-color: var(--emerald); }
+
+.smart-links { display: flex; flex-direction: column; gap: 0.55rem; }
+.smart-links .copy-track-link {
+  text-align: start;
+  padding: 0.62rem 0.9rem;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.smart-links .copy-track-link:hover { border-color: var(--cyan); color: var(--cyan); }
+
+.modal-footer-links {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+@media (max-width: 980px) {
+  .mini-pillars,
+  .foot-certs-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 680px) {
+  .mini-pillars,
+  .foot-certs-strip {
+    grid-template-columns: 1fr;
+  }
+  .pbi-preview { height: 320px; }
+  .pbi-iframe { height: 420px; }
+  .div-badge { font-size: 0.64rem; }
+}

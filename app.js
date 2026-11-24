@@ -1,10 +1,14 @@
 /* =========================================================
-   MOSTAFA SAAD — PORTFOLIO CONFIGURATION
+   MOSTAFA SAAD — DUAL-TRACK PORTFOLIO CONFIG
    ========================================================= */
 const PROFILE_CONFIG = {
   name: 'Mostafa Saad',
   email: 'mostafasaad044@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mostafa-saad-171086191/',
+  github: 'https://github.com/mostafasaad91',
+  liveBaseUrl: 'https://mostafasaad91.github.io/',
+  powerBiUrl:
+    'https://app.powerbi.com/view?r=eyJrIjoiODk5NTM5YjQtMTk4Ny00NGU2LWFiMzUtYTg1N2YwZDUyYWU4IiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9',
 };
 
 /* =========================================================
@@ -12,41 +16,57 @@ const PROFILE_CONFIG = {
    ========================================================= */
 const TRANSLATIONS = {
   en: {
-    nav_expertise: 'Expertise',
-    nav_sim: 'Live xG Model',
-    nav_projects: 'Case Studies',
+    nav_data_track: 'Data & BI Track',
+    nav_foot_track: 'Football Lab',
     nav_exp: 'Experience',
     nav_contact: 'Contact',
     nav_cta: 'Hire / Collaborate',
     hero_badge: 'AL JIZAH, EGYPT · OPEN TO REMOTE & ON-SITE ROLES',
-    hero_title_1: 'Mostafa Saad — Turning Football & Business Data into',
+    hero_title_1: 'Mostafa Saad — Turning Business & Football Data into',
     hero_title_2: 'Actionable Intelligence',
     hero_subtitle:
-      'Data Analyst, Machine Learning & Football Performance Analyst with 6+ years of experience in Excel (Power Query & Pivot), Power BI, SQL, and Python — building custom xG models, scouting reports, and scalable analytical databases.',
-    hero_btn_sim: 'Try Live xG Model',
-    hero_stack_label: 'CORE TOOLKIT:',
-    float_impact: 'Data, BI & Football Analytics',
+      'Data Analyst with 6+ years of experience operating across two specialized tracks: Enterprise BI, SQL & Machine Learning systems, and independent Football Data & Performance Analytics.',
+    track_switch_lbl: 'CHOOSE PORTFOLIO VIEW:',
+    track_all: 'All Tracks',
+    track_data: '📊 Business Data & BI',
+    track_foot: '⚽ Football Analytics',
+    hero_btn_data: 'Explore Data & BI',
+    hero_btn_foot: 'Enter Football Lab ⚽',
+    float_impact: 'Business BI & Football Analytics',
     stat_years: 'Years Data Experience',
-    stat_datasets: 'Archival & Research Datasets',
-    stat_certs: 'Football & Scouting Certs',
-    stat_lang: 'Bilingual Analytical Reporting',
-    exp_eyebrow: '// CORE CAPABILITIES',
-    exp_title: 'Where Business BI, Machine Learning & Football Meet',
-    exp_desc:
-      'Bridging rigorous database design and automated business intelligence with tactical football modeling and clear bilingual storytelling.',
-    exp_1_title: 'BI, Dashboards & Reporting',
-    exp_1_desc:
-      'Designing interactive Power BI, Excel (Power Query / Power Pivot), and Tableau dashboards with DAX models and decision-ready KPI tracking.',
-    exp_2_title: 'Python, SQL & ML Engineering',
-    exp_2_desc:
-      'Cleaning, validating, and structuring complex datasets, building coding taxonomies, and training predictive ML models like custom event-based xG.',
-    exp_3_title: 'Football Data & Performance',
-    exp_3_desc:
-      'Transforming match event data into clear tactical & recruitment insights: xG, Field Tilt, PPDA, pressing intensity, chance quality, and opposition reports.',
-    sim_eyebrow: '// INTERACTIVE ML PLAYGROUND',
+    stat_aw: 'AdventureWorks E2E Analysis',
+    stat_stars: 'GitHub Project Stars',
+    stat_certs: 'FA · PFSA · FP Academy Certs',
+    data_zone_title: 'Business Intelligence, SQL & Machine Learning',
+    data_zone_desc:
+      'End-to-end corporate & archival analytics: relational SQL databases, star-schema modeling, Python segmentation & retention models, and live interactive Power BI executive dashboards.',
+    copy_data_url: '🔗 Copy Data-Only Link',
+    dp_1: 'T-SQL window functions, CTEs, Star Schema views, and point-in-time profitability auditing.',
+    dp_2: 'K-Means RFM clustering, cohort retention heatmaps, market basket lift, and automated QA scripts.',
+    dp_3: 'PBIP source-controlled dashboards, DAX time intelligence, Power Query ETL, and Excel workshops.',
+    aw_title: 'AdventureWorks 2022 — End-to-End Sales Analytics',
+    aw_desc:
+      'Complete SQL Server → Python (pyodbc live DB write-back) → 6-page Power BI investigation answering 17 business questions: point-in-time profit margins, K-Means RFM clustering, cohort retention (~345d window), and market-basket cross-sell bundles.',
+    arch_title: 'Archival & Cultural Heritage Database Systems',
+    arch_desc:
+      'Designed dataset coding taxonomies, automated cross-sheet ID reconciliation scripts, metadata validation workflows, and executive Power BI / Excel reporting while supervising data teams and delivering advanced Excel workshops.',
+    pbi_title: '6-Page Executive Power BI Dashboard (Live)',
+    pbi_load_btn: '▶ Load Interactive Dashboard',
+    pbi_launch: '▶ Launch Live 6-Page Power BI Report',
+    foot_zone_title: 'Football Analytics, xG/xT Models & Tactical Scouting',
+    foot_zone_desc:
+      'Turning Opta / WhoScored match-event data into automated tactical match reports, AMOLED visual posters, player role profiles, and recruitment intelligence — backed by FA, PFSA & FP Academy credentials.',
+    copy_foot_url: '🔗 Copy Football-Only Link',
+    fma_title: 'Football Match Analysis — Automated Tactical Pipeline',
+    fma_desc:
+      'End-to-end Python engine turning a single WhoScored/Opta URL into xG/xT/xGChain models, passing sonars, touch-density heatmaps, player role profiles, 8 AMOLED & Light 4:5 posters, a full PDF report, publishable .docx article, and SQLite match archive across EPL, La Liga & Serie A.',
+    scout_title: 'Match, Opposition & Player Recruitment Scouting',
+    scout_desc:
+      'Translating possession funnels, pressing intensity (PPDA), field tilt, progressive-pass share, and xT per 100 touches into concise tactical briefs and scouting dossiers for coaches and recruitment staff.',
+    sim_eyebrow: '// INTERACTIVE FOOTBALL ML PLAYGROUND',
     sim_title: 'Live Expected Goals (xG) Model Simulator',
     sim_desc:
-      'Click anywhere inside the attacking half-pitch or adjust the shot context below to see how my logistic ML model evaluates goal probability and feature contributions in real time.',
+      'Click anywhere on the pitch, adjust shot context, or press Auto-Demo to inspect live xG probability and SHAP-style feature impacts.',
     sim_click_hint: 'CLICK ON PITCH TO PLACE SHOT',
     sim_presets: 'PRESETS:',
     sim_prob_label: 'PREDICTED GOAL PROBABILITY',
@@ -54,91 +74,91 @@ const TRANSLATIONS = {
     sim_assist: 'Situation / Assist',
     sim_pressure: 'Defensive Pressure (Defenders in Cone)',
     sim_shap: 'MODEL FEATURE IMPACT (LOG-ODDS CONTRIBUTION)',
-    proj_eyebrow: '// SELECTED WORK',
-    proj_title: 'Featured Case Studies',
-    filter_all: 'All',
-    filter_football: 'Football & ML',
-    filter_analytics: 'BI & Data Systems',
-    p1_title: 'Event-Based Expected Goals (xG) ML Model',
-    p1_desc:
-      'Built a custom xG probability model from match event data using shot geometry (distance, angle), body part, assist type, and pressure to quantify chance quality for coaches and scouts.',
-    p2_title: 'Match, Opposition & Player Scouting Intelligence',
-    p2_desc:
-      'Produced tactical match & opposition analysis packs measuring possession structure, field tilt, PPDA pressing intensity, and player role KPIs in clear Arabic & English reports.',
-    p3_title: 'Archival & Cultural Heritage Database Systems',
-    p3_desc:
-      'Led end-to-end dataset methodologies, metadata validation, and cross-sheet ID integrity systems across large cultural heritage & social-research archives while supervising data teams.',
-    p4_title: 'Automated BI Dashboards & Executive KPI Suites',
-    p4_desc:
-      'Delivered freelance Power BI & Excel reporting pipelines with Power Query ETL, star-schema data modeling, DAX measures, and recurring KPI trackers—plus advanced Excel workshops.',
-    proj_details: 'View Case Study →',
+    proj_details: 'Case Study →',
     career_eyebrow: '// TRACK RECORD',
-    career_title: 'Experience, Education & Credentials',
+    career_title: 'Experience & Education',
     role_1_t: 'Digital Archivist & Cultural Data Analyst · Metadata Archivist',
     role_1_d:
       'Managing cultural heritage datasets, metadata standardization, cross-database ID reconciliation, and analytical reporting.',
     role_2_t: 'Freelance Data Analyst & Football Performance Analyst',
     role_2_d:
-      'End-to-end client BI & data cleaning pipelines (Excel Power Query, Power BI, DAX, SQL, Python) alongside independent football xG modeling, match/opposition reports, and scouting analytics.',
+      'End-to-end client BI & data cleaning pipelines (Excel Power Query, Power BI, DAX, SQL, Python) alongside independent football xG/xT modeling, automated match reports, and scouting analytics.',
     role_3_t: 'Senior Data Analyst & Archive Officer (prev. Junior Analyst)',
     role_3_d:
       'Led 7+ archival & social-research dataset projects, designed data coding systems & forecasting indicators in Excel & Power BI, supervised data teams, and taught advanced Excel workshops.',
     role_4_t: 'Content Writer',
     role_4_d:
       'Authored analytical & literary reviews, sharpening clear, structured written communication across Arabic and English audiences.',
-    cert_tag: 'FOOTBALL & SCOUTING CERTIFICATIONS',
     edu_tag: 'EDUCATION',
     edu_deg: "Bachelor's Degree, Business Administration & Management",
-    langs_tag: 'COMMUNICATION & IMPACT',
+    share_tag: 'SMART ROLE-SPECIFIC LINKS',
+    share_desc: 'Applying for a specific role? Share a focused link directly to either track:',
+    langs_tag: 'BILINGUAL DELIVERY',
     langs_desc:
-      'Delivering clear tactical reports, executive dashboards, and technical documentation in both English & Arabic for coaches, scouts, and business stakeholders.',
+      'Executive BI dashboards, tactical match reports, and technical documentation delivered fluently in English & Arabic.',
     contact_eyebrow: "// LET'S COLLABORATE",
-    contact_title: 'Looking for a Data, ML or Football Analyst?',
+    contact_title: 'Looking for a Data, BI/ML or Football Analyst?',
     contact_desc:
-      'Open to Football Data / Performance Analyst, Data Analyst, and BI/ML roles — remote or on-site, plus freelance consulting & training workshops.',
+      'Open to Data Analyst, BI/ML, and Football Data / Performance Analyst roles — remote or on-site, plus freelance consulting & Excel/BI workshops.',
     form_name: 'Your Name',
     form_email: 'Email Address',
     form_msg: 'Role or Project Details',
     form_send: 'Open Email Draft / Send',
-    footer_built: 'Turning football and business data into decisions.',
-    modal_approach: 'Technical Approach',
+    footer_built: 'Turning business and football data into decisions.',
+    modal_approach: 'Technical Architecture & Impact',
   },
   ar: {
-    nav_expertise: 'الخبرات',
-    nav_sim: 'نموذج xG التفاعلي',
-    nav_projects: 'المشاريع',
-    nav_exp: 'المسيرة المهنية',
+    nav_data_track: 'مسار البيانات و BI',
+    nav_foot_track: 'معمل كرة القدم',
+    nav_exp: 'الخبرات',
     nav_contact: 'تواصل معي',
     nav_cta: 'تواصل للعمل',
     hero_badge: 'الجيزة، مصر · متاح للعمل عن بُعد أو الحضوري',
-    hero_title_1: 'مصطفى سعد — أحوّل بيانات كرة القدم والأعمال إلى',
-    hero_title_2: 'قرارات ذكية مدعومة بالبيانات',
+    hero_title_1: 'مصطفى سعد — أحوّل بيانات الأعمال وكرة القدم إلى',
+    hero_title_2: 'ذكاء تحليلي وقرارات دقيقة',
     hero_subtitle:
-      'محلل بيانات ومهندس تعلم آلي ومحلل أداء كروي بخبرة +6 سنوات في Excel (Power Query & Pivot) و Power BI و SQL و Python — أبني نماذج الأهداف المتوقعة (xG) وتقارير السكاوتنج وقواعد البيانات التحليلية.',
-    hero_btn_sim: 'جرّب نموذج xG لايف',
-    hero_stack_label: 'الأدوات الأساسية:',
-    float_impact: 'تحليل البيانات وذكاء كرة القدم',
+      'محلل بيانات بخبرة +6 سنوات أعمل عبر مسارين متخصصين منفصلين: أنظمة ذكاء الأعمال وقواعد البيانات وتعلم الآلة (SQL / Python / Power BI)، ومعمل تحليل بيانات وأداء كرة القدم.',
+    track_switch_lbl: 'اختر مجال العرض:',
+    track_all: 'المسارين معاً',
+    track_data: '📊 تحليل البيانات و BI',
+    track_foot: '⚽ تحليل كرة القدم',
+    hero_btn_data: 'استعرض مسار البيانات و BI',
+    hero_btn_foot: 'ادخل معمل كرة القدم ⚽',
+    float_impact: 'مساران: BI الأعمال + كرة القدم',
     stat_years: 'سنوات خبرة في البيانات',
-    stat_datasets: 'مشروع قواعد بيانات وأرشيف',
-    stat_certs: 'شهادات تحليل وسكاوتنج كروي',
-    stat_lang: 'تقارير احترافية بالعربية والإنجليزية',
-    exp_eyebrow: '// المهارات والقدرات الأساسية',
-    exp_title: 'حيث يلتقي تحليل الأعمال بتعلم الآلة وتحليل كرة القدم',
-    exp_desc:
-      'أجمع بين تصميم قواعد البيانات الدقيقة ولوحات ذكاء الأعمال المؤتمتة وبين النمذجة التنبؤية والتحليل التكتيكي الواضح.',
-    exp_1_title: 'ذكاء الأعمال والداشبورد (BI)',
-    exp_1_desc:
-      'بناء لوحات Power BI و Excel (Power Query / Power Pivot) و Tableau تفاعلية بنماذج DAX ومؤشرات أداء واضحة لصناع القرار.',
-    exp_2_title: 'Python و SQL وتعلم الآلة',
-    exp_2_desc:
-      'تنظيف وتدقيق وهيكلة مجموعات البيانات الكبيرة، تصميم أنظمة التكويد، وبناء نماذج تنبؤية مثل نماذج xG من بيانات الأحداث.',
-    exp_3_title: 'تحليل بيانات وأداء كرة القدم',
-    exp_3_desc:
-      'تحويل بيانات المباريات إلى رؤى تكتيكية واستكشافية واضحة للمدربين والكشافين: xG، Field Tilt، PPDA، الضغط وجودة الفرص.',
-    sim_eyebrow: '// تجربة تعلم آلي تفاعلية',
+    stat_aw: 'تحليل مبيعات AdventureWorks',
+    stat_stars: 'نجمة على مشاريع GitHub',
+    stat_certs: 'شهادات FA و PFSA و FP Academy',
+    data_zone_title: 'ذكاء الأعمال و SQL وتعلم الآلة للشركات',
+    data_zone_desc:
+      'تحليل بيانات متكامل للمؤسسات والأرشيف: قواعد بيانات SQL، نمذجة Star Schema، نماذج Python للتقسيم والاحتفاظ بالعملاء، ولوحات Power BI تنفيذية تفاعلية لايف.',
+    copy_data_url: '🔗 نسخ رابط مسار البيانات فقط',
+    dp_1: 'استعلامات T-SQL المتقدمة (Window Functions & CTEs)، نماذج Star Schema، وتدقيق الربحية الزمنية.',
+    dp_2: 'تقسيم العملاء بـ K-Means RFM، خرائط الاحتفاظ بالأفواج (Cohorts)، تحليل سلة المشتريات، وفحص الجودة بـ Python.',
+    dp_3: 'لوحات Power BI (PBIP)، مقاييس DAX للذكاء الزمني، أتمتة Power Query، وورش عمل Excel متقدمة.',
+    aw_title: 'AdventureWorks 2022 — تحليل مبيعات متكامل ($110M)',
+    aw_desc:
+      'مشروع كامل يربط SQL Server بـ Python (مع كتابة نتائج K-Means مباشرة في قاعدة البيانات عبر pyodbc) ولوحة Power BI من 6 صفحات للإجابة على 17 سؤال عمل: هوامش الربح، تقسيم RFM، الاحتفاظ بالأفواج (~345 يوم)، وحزم البيع المتقاطع (Lift > 90x).',
+    arch_title: 'أنظمة قواعد بيانات التراث والأرشيف البحثي',
+    arch_desc:
+      'تصميم أنظمة التكويد، سكريبتات مطابقة وتدقيق الأكواد بين قواعد البيانات، إدارة الميتاداتا، وبناء تقارير Power BI و Excel مع الإشراف على فرق العمل وتقديم ورش تدريبية متقدمة.',
+    pbi_title: 'لوحة Power BI التنفيذية التفاعلية (6 صفحات لايف)',
+    pbi_load_btn: '▶ تشغيل اللوحة التفاعلية',
+    pbi_launch: '▶ افتح تقرير Power BI التفاعلي (6 صفحات)',
+    foot_zone_title: 'تحليل كرة القدم، نماذج xG/xT والاستكشاف التكتيكي',
+    foot_zone_desc:
+      'تحويل بيانات أحداث المباريات (Opta / WhoScored) إلى تقارير PDF مؤتمتة، بوسترات AMOLED، ملفات أدوار اللاعبين، ورؤى استكشافية — مدعومة بشهادات The FA و PFSA و FP Academy.',
+    copy_foot_url: '🔗 نسخ رابط معمل الكرة فقط',
+    fma_title: 'Football Match Analysis — منصة تحليل المباريات المؤتمتة',
+    fma_desc:
+      'أداة Python متكاملة تحوّل رابط مباراة WhoScored/Opta واحد إلى نماذج xG و xT و xGChain، خرائط اللمسات والتمريرات، ملفات اللاعبين، 8 بوسترات AMOLED و Light، تقرير PDF ومقال .docx وأرشيف SQLite للدوريات الكبرى.',
+    scout_title: 'تحليل المباريات والخصوم واستكشاف اللاعبين',
+    scout_desc:
+      'تحويل مؤشرات الاستحواذ، شدة الضغط (PPDA)، Field Tilt، نسبة التمريرات التقدمية، و xT لكل 100 لمسة إلى تقارير مختصرة وعملية للمدربين وكشافي الأندية.',
+    sim_eyebrow: '// تجربة تعلم آلي تفاعلية لكرة القدم',
     sim_title: 'محاكي نموذج الأهداف المتوقعة (xG) المباشر',
     sim_desc:
-      'اضغط في أي مكان داخل نصف الملعب أو عدّل ظروف التسديدة بالأسفل لترى كيف يحسب نموذج الانحدار اللوجستي احتمالية الهدف وتأثير كل متغير لحظياً.',
+      'اضغط في أي مكان داخل الملعب أو عدّل ظروف التسديدة أو اضغط التشغيل التلقائي لمتابعة احتمالية الهدف وتأثير كل متغير لحظياً.',
     sim_click_hint: 'اضغط على الملعب لتحديد مكان التسديدة',
     sim_presets: 'أمثلة سريعة:',
     sim_prob_label: 'احتمالية تسجيل الهدف المتوقعة (xG)',
@@ -146,176 +166,186 @@ const TRANSLATIONS = {
     sim_assist: 'نوع التمريرة / الموقف',
     sim_pressure: 'الضغط الدفاعي (المدافعون أمام التسديدة)',
     sim_shap: 'تأثير كل متغير على توقع النموذج (Feature Impact)',
-    proj_eyebrow: '// نماذج من الأعمال',
-    proj_title: 'دراسات حالة ومشاريع مختارة',
-    filter_all: 'الكل',
-    filter_football: 'كرة القدم وتعلم الآلة',
-    filter_analytics: 'ذكاء الأعمال وقواعد البيانات',
-    p1_title: 'بناء نموذج الأهداف المتوقعة (xG) من بيانات الأحداث',
-    p1_desc:
-      'تطوير نموذج تعلم آلي مخصص لحساب احتمالية الأهداف باستخدام المسافة والزاوية وجزء الجسم ونوع التمريرة لتقييم جودة الفرص بدقة.',
-    p2_title: 'تقارير تحليل المباريات والخصوم واستكشاف اللاعبين',
-    p2_desc:
-      'إعداد تقارير تكتيكية وتحليلية تقيس الاستحواذ، Field Tilt، شدة الضغط (PPDA)، ومؤشرات اللاعبين باللغتين العربية والإنجليزية.',
-    p3_title: 'أنظمة قواعد بيانات التراث والأرشيف البحثي',
-    p3_desc:
-      'قيادة منهجيات بناء قواعد البيانات والتدقيق وأنظمة التكويد عبر مشاريع الأرشيف والبحث الاجتماعي مع الإشراف على فرق البيانات.',
-    p4_title: 'لوحات Power BI وأتمتة تقارير الأعمال',
-    p4_desc:
-      'تنفيذ مشاريع مستقلة تشمل تنظيف البيانات بـ Power Query وبناء نماذج DAX ولوحات KPI متكررة وتقديم ورش Excel متقدم.',
-    proj_details: 'عرض تفاصيل المشروع ←',
+    proj_details: 'تفاصيل المشروع ←',
     career_eyebrow: '// المسيرة المهنية',
-    career_title: 'الخبرات العملية والتعليم والشهادات',
+    career_title: 'الخبرات العملية والتعليم',
     role_1_t: 'محلل بيانات ثقافية وأخصائي أرشفة وميتاداتا',
     role_1_d:
       'إدارة قواعد بيانات التراث الثقافي، توحيد البيانات الوصفية، مطابقة الأكواد بين قواعد البيانات، وإعداد التقارير التحليلية.',
     role_2_t: 'محلل بيانات مستقل ومحلل أداء وبيانات كرة قدم',
     role_2_d:
-      'تنفيذ مشاريع تحليل بيانات ولوحات Power BI و SQL و Python للعملاء، بجانب بناء نماذج xG وتقارير المباريات والسكاوتنج.',
+      'تنفيذ مشاريع Power BI و SQL و Python للعملاء، بجانب تطوير نماذج xG/xT وتقارير المباريات المؤتمتة والسكاوتنج.',
     role_3_t: 'محلل بيانات أول ومسؤول أرشيف (وسابقاً محلل بيانات وباحث)',
     role_3_d:
       'قيادة أكثر من 7 مشاريع لقواعد البيانات البحثية والأرشيفية، تصميم أنظمة التكويد والمؤشرات التنبؤية بـ Excel و Power BI، الإشراف على الفريق، وتقديم ورش عمل متقدمة.',
     role_4_t: 'كاتب محتوى ومراجع تحليلي',
     role_4_d:
       'كتابة مقالات ومراجعات نقدية وتحليلية ساهمت في صقل مهارة السرد التحليلي الواضح بالعربية والإنجليزية.',
-    cert_tag: 'شهادات تحليل وتدريب واستكشاف كرة القدم',
     edu_tag: 'التعليم',
     edu_deg: 'بكالوريوس إدارة الأعمال (عام)',
-    langs_tag: 'التواصل وتقديم الرؤى',
+    share_tag: 'روابط ذكية مخصصة حسب الوظيفة',
+    share_desc: 'بتقدم على وظيفة معينة؟ ابعت رابط مباشر يفتح المجال المناسب فقط:',
+    langs_tag: 'تقارير ثنائية اللغة',
     langs_desc:
-      'تقديم تقارير تكتيكية ولوحات تحكم ووثائق تحليلية واضحة باللغتين العربية والإنجليزية للمدربين والكشافين وصناع القرار.',
+      'تقديم لوحات ذكاء الأعمال، التقارير التكتيكية، والوثائق التحليلية بطلاقة باللغتين العربية والإنجليزية.',
     contact_eyebrow: '// لنعمل معاً',
-    contact_title: 'تبحث عن محلل بيانات أو محلل أداء كروي؟',
+    contact_title: 'تبحث عن محلل بيانات أو BI أو محلل أداء كروي؟',
     contact_desc:
-      'متاح لفرص Football Data / Performance Analyst و Data Analyst (عن بُعد أو حضوري)، بالإضافة إلى الاستشارات وورش العمل.',
+      'متاح لفرص Data Analyst و BI/ML و Football Data / Performance Analyst (عن بُعد أو حضوري)، بالإضافة إلى الاستشارات وورش Excel/BI.',
     form_name: 'الاسم',
     form_email: 'البريد الإلكتروني',
     form_msg: 'تفاصيل الفرصة أو المشروع',
     form_send: 'إرسال عبر البريد الإلكتروني',
-    footer_built: 'أحوّل بيانات كرة القدم والأعمال إلى قرارات.',
-    modal_approach: 'المنهجية التقنية',
+    footer_built: 'أحوّل بيانات الأعمال وكرة القدم إلى قرارات.',
+    modal_approach: 'البنية التقنية والأثر',
   },
 };
 
 /* =========================================================
-   CASE STUDIES DATA
+   REAL GITHUB & ENTERPRISE CASE STUDIES
    ========================================================= */
 const CASE_STUDIES = [
   {
-    cat: { en: 'FOOTBALL ML · EVENT DATA', ar: 'تعلم الآلة وكرة القدم' },
+    cat: { en: 'GITHUB REPO · SQL → PYTHON ML → POWER BI', ar: 'مشروع GitHub · SQL + Python + Power BI' },
     title: {
-      en: 'Event-Based Expected Goals (xG) ML Model',
-      ar: 'نموذج الأهداف المتوقعة (xG) من بيانات الأحداث',
+      en: 'AdventureWorks 2022 — End-to-End Sales Analytics ($110M)',
+      ar: 'AdventureWorks 2022 — تحليل مبيعات متكامل ($110M)',
     },
     summary: {
-      en: 'Custom Expected Goals machine learning pipeline built from shot-level event data to measure true chance creation, finishing over/under-performance, and recruitment value.',
-      ar: 'نموذج تعلم آلي مخصص لحساب الأهداف المتوقعة (xG) من بيانات التسديدات لقياس جودة صناعة الفرص وكفاءة الإنهاء وتقييم اللاعبين.',
+      en: 'Single-source-of-truth investigation across a 72-table OLTP SQL Server database (121K sales lines) answering 17 concrete business questions on revenue drivers, margin leaks, customer churn, and cross-sell growth.',
+      ar: 'دراسة تحليلية متكاملة على قاعدة بيانات SQL Server من 72 جدولاً (121 ألف صف مبيعات) للإجابة على 17 سؤال عمل حول الإيرادات وتسرب الهوامش وسلوك العملاء.',
     },
-    metrics: ['Geometry + Context Features', 'Calibrated Probabilities', 'Python & Scikit-Learn'],
+    metrics: ['$110M Revenue · 72 Tables', 'K-Means RFM (k=4) Write-Back', 'Basket Lift > 90x · 6-Page Live BI'],
     bullets: {
       en: [
-        'Engineered Euclidean distance to goal center and visible goalmouth angle from (x, y) pitch coordinates.',
-        'Encoded shot context: body part (foot/header), assist pattern (cutback, through ball, cross), and game state.',
-        'Validated model calibration with Brier Score & ROC-AUC to produce reliable match and season xG totals.',
+        'T-SQL: Built Sales.vw_LineProfit using point-in-time ProductCostHistory, LAG(12) YoY growth, NTILE(10) Pareto deciles, and a 6-view pbi star schema.',
+        'Python (pyodbc + scikit-learn): Log-transformed RFM + K-Means (k=4 elbow method: VIP / At Risk / Hibernating / New-Promising) written straight back into dbo.CustomerSegments.',
+        'Cohort & Market Basket: Confirmed ~345-day median repurchase window and uncovered drivetrain bundles with >90x lift.',
+        'Power BI (PBIP): 6 interactive pages, 17 DAX measures (SAMEPERIODLASTYEAR, TOTALYTD, dynamic titles) with live public embed.',
       ],
       ar: [
-        'حساب المسافة الإقليدية وزاوية الرؤية الفعلية للمرمى انطلاقاً من إحداثيات التسديدة (x, y).',
-        'ترميز سياق التسديدة: جزء الجسم، نوع التمريرة المساعدة، وحالة اللعب.',
-        'التحقق من معايرة الاحتمالات باستخدام Brier Score و ROC-AUC لإنتاج تقارير xG دقيقة.',
+        'T-SQL: بناء عرض Sales.vw_LineProfit بالتكلفة التاريخية وقت البيع، وحساب النمو السنوي بـ LAG(12) وتحليل باريتو بـ NTILE(10) ونموذج Star Schema.',
+        'Python (pyodbc + scikit-learn): تقسيم RFM بـ K-Means (k=4) وكتابة النتائج مباشرة داخل جدول dbo.CustomerSegments في SQL Server.',
+        'تحليل الأفواج وسلة المشتريات: إثبات دورة إعادة الشراء (~345 يوماً) واكتشاف حزم بيع متقاطع بمعامل رفع > 90 ضعفاً.',
+        'Power BI (PBIP): لوحة تفاعلية من 6 صفحات و 17 مقياس DAX منشورة لايف.',
       ],
     },
-    tags: ['Python', 'Scikit-Learn', 'Pandas', 'Event Data', 'xG', 'Visualization'],
+    tags: ['SQL Server', 'T-SQL', 'Python', 'K-Means', 'RFM', 'Power BI (PBIP)', 'DAX'],
+    links: [
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/adventure-works-sales-analytics', cls: 'repo-link' },
+      { label: 'Live 6-Page Power BI ↗', url: PROFILE_CONFIG.powerBiUrl, cls: 'repo-link live-bi' },
+    ],
   },
   {
-    cat: { en: 'PERFORMANCE & SCOUTING', ar: 'تحليل الأداء والسكاوتنج' },
-    title: {
-      en: 'Match, Opposition & Player Scouting Intelligence',
-      ar: 'تقارير تحليل المباريات والخصوم واستكشاف اللاعبين',
-    },
-    summary: {
-      en: 'Actionable team and opposition analysis packs translating event metrics—Possession, Field Tilt, PPDA, pressing traps, and chance quality—into concise briefs for coaches and scouts.',
-      ar: 'حزم تقارير تكتيكية واستكشافية تحوّل مؤشرات الاستحواذ و Field Tilt و PPDA وجودة الفرص إلى توصيات عملية للمدربين والكشافين.',
-    },
-    metrics: ['PPDA & Pressing Maps', 'Field Tilt & Zone 14', 'EN & AR Reports'],
-    bullets: {
-      en: [
-        'Tracked team territorial dominance (Field Tilt) and defensive aggression (PPDA) across match phases.',
-        'Built role-based player scouting radars comparing candidates against league percentiles.',
-        'Combined FA/PFSA/FP Academy tactical frameworks with data visualization for coach-friendly communication.',
-      ],
-      ar: [
-        'قياس السيطرة الميدانية (Field Tilt) وشراسة الضغط العالي (PPDA) عبر مراحل المباراة.',
-        'إنشاء مخططات رادار لمقارنة اللاعبين المستهدفين بمتوسطات مراكزهم في الدوري.',
-        'دمج الأطر التكتيكية المعتمدة (FA / PFSA / FP Academy) مع العرض البصري الواضح.',
-      ],
-    },
-    tags: ['Sports Analytics', 'PPDA', 'Field Tilt', 'Power BI', 'Scouting', 'Python'],
-  },
-  {
-    cat: { en: 'DATA ARCHITECTURE & ARCHIVAL QA', ar: 'هيكلة قواعد البيانات والتدقيق' },
+    cat: { en: 'ENTERPRISE & ARCHIVAL DATA SYSTEMS', ar: 'أنظمة قواعد البيانات والأرشيف' },
     title: {
       en: 'Archival & Cultural Heritage Database Systems',
       ar: 'أنظمة قواعد بيانات التراث والأرشيف البحثي',
     },
     summary: {
-      en: 'Led data architecture, coding taxonomies, metadata QA, and team supervision across 7+ large-scale cultural heritage and social-research datasets at NADIM Foundation and Daftar Ahwal.',
-      ar: 'قيادة تصميم هيكلة البيانات وأنظمة التكويد وتدقيق الميتاداتا والإشراف على فرق العمل في أكثر من 7 مشاريع لقواعد البيانات التراثية والبحثية.',
+      en: 'Led dataset design, metadata coding taxonomies, cross-database QA validation, team supervision, and advanced Excel workshops across 7+ archival and social-research projects at NADIM Foundation and Daftar Ahwal.',
+      ar: 'قيادة تصميم قواعد البيانات وأنظمة التكويد وتدقيق الميتاداتا والإشراف على فرق العمل وتقديم ورش Excel متقدمة عبر أكثر من 7 مشاريع أرشيفية وبحثية في مؤسسة نديم ودفتر أحوال.',
     },
-    metrics: ['7+ Research Datasets', 'Coding Methodologies', 'Team Supervision'],
+    metrics: ['7+ Research Datasets', 'Automated Python/Excel QA', 'Team Lead & Workshops'],
     bullets: {
       en: [
-        'Designed unified ID coding taxonomies and validation rules reconciling multi-source archival sheets.',
-        'Built automated anomaly detection scripts in Python & Excel to catch duplicates, typos, and mismatched keys.',
-        'Supervised data teams and delivered structured advanced Excel workshops to elevate team capability.',
+        'Architected unified ID coding schemes and cross-sheet validation scripts detecting duplicates, typos, and key mismatches.',
+        'Built Power Query ETL & Power BI reporting indicators supporting project coordinators and institutional leadership.',
+        'Supervised data teams throughout project lifecycles and taught advanced Excel dataset workshops.',
       ],
       ar: [
-        'تصميم أنظمة تكويد موحدة وقواعد تحقق لمطابقة الجداول الأرشيفية متعددة المصادر.',
-        'بناء أدوات فحص وتدقيق تلقائي بـ Python و Excel لاكتشاف التكرارات وأخطاء الترقيم.',
-        'الإشراف على فرق إدخال وتحليل البيانات وتقديم ورش تدريبية متقدمة في Excel.',
+        'تصميم أنظمة تكويد موحدة وأدوات تحقق لاكتشاف التكرارات وأخطاء الربط بين الجداول.',
+        'بناء خطوط Power Query ولوحات Power BI لتوليد مؤشرات وتوقعات دقيقة للإدارة.',
+        'الإشراف الفني والإداري على فرق البيانات وتقديم ورش تدريبية متقدمة في Excel.',
       ],
     },
-    tags: ['SQL', 'Python', 'Metadata', 'Data Cleaning', 'Excel', 'Power BI'],
+    tags: ['Metadata Archiving', 'Data QA', 'SQL', 'Python', 'Power Query', 'Power BI'],
+    links: [],
   },
   {
-    cat: { en: 'BUSINESS INTELLIGENCE · FREELANCE', ar: 'ذكاء الأعمال والتقارير المؤتمتة' },
+    cat: { en: 'GITHUB FLAGSHIP (★ 7) · PYTHON + OPTA EVENT DATA', ar: 'مشروع GitHub الرئيسي (★ 7) · تحليل كرة القدم' },
     title: {
-      en: 'Automated BI Dashboards & Executive KPI Suites',
-      ar: 'لوحات Power BI وأتمتة تقارير مؤشرات الأداء',
+      en: 'Football Match Analysis — Automated Tactical Pipeline',
+      ar: 'Football Match Analysis — منصة تحليل المباريات المؤتمتة',
     },
     summary: {
-      en: 'End-to-end freelance analytics solutions transforming messy operational spreadsheets into clean star-schema models, DAX KPIs, and interactive Power BI / Tableau dashboards.',
-      ar: 'حلول تحليل بيانات متكاملة للعملاء تحوّل الجداول المتفرقة إلى نماذج بيانات منظمة ولوحات Power BI و Tableau تفاعلية.',
+      en: 'One WhoScored/Opta URL in → a complete evidence-led post-match package out: xG/xT models, player profiles, 8 AMOLED & Light 4:5 posters, a dynamic PDF report, publishable .docx article, and SQLite match archive.',
+      ar: 'رابط مباراة WhoScored/Opta واحد يُنتج حزمة تحليل كاملة: نماذج xG/xT، ملفات اللاعبين، 8 بوسترات AMOLED و Light، تقرير PDF، مقال .docx، وأرشيف SQLite.',
     },
-    metrics: ['Power Query ETL', 'DAX Data Modeling', 'Recurring KPI Automation'],
+    metrics: ['★ 7 GitHub Stars', '8 AMOLED + Light Posters', 'xG · xT · xGChain · SQLite'],
     bullets: {
       en: [
-        'Automated data extraction, cleaning, and transformation pipelines using SQL, Python, and Power Query.',
-        'Engineered reusable Power Pivot / Power BI data models with time-intelligence DAX measures.',
-        'Delivered executive-ready visuals and recurring KPI reports tailored to client decision workflows.',
+        'Automated event pipeline computing xG, xT per 100 touches, xGChain, xGBuildup, progressive-pass share, passing sonar, and touch-density heatmaps.',
+        'Dual-theme renderer generating AMOLED pure black (#000000) and Light Ink & Petrol (#F5F5F5) editions with adaptive kit-color contrast lifting.',
+        'Built-in season fixture CLI across Premier League, La Liga & Serie A plus package_manifest.json provenance tracking and SQLite history replay.',
       ],
       ar: [
-        'أتمتة سحب وتنظيف وتحويل البيانات باستخدام SQL و Python و Power Query.',
-        'بناء نماذج بيانات قابلة لإعادة الاستخدام مع مقاييس DAX للتحليل الزمني.',
-        'تسليم تقارير ومؤشرات أداء دورية مصممة لاحتياجات صناع القرار.',
+        'محرك مؤتمت يحسب xG و xT لكل 100 لمسة و xGChain و xGBuildup ونسبة التمريرات التقدمية وخرائط كثافة اللمس.',
+        'نظام تصدير مزدوج الثيم (AMOLED أسود #000000 وثيم فاتح #F5F5F5) مع ضبط تلقائي لتباين ألوان القمصان.',
+        'أداة CLI لجداول الدوري الإنجليزي والإسباني والإيطالي مع توثيق package_manifest.json وأرشيف SQLite.',
       ],
     },
-    tags: ['Power BI', 'DAX', 'Power Query', 'Power Pivot', 'Tableau', 'SQL'],
+    tags: ['Python', 'Opta / WhoScored', 'xG / xT', 'AMOLED Viz', 'Automated PDF', 'SQLite'],
+    links: [
+      { label: 'GitHub Repository (★ 7) ↗', url: 'https://github.com/mostafasaad91/Football-Match-Analysis', cls: 'repo-link emerald-link' },
+    ],
+  },
+  {
+    cat: { en: 'PERFORMANCE & SCOUTING INTELLIGENCE', ar: 'تحليل الأداء واستكشاف اللاعبين' },
+    title: {
+      en: 'Match, Opposition & Player Recruitment Scouting',
+      ar: 'تقارير تحليل المباريات والخصوم واستكشاف اللاعبين',
+    },
+    summary: {
+      en: 'Translating advanced match metrics—Field Tilt, PPDA pressing intensity, nested possession funnels, loss consequences, and player role percentiles—into clear English & Arabic briefs for coaches and scouts.',
+      ar: 'تحويل مؤشرات المباريات المتقدمة مثل Field Tilt و PPDA وتحليل فقدان الكرة ومئويات أدوار اللاعبين إلى تقارير عملية بالعربية والإنجليزية للمدربين والكشافين.',
+    },
+    metrics: ['PPDA & Field Tilt', 'Role Percentiles', 'FA · PFSA · FP Academy'],
+    bullets: {
+      en: [
+        'Evaluates team territorial control, pressing traps, box-entry routes, and score-state performance shifts.',
+        'Builds role-specific player profiles requiring statistically valid peer cohorts (min 8 same-role players for percentile ranks).',
+        'Combines formal scouting & coaching training (PFSA, The FA, FP Academy, England Football) with quantitative modeling.',
+      ],
+      ar: [
+        'تقييم السيطرة الميدانية ومصائد الضغط ومسارات دخول منطقة الجزاء وتأثير حالة النتيجة.',
+        'بناء ملفات أدوار للاعبين وفق معايير إحصائية دقيقة لمقارنة كل لاعب بنظرائه في نفس المركز.',
+        'دمج التأهيل التدريبي والاستكشافي المعتمد (PFSA / The FA / FP Academy) مع النمذجة الكمية.',
+      ],
+    },
+    tags: ['PPDA', 'Field Tilt', 'Scouting', 'Opposition Analysis', 'Bilingual Reports'],
+    links: [
+      { label: 'Football Toolkit Repo ↗', url: 'https://github.com/mostafasaad91/Football-Match-Analysis', cls: 'repo-link emerald-link' },
+    ],
   },
 ];
 
 /* =========================================================
-   HERO INTERACTIVE TELEMETRY MODES
+   HERO INTERACTIVE TELEMETRY MODES (BI/ML + xG + TACTICAL)
    ========================================================= */
 const TELEMETRY_MODES = {
+  bi: {
+    tag: 'REPO: ADVENTUREWORKS · $110M OLTP',
+    title: 'SQL Server → Python K-Means → Power BI',
+    kpis: [
+      { label: 'REVENUE', val: '$110M', delta: '72 TABLES', color: 'cyan' },
+      { label: 'RFM K-MEANS', val: 'k = 4', delta: 'LIFT > 90x', color: 'violet' },
+      { label: 'POWER BI', val: '6 Pages', delta: '17 DAX', color: 'emerald' },
+    ],
+    cmd: 'SELECT segment, COUNT(*) FROM dbo.CustomerSegments GROUP BY 1;',
+    type: 'bars',
+    values: [58, 72, 66, 84, 91, 79, 96, 89, 98],
+    labels: ['VIP', 'Core', 'New', 'Risk', 'Q1', 'Q2', 'Q3', 'Q4', 'LTV'],
+  },
   xg: {
-    tag: 'MODEL: CUSTOM_XG_EVENT_ML',
-    title: 'Shot Map & Expected Goals (xG) Quality',
+    tag: 'REPO: FOOTBALL-MATCH-ANALYSIS (★ 7)',
+    title: 'Opta Event Data → xG / xT Shot Map',
     kpis: [
       { label: 'TOTAL xG', val: '2.46', delta: '11 SHOTS', color: 'emerald' },
-      { label: 'ROC-AUC', val: '0.84', delta: 'CALIBRATED', color: 'cyan' },
+      { label: 'OUTPUTS', val: '8 Posters', delta: 'AMOLED/LIGHT', color: 'cyan' },
       { label: 'PPDA', val: '7.8', delta: 'HIGH PRESS', color: 'violet' },
     ],
-    cmd: "xg_model.predict_proba(shots_df[['dist', 'angle', 'body_part', 'assist']])",
+    cmd: 'python football_match_analysis.py  # 1 WhoScored URL -> PDF + 8 Posters',
     type: 'pitch',
     shots: [
       { x: 220, y: 44, xg: 0.62, goal: true, lbl: 'GOAL · 0.62 xG · 6.8m Tap-In' },
@@ -333,34 +363,21 @@ const TELEMETRY_MODES = {
   },
   tactical: {
     tag: 'REPORT: MATCH & OPPOSITION KPIs',
-    title: 'Territorial Control, Pressing & Chance Quality',
+    title: 'Field Tilt, Pressing (PPDA) & xT Threat',
     kpis: [
       { label: 'FIELD TILT', val: '64.2%', delta: '+11.4% AVG', color: 'cyan' },
-      { label: 'POSSESSION', val: '59.8%', delta: 'ZONE 14 HIGH', color: 'violet' },
+      { label: 'xT / 100', val: '1.84', delta: '92nd PCTL', color: 'violet' },
       { label: 'xG DIFF', val: '+1.68', delta: 'DOMINANT', color: 'emerald' },
     ],
-    cmd: 'match_report.summarize(metrics=["field_tilt", "ppda", "xg_chain", "box_entries"])',
+    cmd: 'python -m football_analysis.pipeline.fixtures arsenal --last --url',
     type: 'tacticalBars',
     items: [
       { name: 'Field Tilt', val: 64, opp: 36, unit: '%' },
       { name: 'Possession', val: 60, opp: 40, unit: '%' },
       { name: 'Box Entries', val: 78, opp: 32, unit: '' },
       { name: 'Pressing (Inv PPDA)', val: 82, opp: 45, unit: '' },
-      { name: 'Chance Quality', val: 74, opp: 38, unit: '' },
+      { name: 'xT Progression', val: 76, opp: 39, unit: '' },
     ],
-  },
-  bi: {
-    tag: 'PIPELINE: POWER BI · SQL · PYTHON QA',
-    title: 'Dataset Validation & BI Reporting Throughput',
-    kpis: [
-      { label: 'QA PASS', val: '99.6%', delta: 'VALIDATED', color: 'emerald' },
-      { label: 'DATASETS', val: '7+ LABS', delta: 'STRUCTURED', color: 'cyan' },
-      { label: 'TIME SAVED', val: '-80%', delta: 'POWER QUERY', color: 'violet' },
-    ],
-    cmd: 'SELECT monument_id, COUNT(DISTINCT base_id) FROM archive_qa GROUP BY 1;',
-    type: 'bars',
-    values: [56, 70, 65, 82, 88, 78, 94, 91, 98],
-    labels: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9'],
   },
 };
 
@@ -384,14 +401,13 @@ function renderHeroChart(modeKey) {
 
   if (cfg.type === 'pitch') {
     const pitchMarkup = `
-      <rect x="24" y="14" width="392" height="190" rx="8" fill="rgba(16,185,129,0.08)" stroke="rgba(148,163,184,0.3)" stroke-width="1.4"/>
-      <rect x="184" y="6" width="72" height="8" rx="1.5" fill="rgba(0,229,255,0.22)" stroke="#00E5FF" stroke-width="1.5"/>
-      <rect x="108" y="14" width="224" height="96" fill="none" stroke="rgba(148,163,184,0.28)" stroke-width="1.2"/>
-      <rect x="164" y="14" width="112" height="36" fill="none" stroke="rgba(148,163,184,0.28)" stroke-width="1.2"/>
-      <circle cx="220" cy="76" r="2.2" fill="rgba(148,163,184,0.5)"/>
-      <path d="M178 110 A 48 48 0 0 0 262 110" fill="none" stroke="rgba(148,163,184,0.28)" stroke-width="1.2"/>
-      <!-- Animated shot trajectory rays into goal -->
-      <line class="shot-ray" x1="196" y1="74" x2="216" y2="12" stroke="rgba(16,185,129,0.55)" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <rect x="24" y="14" width="392" height="190" rx="8" fill="rgba(16,185,129,0.08)" stroke="rgba(255,255,255,0.24)" stroke-width="1.4"/>
+      <rect x="184" y="6" width="72" height="8" rx="1.5" fill="rgba(16,185,129,0.22)" stroke="#10B981" stroke-width="1.5"/>
+      <rect x="108" y="14" width="224" height="96" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+      <rect x="164" y="14" width="112" height="36" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+      <circle cx="220" cy="76" r="2.2" fill="rgba(255,255,255,0.5)"/>
+      <path d="M178 110 A 48 48 0 0 0 262 110" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+      <line class="shot-ray" x1="196" y1="74" x2="216" y2="12" stroke="rgba(16,185,129,0.6)" stroke-width="1.5" stroke-dasharray="5 5"/>
       <line class="shot-ray" x1="215" y1="122" x2="226" y2="12" stroke="rgba(0,229,255,0.45)" stroke-width="1.3" stroke-dasharray="5 5"/>
       <text x="34" y="194" fill="#10B981" font-size="9.5" font-family="JetBrains Mono">● Goal</text>
       <text x="90" y="194" fill="#00E5FF" font-size="9.5" font-family="JetBrains Mono">○ Saved / Blocked (size = xG)</text>
@@ -403,7 +419,7 @@ function renderHeroChart(modeKey) {
         if (s.goal) {
           return `
             <circle class="goal-ripple" cx="${s.x}" cy="${s.y}" r="${r + 2}" fill="none" stroke="#10B981" stroke-width="1.6" style="animation-delay:${(idx * 0.4).toFixed(1)}s"/>
-            <circle class="chart-pt shot-pop" cx="${s.x}" cy="${s.y}" r="${r}" fill="#10B981" stroke="#f8fafc" stroke-width="1.6" style="animation-delay:${delay}s" data-tip="${s.lbl}"/>
+            <circle class="chart-pt shot-pop" cx="${s.x}" cy="${s.y}" r="${r}" fill="#10B981" stroke="#ffffff" stroke-width="1.6" style="animation-delay:${delay}s" data-tip="${s.lbl}"/>
           `;
         }
         return `<circle class="chart-pt shot-pop" cx="${s.x}" cy="${s.y}" r="${r}" fill="rgba(0,229,255,0.32)" stroke="#00E5FF" stroke-width="1.5" style="animation-delay:${delay}s" data-tip="${s.lbl}"/>`;
@@ -413,22 +429,23 @@ function renderHeroChart(modeKey) {
   } else if (cfg.type === 'tacticalBars') {
     const startY = 26;
     const rowH = 34;
-    svg.innerHTML = cfg.items
-      .map((item, i) => {
-        const y = startY + i * rowH;
-        const barMax = 210;
-        const w1 = (item.val / 100) * barMax;
-        const w2 = (item.opp / 100) * barMax;
-        const delay = (i * 0.09).toFixed(2);
-        return `
-          <text x="14" y="${y + 8}" fill="#94a3b8" font-size="10.5" font-family="JetBrains Mono">${item.name}</text>
-          <rect x="155" y="${y - 4}" width="${barMax}" height="10" rx="5" fill="rgba(148,163,184,0.12)"/>
-          <rect class="chart-pt bar-grow-x" x="155" y="${y - 4}" width="${w1}" height="10" rx="5" fill="url(#tacGrad)" style="animation-delay:${delay}s" data-tip="${item.name}: Team ${item.val}${item.unit} vs Opp ${item.opp}${item.unit}"/>
-          <rect class="bar-grow-x" x="155" y="${y + 9}" width="${w2}" height="5" rx="2.5" fill="rgba(167,139,250,0.55)" style="animation-delay:${(i * 0.09 + 0.1).toFixed(2)}s"/>
-          <text x="378" y="${y + 6}" fill="#00E5FF" font-size="10.5" font-family="JetBrains Mono">${item.val}${item.unit}</text>
-        `;
-      })
-      .join('') +
+    svg.innerHTML =
+      cfg.items
+        .map((item, i) => {
+          const y = startY + i * rowH;
+          const barMax = 210;
+          const w1 = (item.val / 100) * barMax;
+          const w2 = (item.opp / 100) * barMax;
+          const delay = (i * 0.09).toFixed(2);
+          return `
+            <text x="14" y="${y + 8}" fill="#9ca3af" font-size="10.5" font-family="JetBrains Mono">${item.name}</text>
+            <rect x="155" y="${y - 4}" width="${barMax}" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
+            <rect class="chart-pt bar-grow-x" x="155" y="${y - 4}" width="${w1}" height="10" rx="5" fill="url(#tacGrad)" style="animation-delay:${delay}s" data-tip="${item.name}: Team ${item.val}${item.unit} vs Opp ${item.opp}${item.unit}"/>
+            <rect class="bar-grow-x" x="155" y="${y + 9}" width="${w2}" height="5" rx="2.5" fill="rgba(167,139,250,0.55)" style="animation-delay:${(i * 0.09 + 0.1).toFixed(2)}s"/>
+            <text x="378" y="${y + 6}" fill="#10B981" font-size="10.5" font-family="JetBrains Mono">${item.val}${item.unit}</text>
+          `;
+        })
+        .join('') +
       `<defs><linearGradient id="tacGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00E5FF"/><stop offset="100%" stop-color="#10B981"/></linearGradient></defs>`;
   } else {
     const W = 440, H = 215, padL = 32, padR = 16, padT = 18, padB = 26;
@@ -440,7 +457,7 @@ function renderHeroChart(modeKey) {
     let grid = '';
     for (let i = 0; i <= 4; i++) {
       const y = padT + (plotH / 4) * i;
-      grid += `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="rgba(148,163,184,0.12)" stroke-dasharray="3 4"/>`;
+      grid += `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3 4"/>`;
     }
     svg.innerHTML =
       grid +
@@ -452,9 +469,9 @@ function renderHeroChart(modeKey) {
           const y = padT + plotH - h;
           const delay = (i * 0.06).toFixed(2);
           return `
-            <rect class="chart-pt bar-grow" x="${x}" y="${y}" width="${barW}" height="${h}" rx="5" fill="url(#barGrad)" opacity="0.9" style="animation-delay:${delay}s"
-              data-tip="${cfg.labels[i]} · QA Score ${v}% · Power Query + SQL"/>
-            <text x="${x + barW / 2}" y="${H - 8}" text-anchor="middle" fill="#64748b" font-size="9.5" font-family="JetBrains Mono">${cfg.labels[i]}</text>
+            <rect class="chart-pt bar-grow" x="${x}" y="${y}" width="${barW}" height="${h}" rx="5" fill="url(#barGrad)" opacity="0.92" style="animation-delay:${delay}s"
+              data-tip="${cfg.labels[i]} · Index ${v}% · AdventureWorks SQL + Python + BI"/>
+            <text x="${x + barW / 2}" y="${H - 8}" text-anchor="middle" fill="#6b7280" font-size="9.5" font-family="JetBrains Mono">${cfg.labels[i]}</text>
           `;
         })
         .join('');
@@ -473,27 +490,19 @@ function renderHeroChart(modeKey) {
 /* =========================================================
    LIVE INTERACTIVE xG (EXPECTED GOALS) ML SIMULATOR
    ========================================================= */
-const simState = {
-  // SVG coordinates on 420x290 pitch (Goal center is x=210, y=16; scale: 1m ≈ 6.9px)
-  sx: 210,
-  sy: 92, // Penalty spot (~11m)
-};
+const simState = { sx: 210, sy: 92 };
 
 function computeXG() {
   const goalX = 210;
   const goalY = 16;
   const pxPerMeter = 6.9;
 
-  // Pitch meters
   const dxM = (simState.sx - goalX) / pxPerMeter;
   const dyM = Math.max(0.8, (simState.sy - goalY) / pxPerMeter);
   const distM = Math.hypot(dxM, dyM);
 
-  // Visible goalmouth angle (goal width = 7.32m -> half = 3.66m)
-  const leftPostX = -3.66;
-  const rightPostX = 3.66;
-  const a1 = Math.atan2(dyM, dxM - leftPostX);
-  const a2 = Math.atan2(dyM, dxM - rightPostX);
+  const a1 = Math.atan2(dyM, dxM + 3.66);
+  const a2 = Math.atan2(dyM, dxM - 3.66);
   const angleRad = Math.abs(a1 - a2);
   const angleDeg = (angleRad * 180) / Math.PI;
 
@@ -501,10 +510,9 @@ function computeXG() {
   const assist = document.getElementById('simAssist').value;
   const pressure = Number(document.getElementById('simPressure').value);
 
-  // Realistic logistic regression coefficients (calibrated to football xG behavior)
   const intercept = -0.35;
-  const distTerm = -0.145 * (distM - 11.0); // closer than 11m boosts xG
-  const angleTerm = 1.65 * (angleRad - 0.52); // wider angle boosts xG
+  const distTerm = -0.145 * (distM - 11.0);
+  const angleTerm = 1.65 * (angleRad - 0.52);
   const bodyMap = { foot: 0.15, weak: -0.28, header: -0.68 };
   const assistMap = { through: 0.36, open: 0.0, cross: -0.32, counter: 0.52 };
   const bodyTerm = bodyMap[body] || 0;
@@ -512,10 +520,8 @@ function computeXG() {
   const pressTerm = -0.34 * (pressure - 1);
 
   const logit = intercept + distTerm + angleTerm + bodyTerm + assistTerm + pressTerm;
-  const prob = 1 / (1 + Math.exp(-logit));
-  const clamped = Math.min(0.96, Math.max(0.01, prob));
+  const clamped = Math.min(0.96, Math.max(0.01, 1 / (1 + Math.exp(-logit))));
 
-  // Update pitch visuals (including pulsing sonar & flowing shot ray)
   document.getElementById('shotDot').setAttribute('cx', simState.sx);
   document.getElementById('shotDot').setAttribute('cy', simState.sy);
   document.getElementById('shotHalo').setAttribute('cx', simState.sx);
@@ -532,9 +538,7 @@ function computeXG() {
     ray.setAttribute('x2', goalX);
     ray.setAttribute('y2', goalY);
   }
-  document
-    .getElementById('shotCone')
-    .setAttribute('points', `${simState.sx},${simState.sy} 174,16 246,16`);
+  document.getElementById('shotCone').setAttribute('points', `${simState.sx},${simState.sy} 174,16 246,16`);
 
   document.getElementById('shotCoords').textContent = `${distM.toFixed(1)}m · ${angleDeg.toFixed(1)}°`;
   document.getElementById('xgBig').innerHTML = `${clamped.toFixed(2)} <span class="xg-pct">(${(clamped * 100).toFixed(1)}%)</span>`;
@@ -549,7 +553,6 @@ function computeXG() {
         : `${pressure} Defender${pressure > 1 ? 's' : ''}`;
   document.getElementById('pressureVal').textContent = pText;
 
-  // Quality tier badge
   const qEl = document.getElementById('xgQuality');
   if (clamped >= 0.35) {
     qEl.textContent = currentLang === 'ar' ? 'فرصة محققة' : 'BIG CHANCE';
@@ -568,7 +571,6 @@ function computeXG() {
     qEl.style.background = 'rgba(245,158,11,0.14)';
   }
 
-  // SHAP-style Feature Impact Bars
   const factors = [
     { name: currentLang === 'ar' ? 'المسافة' : 'Shot Distance', val: distTerm },
     { name: currentLang === 'ar' ? 'زاوية المرمى' : 'Goal Angle', val: angleTerm },
@@ -712,7 +714,7 @@ function initXGSimulator() {
 }
 
 /* =========================================================
-   NEURAL NETWORK CANVAS WITH TRAVELING DATA SIGNAL PULSES
+   NEURAL NETWORK CANVAS WITH TRAVELING DATA PULSES
    ========================================================= */
 function initNeuralCanvas() {
   const canvas = document.getElementById('neuralCanvas');
@@ -752,7 +754,6 @@ function initNeuralCanvas() {
   function frame() {
     ctx.clearRect(0, 0, width, height);
 
-    // Subtle cursor glow aura
     if (mouse.x > 0 && mouse.y > 0) {
       const aura = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 170);
       aura.addColorStop(0, 'rgba(0, 229, 255, 0.14)');
@@ -787,7 +788,6 @@ function initNeuralCanvas() {
           ctx.lineTo(m.x, m.y);
           ctx.stroke();
 
-          // Occasionally spawn a glowing data pulse traveling along this edge
           if (pulses.length < 18 && Math.random() < 0.0025) {
             pulses.push({ from: n, to: m, t: 0, speed: 0.015 + Math.random() * 0.015, kind: n.kind });
           }
@@ -815,7 +815,6 @@ function initNeuralCanvas() {
       ctx.fill();
     }
 
-    // Animate traveling signal packets
     for (let k = pulses.length - 1; k >= 0; k--) {
       const p = pulses[k];
       p.t += p.speed;
@@ -857,16 +856,16 @@ function initTypingRotator() {
 
   const phrases = {
     en: [
-      'Custom xG Machine Learning Models',
-      'Power BI, DAX & Power Query Dashboards',
-      'Tactical Match, PPDA & Field Tilt Reports',
-      'SQL, Python & Archival Data Validation',
+      'SQL Server → Python K-Means → Power BI ($110M)',
+      'Opta Event Data → xG / xT & 8 AMOLED Match Posters',
+      'Cohort Retention, RFM Segmentation & DAX Modeling',
+      'Tactical Scouting: PPDA, Field Tilt & Role Profiles',
     ],
     ar: [
-      'بناء نماذج الأهداف المتوقعة (xG) بتعلم الآلة',
-      'لوحات Power BI و DAX و Power Query',
-      'تحليل المباريات والضغط (PPDA & Field Tilt)',
-      'تنظيف وتدقيق قواعد البيانات بـ SQL و Python',
+      'SQL Server ← Python K-Means ← لوحات Power BI',
+      'بيانات Opta ← نماذج xG / xT وبوسترات AMOLED',
+      'تحليل الأفواج وتقسيم العملاء RFM ومقاييس DAX',
+      'التحليل التكتيكي والسكاوتنج: PPDA و Field Tilt',
     ],
   };
 
@@ -877,7 +876,6 @@ function initTypingRotator() {
   function tick() {
     const list = phrases[currentLang] || phrases.en;
     const word = list[phraseIdx % list.length];
-
     if (!deleting) {
       charIdx++;
       el.textContent = word.slice(0, charIdx);
@@ -886,7 +884,7 @@ function initTypingRotator() {
         setTimeout(tick, 1800);
         return;
       }
-      setTimeout(tick, 44);
+      setTimeout(tick, 42);
     } else {
       charIdx--;
       el.textContent = word.slice(0, Math.max(0, charIdx));
@@ -896,14 +894,14 @@ function initTypingRotator() {
         setTimeout(tick, 320);
         return;
       }
-      setTimeout(tick, 24);
+      setTimeout(tick, 22);
     }
   }
   tick();
 }
 
 /* =========================================================
-   INTERACTIVE 3D TILT + CURSOR SPOTLIGHT ON CARDS
+   3D TILT + CURSOR SPOTLIGHT
    ========================================================= */
 function initTiltCards() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -912,8 +910,8 @@ function initTiltCards() {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const rx = ((y / rect.height) - 0.5) * -7;
-      const ry = ((x / rect.width) - 0.5) * 7;
+      const rx = (y / rect.height - 0.5) * -7;
+      const ry = (x / rect.width - 0.5) * 7;
       card.style.setProperty('--mx', `${x}px`);
       card.style.setProperty('--my', `${y}px`);
       card.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-5px)`;
@@ -925,9 +923,39 @@ function initTiltCards() {
 }
 
 /* =========================================================
-   APP INITIALIZATION
+   DUAL-TRACK MODE + POWER BI EMBED + APP INIT
    ========================================================= */
 let currentLang = 'en';
+let selectHeroModeGlobal = null;
+
+function applyTrackMode(track, scrollToTrack = false) {
+  const valid = ['all', 'data', 'football'].includes(track) ? track : 'all';
+  document.documentElement.setAttribute('data-track', valid);
+
+  document.querySelectorAll('.track-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.trackBtn === valid);
+  });
+
+  // Ensure reveal zones become visible immediately when switched
+  document.querySelectorAll('.track-zone').forEach((z) => z.classList.add('visible'));
+
+  // Sync hero telemetry preview with selected track
+  if (selectHeroModeGlobal) {
+    if (valid === 'football') selectHeroModeGlobal('xg');
+    else if (valid === 'data') selectHeroModeGlobal('bi');
+  }
+
+  // Update URL query cleanly without reloading
+  const url = new URL(window.location.href);
+  if (valid === 'all') url.searchParams.delete('track');
+  else url.searchParams.set('track', valid);
+  window.history.replaceState({}, '', url);
+
+  if (scrollToTrack && valid !== 'all') {
+    const target = document.getElementById(valid === 'data' ? 'data-track' : 'football-track');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
 
 function applyLanguage(lang) {
   currentLang = lang;
@@ -956,7 +984,7 @@ function initCountersAndReveal() {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.08 }
   );
   document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
@@ -991,6 +1019,10 @@ function openCaseModal(idx) {
   document.getElementById('mMetrics').innerHTML = item.metrics.map((m) => `<span>${m}</span>`).join('');
   document.getElementById('mBullets').innerHTML = item.bullets[currentLang].map((b) => `<li>${b}</li>`).join('');
   document.getElementById('mTags').innerHTML = item.tags.map((t) => `<span class="tech-chip">${t}</span>`).join('');
+  document.getElementById('mLinks').innerHTML = (item.links || [])
+    .map((l) => `<a href="${l.url}" target="_blank" rel="noopener" class="${l.cls} mono">${l.label}</a>`)
+    .join('');
+
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
 }
@@ -1001,10 +1033,17 @@ function closeCaseModal() {
   modal.setAttribute('aria-hidden', 'true');
 }
 
+function mountPowerBI() {
+  const stage = document.getElementById('pbiStage');
+  if (!stage || stage.querySelector('iframe')) return;
+  stage.innerHTML = `<iframe class="pbi-iframe" title="AdventureWorks 2022 Live Power BI Dashboard" src="${PROFILE_CONFIG.powerBiUrl}" frameborder="0" allowFullScreen="true"></iframe>`;
+  const btn = document.getElementById('loadPbiBtn');
+  if (btn) btn.textContent = currentLang === 'ar' ? '✓ اللوحة قيد التشغيل' : '✓ Dashboard Live';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Scroll progress + navbar background
   const navbar = document.getElementById('navbar');
   const progressBar = document.getElementById('scrollProgress');
   window.addEventListener('scroll', () => {
@@ -1014,7 +1053,7 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBar.style.width = `${pct}%`;
   });
 
-  // Theme Toggle (Dark / Light)
+  // Theme Toggle
   const themeBtn = document.getElementById('themeToggle');
   const themeIcon = document.getElementById('themeIcon');
   themeBtn.addEventListener('click', () => {
@@ -1024,7 +1063,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeIcon.textContent = next === 'dark' ? '☀' : '☾';
   });
 
-  // Mobile menu
+  // Mobile Menu
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
   menuToggle.addEventListener('click', () => {
@@ -1035,13 +1074,13 @@ document.addEventListener('DOMContentLoaded', () => {
     a.addEventListener('click', () => navLinks.classList.remove('open'))
   );
 
-  // Language switcher
+  // Language Switcher
   document.getElementById('langToggle').addEventListener('click', () => {
     applyLanguage(currentLang === 'en' ? 'ar' : 'en');
   });
 
-  // Hero Telemetry Tabs + Gentle Auto-Cycle (pauses on hover/click)
-  const heroModes = ['xg', 'tactical', 'bi'];
+  // Hero Telemetry Tabs + Auto-Cycle
+  const heroModes = ['bi', 'xg', 'tactical'];
   let heroModeIdx = 0;
   let heroPaused = false;
 
@@ -1054,8 +1093,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     renderHeroChart(mode);
   }
+  selectHeroModeGlobal = selectHeroMode;
 
-  selectHeroMode('xg');
+  selectHeroMode('bi');
   document.querySelectorAll('.t-tab').forEach((btn) => {
     btn.addEventListener('click', () => {
       heroPaused = true;
@@ -1074,17 +1114,46 @@ document.addEventListener('DOMContentLoaded', () => {
     selectHeroMode(heroModes[heroModeIdx]);
   }, 6500);
 
-  // Project Filter Tabs
-  document.querySelectorAll('.filter-btn').forEach((btn) => {
+  // Dual-Track Switcher + URL Param (?track=data or ?track=football)
+  document.querySelectorAll('.track-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.project-card').forEach((card) => {
-        card.classList.toggle('hidden', !(filter === 'all' || card.dataset.cat === filter));
-      });
+      applyTrackMode(btn.dataset.trackBtn, false);
     });
   });
+
+  // Navbar Track Links automatically ensure that track is visible
+  document.querySelector('.nav-data-link')?.addEventListener('click', () => {
+    if (document.documentElement.getAttribute('data-track') === 'football') applyTrackMode('all', false);
+  });
+  document.querySelector('.nav-foot-link')?.addEventListener('click', () => {
+    if (document.documentElement.getAttribute('data-track') === 'data') applyTrackMode('all', false);
+  });
+
+  // Copy Track-Specific Shareable Links
+  document.querySelectorAll('.copy-track-link').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const track = btn.dataset.copyTrack;
+      const shareUrl = `${PROFILE_CONFIG.liveBaseUrl}?track=${track}`;
+      const orig = btn.textContent;
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        btn.textContent = currentLang === 'ar' ? `✓ تم نسخ رابط ${track}` : `✓ Copied ?track=${track}`;
+      } catch {
+        btn.textContent = shareUrl;
+      }
+      setTimeout(() => (btn.textContent = orig), 2400);
+    });
+  });
+
+  // Read initial ?track= from URL
+  const initialTrack = new URLSearchParams(window.location.search).get('track');
+  if (initialTrack === 'data' || initialTrack === 'football') {
+    applyTrackMode(initialTrack, false);
+  }
+
+  // Live Power BI Mount Buttons
+  document.getElementById('loadPbiBtn')?.addEventListener('click', mountPowerBI);
+  document.getElementById('loadPbiOverlayBtn')?.addEventListener('click', mountPowerBI);
 
   // Modal
   document.querySelectorAll('.open-modal').forEach((btn) => {
@@ -1110,7 +1179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => (status.textContent = 'COPY'), 2200);
   });
 
-  // Contact Form -> opens real mailto draft to mostafasaad044@gmail.com
+  // Contact Form
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('fName').value.trim();

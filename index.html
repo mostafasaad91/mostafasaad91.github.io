@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark" data-track="all">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mostafa Saad — Data Analyst, ML &amp; Football Performance Analyst</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='7' fill='%23000000'/%3E%3Crect x='2' y='2' width='24' height='24' rx='6' fill='none' stroke='%2300E5FF' stroke-width='2'/%3E%3Cpath d='M8 18.5L14.5 10.5L20.5 14' fill='none' stroke='%2310B981' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='8' cy='18.5' r='2.2' fill='%2300E5FF'/%3E%3Ccircle cx='14.5' cy='10.5' r='2.2' fill='%23A78BFA'/%3E%3Ccircle cx='20.5' cy='14' r='2.2' fill='%2310B981'/%3E%3C/svg%3E" />
-  <meta name="description" content="Portfolio of Mostafa Saad — Data Analyst, Machine Learning & Football Performance Analyst with 6+ years of experience turning football and business data into decisions." />
+  <meta name="description" content="Portfolio of Mostafa Saad — Data Analyst (SQL, Python, Power BI, ML) & Football Data / Performance Analyst (Opta event data, xG/xT models, tactical scouting)." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -42,9 +42,8 @@
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Primary">
-        <a href="#expertise" data-i18n="nav_expertise">Expertise</a>
-        <a href="#simulator" data-i18n="nav_sim">Live xG Model</a>
-        <a href="#projects" data-i18n="nav_projects">Case Studies</a>
+        <a href="#data-track" class="nav-data-link" data-i18n="nav_data_track">Data &amp; BI Track</a>
+        <a href="#football-track" class="nav-foot-link" data-i18n="nav_foot_track">Football Lab</a>
         <a href="#experience" data-i18n="nav_exp">Experience</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
@@ -77,40 +76,41 @@
           </div>
 
           <h1 class="hero-title">
-            <span data-i18n="hero_title_1">Mostafa Saad — Turning Football &amp; Business Data into</span>
+            <span data-i18n="hero_title_1">Mostafa Saad — Turning Business &amp; Football Data into</span>
             <span class="gradient-text animated-gradient" data-i18n="hero_title_2">Actionable Intelligence</span>
           </h1>
 
           <div class="typing-line mono" aria-live="polite">
             <span class="typing-prefix">&gt;_</span>
-            <span id="typingText">Custom xG Machine Learning Models</span>
+            <span id="typingText">SQL → Python ML → Power BI Dashboards</span>
             <span class="typing-cursor">|</span>
           </div>
 
           <p class="hero-subtitle" data-i18n="hero_subtitle">
-            Data Analyst, Machine Learning &amp; Football Performance Analyst with 6+ years of experience in Excel (Power Query &amp; Pivot), Power BI, SQL, and Python — building custom xG models, scouting reports, and scalable analytical databases.
+            Data Analyst with 6+ years of experience operating across two specialized tracks: Enterprise BI, SQL &amp; Machine Learning systems, and independent Football Data &amp; Performance Analytics.
           </p>
 
-          <div class="hero-cta">
-            <a href="#simulator" class="btn btn-primary btn-lg">
-              <span data-i18n="hero_btn_sim">Try Live xG Model</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/mostafa-saad-171086191/" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-              <span>LinkedIn ↗</span>
-            </a>
+          <!-- DUAL-TRACK LENS SWITCHER (Shareable via ?track=data or ?track=football) -->
+          <div class="track-switcher glass" role="group" aria-label="Portfolio Track Switcher">
+            <span class="mono switcher-lbl" data-i18n="track_switch_lbl">CHOOSE PORTFOLIO VIEW:</span>
+            <div class="switcher-btns">
+              <button class="track-btn active" data-track-btn="all" type="button" data-i18n="track_all">All Tracks</button>
+              <button class="track-btn data-btn" data-track-btn="data" type="button" data-i18n="track_data">📊 Business Data &amp; BI</button>
+              <button class="track-btn foot-btn" data-track-btn="football" type="button" data-i18n="track_foot">⚽ Football Analytics</button>
+            </div>
           </div>
 
-          <div class="hero-stack-strip">
-            <span class="mono strip-label" data-i18n="hero_stack_label">CORE TOOLKIT:</span>
-            <div class="chip-row">
-              <span class="tech-chip">Python &amp; ML</span>
-              <span class="tech-chip">SQL</span>
-              <span class="tech-chip">Power BI &amp; DAX</span>
-              <span class="tech-chip">Excel / Power Query</span>
-              <span class="tech-chip">Tableau</span>
-              <span class="tech-chip">xG &amp; Event Data</span>
-            </div>
+          <div class="hero-cta">
+            <a href="#data-track" class="btn btn-primary btn-lg">
+              <span data-i18n="hero_btn_data">Explore Data &amp; BI</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#football-track" class="btn btn-emerald btn-lg">
+              <span data-i18n="hero_btn_foot">Enter Football Lab ⚽</span>
+            </a>
+            <a href="https://github.com/mostafasaad91" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+              <span>GitHub ↗</span>
+            </a>
           </div>
         </div>
 
@@ -124,17 +124,17 @@
                 <span class="dot green"></span>
               </div>
               <div class="telemetry-tabs" role="tablist">
-                <button class="t-tab active" data-mode="xg" role="tab" aria-selected="true">xG Pitch</button>
+                <button class="t-tab active" data-mode="bi" role="tab" aria-selected="true">BI &amp; ML</button>
+                <button class="t-tab" data-mode="xg" role="tab" aria-selected="false">xG Pitch</button>
                 <button class="t-tab" data-mode="tactical" role="tab" aria-selected="false">Match KPIs</button>
-                <button class="t-tab" data-mode="bi" role="tab" aria-selected="false">BI &amp; SQL</button>
               </div>
             </div>
 
             <div class="telemetry-body">
               <div class="telemetry-meta">
                 <div>
-                  <span class="mono meta-tag" id="vizTag">MODEL: CUSTOM_XG_EVENT_ML</span>
-                  <h3 class="viz-title" id="vizTitle">Shot Map &amp; Expected Goals (xG) Quality</h3>
+                  <span class="mono meta-tag" id="vizTag">REPO: ADVENTUREWORKS · $110M OLTP</span>
+                  <h3 class="viz-title" id="vizTitle">SQL Server → Python K-Means → Power BI</h3>
                 </div>
                 <span class="live-pill mono"><span class="live-dot"></span>INTERACTIVE</span>
               </div>
@@ -146,25 +146,25 @@
 
               <div class="kpi-grid">
                 <div class="kpi-box">
-                  <span class="kpi-label mono" id="kpiLabel1">TOTAL xG</span>
-                  <span class="kpi-val emerald" id="kpiVal1">2.46</span>
-                  <span class="kpi-delta" id="kpiDelta1">11 SHOTS</span>
+                  <span class="kpi-label mono" id="kpiLabel1">REVENUE</span>
+                  <span class="kpi-val cyan" id="kpiVal1">$110M</span>
+                  <span class="kpi-delta" id="kpiDelta1">72 TABLES</span>
                 </div>
                 <div class="kpi-box">
-                  <span class="kpi-label mono" id="kpiLabel2">ROC-AUC</span>
-                  <span class="kpi-val cyan" id="kpiVal2">0.84</span>
-                  <span class="kpi-delta" id="kpiDelta2">CALIBRATED</span>
+                  <span class="kpi-label mono" id="kpiLabel2">RFM K-MEANS</span>
+                  <span class="kpi-val violet" id="kpiVal2">k = 4</span>
+                  <span class="kpi-delta" id="kpiDelta2">LIFT &gt; 90x</span>
                 </div>
                 <div class="kpi-box">
-                  <span class="kpi-label mono" id="kpiLabel3">PPDA</span>
-                  <span class="kpi-val violet" id="kpiVal3">7.8</span>
-                  <span class="kpi-delta" id="kpiDelta3">HIGH PRESS</span>
+                  <span class="kpi-label mono" id="kpiLabel3">POWER BI</span>
+                  <span class="kpi-val emerald" id="kpiVal3">6 Pages</span>
+                  <span class="kpi-delta" id="kpiDelta3">17 DAX</span>
                 </div>
               </div>
 
               <div class="terminal-bar mono">
                 <span class="prompt">&gt;_</span>
-                <span class="cmd-text" id="terminalCmd">xg_model.predict_proba(shots_df[['dist', 'angle', 'body_part', 'assist']])</span>
+                <span class="cmd-text" id="terminalCmd">SELECT segment, COUNT(*) FROM dbo.CustomerSegments GROUP BY 1;</span>
               </div>
             </div>
           </div>
@@ -174,8 +174,8 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
             </div>
             <div>
-              <div class="fb-num mono">6+ Years</div>
-              <div class="fb-sub" data-i18n="float_impact">Data, BI &amp; Football Analytics</div>
+              <div class="fb-num mono">2 Specialized Tracks</div>
+              <div class="fb-sub" data-i18n="float_impact">Business BI &amp; Football Analytics</div>
             </div>
           </div>
         </div>
@@ -190,16 +190,16 @@
           <div class="metric-label" data-i18n="stat_years">Years Data Experience</div>
         </div>
         <div class="metric-item">
-          <div class="metric-value mono"><span class="counter" data-target="7">0</span>+</div>
-          <div class="metric-label" data-i18n="stat_datasets">Archival &amp; Research Datasets</div>
+          <div class="metric-value mono">$<span class="counter" data-target="110">0</span>M</div>
+          <div class="metric-label" data-i18n="stat_aw">AdventureWorks E2E Analysis</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value mono">⭐ <span class="counter" data-target="8">0</span></div>
+          <div class="metric-label" data-i18n="stat_stars">GitHub Project Stars</div>
         </div>
         <div class="metric-item">
           <div class="metric-value mono"><span class="counter" data-target="4">0</span></div>
-          <div class="metric-label" data-i18n="stat_certs">Football &amp; Scouting Certs</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value mono">EN &amp; AR</div>
-          <div class="metric-label" data-i18n="stat_lang">Bilingual Analytical Reporting</div>
+          <div class="metric-label" data-i18n="stat_certs">FA · PFSA · FP Academy Certs</div>
         </div>
       </div>
     </section>
@@ -208,112 +208,281 @@
     <div class="ticker-bar" aria-hidden="true">
       <div class="ticker-track mono">
         <div class="ticker-group">
-          <span><i class="t-dot cyan-d"></i> EXPECTED GOALS (xG) ML</span>
-          <span><i class="t-dot emerald-d"></i> POWER BI &amp; DAX</span>
-          <span><i class="t-dot violet-d"></i> PYTHON &amp; SCIKIT-LEARN</span>
-          <span><i class="t-dot cyan-d"></i> SQL &amp; DATA MODELING</span>
-          <span><i class="t-dot emerald-d"></i> PPDA &amp; FIELD TILT</span>
-          <span><i class="t-dot violet-d"></i> POWER QUERY &amp; PIVOT</span>
-          <span><i class="t-dot cyan-d"></i> SCOUTING &amp; EVENT DATA</span>
-          <span><i class="t-dot emerald-d"></i> METADATA &amp; ARCHIVAL QA</span>
-          <span><i class="t-dot violet-d"></i> TABLEAU &amp; KPI REPORTING</span>
+          <span><i class="t-dot cyan-d"></i> SQL SERVER &amp; T-SQL</span>
+          <span><i class="t-dot violet-d"></i> PYTHON · K-MEANS · RFM</span>
+          <span><i class="t-dot cyan-d"></i> POWER BI &amp; 17 DAX MEASURES</span>
+          <span><i class="t-dot emerald-d"></i> WHOSCORED / OPTA EVENT DATA</span>
+          <span><i class="t-dot emerald-d"></i> xG · xT · xGCHAIN · PPDA</span>
+          <span><i class="t-dot violet-d"></i> POWER QUERY &amp; STAR SCHEMA</span>
+          <span><i class="t-dot cyan-d"></i> COHORT &amp; MARKET BASKET (LIFT &gt; 90x)</span>
+          <span><i class="t-dot emerald-d"></i> AUTOMATED PDF &amp; 8 MATCH POSTERS</span>
         </div>
         <div class="ticker-group">
-          <span><i class="t-dot cyan-d"></i> EXPECTED GOALS (xG) ML</span>
-          <span><i class="t-dot emerald-d"></i> POWER BI &amp; DAX</span>
-          <span><i class="t-dot violet-d"></i> PYTHON &amp; SCIKIT-LEARN</span>
-          <span><i class="t-dot cyan-d"></i> SQL &amp; DATA MODELING</span>
-          <span><i class="t-dot emerald-d"></i> PPDA &amp; FIELD TILT</span>
-          <span><i class="t-dot violet-d"></i> POWER QUERY &amp; PIVOT</span>
-          <span><i class="t-dot cyan-d"></i> SCOUTING &amp; EVENT DATA</span>
-          <span><i class="t-dot emerald-d"></i> METADATA &amp; ARCHIVAL QA</span>
-          <span><i class="t-dot violet-d"></i> TABLEAU &amp; KPI REPORTING</span>
+          <span><i class="t-dot cyan-d"></i> SQL SERVER &amp; T-SQL</span>
+          <span><i class="t-dot violet-d"></i> PYTHON · K-MEANS · RFM</span>
+          <span><i class="t-dot cyan-d"></i> POWER BI &amp; 17 DAX MEASURES</span>
+          <span><i class="t-dot emerald-d"></i> WHOSCORED / OPTA EVENT DATA</span>
+          <span><i class="t-dot emerald-d"></i> xG · xT · xGCHAIN · PPDA</span>
+          <span><i class="t-dot violet-d"></i> POWER QUERY &amp; STAR SCHEMA</span>
+          <span><i class="t-dot cyan-d"></i> COHORT &amp; MARKET BASKET (LIFT &gt; 90x)</span>
+          <span><i class="t-dot emerald-d"></i> AUTOMATED PDF &amp; 8 MATCH POSTERS</span>
         </div>
       </div>
     </div>
 
-    <!-- EXPERTISE SECTION -->
-    <section class="section reveal" id="expertise">
+    <!-- =====================================================
+         TRACK 01: BUSINESS DATA, BI & MACHINE LEARNING HUB
+         ===================================================== -->
+    <section class="section track-zone track-data-zone reveal" id="data-track" data-zone="data">
       <div class="container">
-        <div class="section-head">
-          <span class="section-eyebrow mono" data-i18n="exp_eyebrow">// CORE CAPABILITIES</span>
-          <h2 class="section-title" data-i18n="exp_title">Where Business BI, Machine Learning &amp; Football Meet</h2>
-          <p class="section-desc" data-i18n="exp_desc">
-            Bridging rigorous database design and automated business intelligence with tactical football modeling and clear bilingual storytelling.
-          </p>
+        <div class="track-banner data-banner glass">
+          <div class="tb-left">
+            <span class="tb-pill mono cyan-pill">TRACK 01 · BUSINESS DATA, BI &amp; ML</span>
+            <h2 class="section-title" data-i18n="data_zone_title">Business Intelligence, SQL &amp; Machine Learning</h2>
+            <p class="section-desc" data-i18n="data_zone_desc">
+              End-to-end corporate &amp; archival analytics: relational SQL databases, star-schema modeling, Python segmentation &amp; retention models, and live interactive Power BI executive dashboards.
+            </p>
+          </div>
+          <div class="tb-actions">
+            <button class="btn btn-sm btn-ghost copy-track-link mono" data-copy-track="data" type="button" data-i18n="copy_data_url">🔗 Copy Data-Only Link</button>
+          </div>
         </div>
 
-        <div class="expertise-grid">
-          <article class="exp-card glass tilt-card" data-accent="cyan">
-            <div class="exp-icon cyan-bg">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        <!-- Track 1 Core Capabilities -->
+        <div class="mini-pillars">
+          <div class="pillar-pill glass">
+            <span class="mono cyan">01 · SQL &amp; Modeling</span>
+            <p data-i18n="dp_1">T-SQL window functions, CTEs, Star Schema views, and point-in-time profitability auditing.</p>
+          </div>
+          <div class="pillar-pill glass">
+            <span class="mono violet">02 · Python &amp; ML</span>
+            <p data-i18n="dp_2">K-Means RFM clustering, cohort retention heatmaps, market basket lift, and automated QA scripts.</p>
+          </div>
+          <div class="pillar-pill glass">
+            <span class="mono cyan">03 · Power BI &amp; Excel</span>
+            <p data-i18n="dp_3">PBIP source-controlled dashboards, DAX time intelligence, Power Query ETL, and Excel workshops.</p>
+          </div>
+        </div>
+
+        <!-- Track 1 Flagship Projects -->
+        <div class="projects-grid">
+          <!-- GITHUB REPO 1: AdventureWorks 2022 -->
+          <article class="project-card glass tilt-card featured-repo" data-cat="analytics">
+            <div class="project-viz viz-cyan">
+              <div class="repo-top-row">
+                <span class="proj-cat mono">GITHUB REPO · SQL → PYTHON → POWER BI</span>
+                <span class="star-badge mono">★ 1 · LIVE BI</span>
+              </div>
+              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
+                <rect class="wave-bar b1" x="20" y="48" width="24" height="34" rx="4" fill="#00E5FF" opacity="0.5"/>
+                <rect class="wave-bar b2" x="58" y="34" width="24" height="48" rx="4" fill="#00E5FF" opacity="0.68"/>
+                <rect class="wave-bar b3" x="96" y="40" width="24" height="42" rx="4" fill="#8B5CF6" opacity="0.72"/>
+                <rect class="wave-bar b4" x="134" y="20" width="24" height="62" rx="4" fill="#00E5FF" opacity="0.88"/>
+                <rect class="wave-bar b5" x="172" y="28" width="24" height="54" rx="4" fill="#8B5CF6" opacity="0.85"/>
+                <rect class="wave-bar b6" x="210" y="12" width="24" height="70" rx="4" fill="#00E5FF"/>
+              </svg>
+              <div class="proj-metric mono">$110M DATASET · 72 TABLES · K-MEANS (k=4) · LIFT &gt; 90x</div>
             </div>
-            <h3 data-i18n="exp_1_title">BI, Dashboards &amp; Reporting</h3>
-            <p data-i18n="exp_1_desc">
-              Designing interactive Power BI, Excel (Power Query / Power Pivot), and Tableau dashboards with DAX models and decision-ready KPI tracking.
-            </p>
-            <ul class="exp-skills mono">
-              <li>Power BI &amp; DAX</li>
-              <li>Excel Power Query</li>
-              <li>Power Pivot</li>
-              <li>Tableau</li>
-              <li>KPI Architecture</li>
-              <li>Workshops &amp; Training</li>
-            </ul>
+            <div class="project-body">
+              <h3 data-i18n="aw_title">AdventureWorks 2022 — End-to-End Sales Analytics</h3>
+              <p data-i18n="aw_desc">
+                Complete SQL Server → Python (`pyodbc` live DB write-back) → 6-page Power BI investigation answering 17 business questions: point-in-time profit margins, K-Means RFM clustering, cohort retention (~345d window), and market-basket cross-sell bundles.
+              </p>
+              <div class="chip-row small">
+                <span class="tech-chip">SQL Server (T-SQL)</span>
+                <span class="tech-chip">Python · K-Means</span>
+                <span class="tech-chip">RFM &amp; Cohorts</span>
+                <span class="tech-chip">Power BI (PBIP)</span>
+                <span class="tech-chip">17 DAX Measures</span>
+              </div>
+              <div class="project-links multi-links">
+                <a href="https://github.com/mostafasaad91/adventure-works-sales-analytics" target="_blank" rel="noopener" class="repo-link mono">GitHub Repo ↗</a>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiODk5NTM5YjQtMTk4Ny00NGU2LWFiMzUtYTg1N2YwZDUyYWU4IiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9" target="_blank" rel="noopener" class="repo-link live-bi mono">Live Power BI ↗</a>
+                <button class="text-link open-modal" data-project="0" type="button" data-i18n="proj_details">Case Study →</button>
+              </div>
+            </div>
           </article>
 
-          <article class="exp-card glass tilt-card" data-accent="violet">
-            <div class="exp-icon violet-bg">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/></svg>
+          <!-- Cultural Heritage & Research Data Systems -->
+          <article class="project-card glass tilt-card" data-cat="analytics">
+            <div class="project-viz viz-violet">
+              <div class="repo-top-row">
+                <span class="proj-cat mono">ENTERPRISE &amp; ARCHIVAL DATA QA</span>
+                <span class="star-badge mono">NADIM · DAFTAR AHWAL</span>
+              </div>
+              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
+                <path class="dash-flow" d="M14 62 L58 54 L102 60 L146 36 L190 42 L234 22 L268 16" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6"/>
+                <circle cx="146" cy="36" r="4" fill="#00E5FF" class="svg-pulse"/>
+                <circle cx="234" cy="22" r="4" fill="#A78BFA" class="svg-pulse"/>
+                <circle cx="268" cy="16" r="4.5" fill="#10B981" class="svg-pulse"/>
+                <circle r="4" fill="#00E5FF">
+                  <animateMotion dur="3.2s" repeatCount="indefinite" path="M14 62 L58 54 L102 60 L146 36 L190 42 L234 22 L268 16"/>
+                </circle>
+              </svg>
+              <div class="proj-metric mono">7+ RESEARCH DATASETS · CODING SYSTEMS · TEAM LEAD</div>
             </div>
-            <h3 data-i18n="exp_2_title">Python, SQL &amp; ML Engineering</h3>
-            <p data-i18n="exp_2_desc">
-              Cleaning, validating, and structuring complex datasets, building coding taxonomies, and training predictive ML models like custom event-based xG.
-            </p>
-            <ul class="exp-skills mono">
-              <li>Python (Pandas/Sklearn)</li>
-              <li>SQL &amp; Schemas</li>
-              <li>Predictive Modeling</li>
-              <li>Data Cleaning &amp; QA</li>
-              <li>Coding Systems</li>
-              <li>Statistical Analysis</li>
-            </ul>
+            <div class="project-body">
+              <h3 data-i18n="arch_title">Archival &amp; Cultural Heritage Database Systems</h3>
+              <p data-i18n="arch_desc">
+                Designed dataset coding taxonomies, automated cross-sheet ID reconciliation scripts, metadata validation workflows, and executive Power BI / Excel reporting while supervising data teams and delivering advanced Excel workshops.
+              </p>
+              <div class="chip-row small">
+                <span class="tech-chip">Metadata QA</span>
+                <span class="tech-chip">Python / Pandas</span>
+                <span class="tech-chip">Power Query</span>
+                <span class="tech-chip">Power BI</span>
+                <span class="tech-chip">Data Governance</span>
+              </div>
+              <div class="project-links multi-links">
+                <button class="text-link open-modal" data-project="1" type="button" data-i18n="proj_details">Case Study →</button>
+              </div>
+            </div>
           </article>
+        </div>
 
-          <article class="exp-card glass tilt-card" data-accent="emerald">
-            <div class="exp-icon emerald-bg">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="12 7 16.5 10.2 14.8 15.5 9.2 15.5 7.5 10.2"/></svg>
+        <!-- LIVE INTERACTIVE POWER BI DASHBOARD EMBED (AdventureWorks 2022) -->
+        <div class="pbi-embed-card glass">
+          <div class="pbi-head">
+            <div>
+              <span class="mono meta-tag">LIVE INTERACTIVE EMBED · ADVENTUREWORKS 2022</span>
+              <h3 class="viz-title" data-i18n="pbi_title">6-Page Executive Power BI Dashboard (Live)</h3>
             </div>
-            <h3 data-i18n="exp_3_title">Football Data &amp; Performance</h3>
-            <p data-i18n="exp_3_desc">
-              Transforming match event data into clear tactical &amp; recruitment insights: xG, Field Tilt, PPDA, pressing intensity, chance quality, and opposition reports.
-            </p>
-            <ul class="exp-skills mono">
-              <li>Custom xG Models</li>
-              <li>PPDA &amp; Pressing</li>
-              <li>Field Tilt</li>
-              <li>Match &amp; Opposition</li>
-              <li>Player Scouting</li>
-              <li>Event Data</li>
-            </ul>
-          </article>
+            <div class="pbi-actions">
+              <button class="btn btn-sm btn-primary" id="loadPbiBtn" type="button" data-i18n="pbi_load_btn">▶ Load Interactive Dashboard</button>
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiODk5NTM5YjQtMTk4Ny00NGU2LWFiMzUtYTg1N2YwZDUyYWU4IiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Full Screen ↗</a>
+            </div>
+          </div>
+
+          <div class="pbi-stage" id="pbiStage">
+            <div class="pbi-preview" id="pbiPreview">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/adventure-works-sales-analytics/main/docs/screenshots/01_executive_overview.png" alt="AdventureWorks 2022 Power BI Executive Overview" loading="lazy" />
+              <div class="pbi-overlay">
+                <button class="btn btn-primary btn-lg" id="loadPbiOverlayBtn" type="button" data-i18n="pbi_launch">▶ Launch Live 6-Page Power BI Report</button>
+                <span class="mono pbi-sub">Star Schema · 121K FactSales Rows · 17 DAX Measures · Python K-Means Segments</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- LIVE INTERACTIVE xG ML SIMULATOR -->
-    <section class="section reveal" id="simulator">
+    <!-- VISUAL SEPARATOR BETWEEN TRACKS -->
+    <div class="track-divider" aria-hidden="true">
+      <div class="container divider-inner mono">
+        <span class="div-line"></span>
+        <span class="div-badge">SWITCHING DOMAIN · BUSINESS BI ⇄ FOOTBALL LAB</span>
+        <span class="div-line"></span>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         TRACK 02: FOOTBALL DATA & PERFORMANCE ANALYTICS LAB
+         ===================================================== -->
+    <section class="section track-zone track-football-zone reveal" id="football-track" data-zone="football">
       <div class="container">
-        <div class="section-head">
-          <span class="section-eyebrow mono" data-i18n="sim_eyebrow">// INTERACTIVE ML PLAYGROUND</span>
-          <h2 class="section-title" data-i18n="sim_title">Live Expected Goals (xG) Model Simulator</h2>
+        <div class="track-banner foot-banner glass">
+          <div class="tb-left">
+            <span class="tb-pill mono emerald-pill">TRACK 02 · FOOTBALL DATA &amp; PERFORMANCE LAB</span>
+            <h2 class="section-title" data-i18n="foot_zone_title">Football Analytics, xG/xT Models &amp; Tactical Scouting</h2>
+            <p class="section-desc" data-i18n="foot_zone_desc">
+              Turning Opta / WhoScored match-event data into automated tactical match reports, AMOLED visual posters, player role profiles, and recruitment intelligence — backed by FA, PFSA &amp; FP Academy credentials.
+            </p>
+          </div>
+          <div class="tb-actions">
+            <button class="btn btn-sm btn-ghost copy-track-link mono" data-copy-track="football" type="button" data-i18n="copy_foot_url">🔗 Copy Football-Only Link</button>
+          </div>
+        </div>
+
+        <!-- Track 2 Flagship Projects -->
+        <div class="projects-grid">
+          <!-- GITHUB REPO 2: Football-Match-Analysis (7 Stars!) -->
+          <article class="project-card glass tilt-card featured-repo foot-featured" data-cat="football">
+            <div class="project-viz viz-emerald">
+              <div class="repo-top-row">
+                <span class="proj-cat mono">GITHUB FLAGSHIP · PYTHON + OPTA EVENT DATA</span>
+                <span class="star-badge emerald-star mono">★ 7 STARS</span>
+              </div>
+              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
+                <path class="flow-stroke" d="M12 76 C55 70, 82 54, 120 38 C160 22, 200 18, 268 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M12 76 C55 70, 82 54, 120 38 C160 22, 200 18, 268 12 L268 86 L12 86 Z" fill="url(#p1Grad)" opacity="0.28"/>
+                <circle cx="120" cy="38" r="4" fill="#00E5FF" class="svg-pulse"/>
+                <circle cx="268" cy="12" r="4.5" fill="#10B981" class="svg-pulse"/>
+                <circle r="4.5" fill="#10B981">
+                  <animateMotion dur="3.4s" repeatCount="indefinite" path="M12 76 C55 70, 82 54, 120 38 C160 22, 200 18, 268 12"/>
+                </circle>
+                <defs>
+                  <linearGradient id="p1Grad" x1="0" y1="0" x2="0" y2="90" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#10B981"/>
+                    <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="proj-metric mono">1 URL IN → PDF + 8 POSTERS (AMOLED/LIGHT) + xG/xT + DOCX</div>
+            </div>
+            <div class="project-body">
+              <h3 data-i18n="fma_title">Football Match Analysis — Automated Tactical Pipeline</h3>
+              <p data-i18n="fma_desc">
+                End-to-end Python engine turning a single WhoScored/Opta URL into xG/xT/xGChain models, passing sonars, touch-density heatmaps, player role profiles, 8 AMOLED &amp; Light 4:5 posters, a full PDF report, publishable .docx article, and SQLite match archive across EPL, La Liga &amp; Serie A.
+              </p>
+              <div class="chip-row small">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">xG / xT / xGChain</span>
+                <span class="tech-chip">Opta Event Data</span>
+                <span class="tech-chip">SQLite &amp; PDF</span>
+                <span class="tech-chip">AMOLED Posters</span>
+              </div>
+              <div class="project-links multi-links">
+                <a href="https://github.com/mostafasaad91/Football-Match-Analysis" target="_blank" rel="noopener" class="repo-link emerald-link mono">GitHub Repo (★ 7) ↗</a>
+                <button class="text-link open-modal" data-project="2" type="button" data-i18n="proj_details">Case Study →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tactical Opposition & Scouting Reports -->
+          <article class="project-card glass tilt-card" data-cat="football">
+            <div class="project-viz viz-emerald-soft">
+              <div class="repo-top-row">
+                <span class="proj-cat mono">SCOUTING &amp; OPPOSITION INTELLIGENCE</span>
+                <span class="star-badge mono">EN &amp; AR REPORTS</span>
+              </div>
+              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
+                <polygon class="radar-outer" points="140,10 198,28 184,78 96,78 82,28" stroke="#10B981" stroke-width="1.6" fill="rgba(16,185,129,0.2)"/>
+                <polygon class="radar-inner" points="140,22 178,36 168,68 112,68 102,36" stroke="#00E5FF" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
+                <line x1="140" y1="45" x2="140" y2="10" stroke="rgba(16,185,129,0.6)" stroke-width="1.5" class="radar-sweep"/>
+                <circle cx="140" cy="10" r="3.5" fill="#10B981" class="svg-pulse"/>
+                <circle cx="198" cy="28" r="3.5" fill="#00E5FF" class="svg-pulse"/>
+                <circle cx="184" cy="78" r="3.5" fill="#A78BFA" class="svg-pulse"/>
+              </svg>
+              <div class="proj-metric mono">PPDA · FIELD TILT · PRESSING · PLAYER ROLE PROFILES</div>
+            </div>
+            <div class="project-body">
+              <h3 data-i18n="scout_title">Match, Opposition &amp; Player Recruitment Scouting</h3>
+              <p data-i18n="scout_desc">
+                Translating possession funnels, pressing intensity (PPDA), field tilt, progressive-pass share, and xT per 100 touches into concise tactical briefs and scouting dossiers for coaches and recruitment staff.
+              </p>
+              <div class="chip-row small">
+                <span class="tech-chip">PPDA &amp; Pressing</span>
+                <span class="tech-chip">Field Tilt</span>
+                <span class="tech-chip">Role Percentiles</span>
+                <span class="tech-chip">Opposition Briefs</span>
+              </div>
+              <div class="project-links multi-links">
+                <button class="text-link open-modal" data-project="3" type="button" data-i18n="proj_details">Case Study →</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- LIVE INTERACTIVE xG ML SIMULATOR (Inside Football Lab) -->
+        <div class="sim-header-inline">
+          <span class="section-eyebrow mono" style="color:var(--emerald)" data-i18n="sim_eyebrow">// INTERACTIVE FOOTBALL ML PLAYGROUND</span>
+          <h3 class="sub-section-title" data-i18n="sim_title">Live Expected Goals (xG) Model Simulator</h3>
           <p class="section-desc" data-i18n="sim_desc">
-            Click anywhere inside the attacking half-pitch or adjust the shot context below to see how my logistic ML model evaluates goal probability and feature contributions in real time.
+            Click anywhere on the pitch, adjust shot context, or press Auto-Demo to inspect live xG probability and SHAP-style feature impacts.
           </p>
         </div>
 
-        <div class="sim-wrapper glass">
-          <!-- Left: Clickable Tactical Pitch -->
+        <div class="sim-wrapper glass" id="simulator">
           <div class="sim-pitch-col">
             <div class="sim-pitch-head">
               <span class="mono" data-i18n="sim_click_hint">CLICK ON PITCH TO PLACE SHOT</span>
@@ -324,38 +493,26 @@
               <svg id="simPitch" viewBox="0 0 420 290" role="img" aria-label="Interactive Football Pitch for xG Model">
                 <defs>
                   <linearGradient id="pitchBg" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="rgba(16,185,129,0.14)" />
-                    <stop offset="100%" stop-color="rgba(0,0,0,0.95)" />
+                    <stop offset="0%" stop-color="rgba(16,185,129,0.16)" />
+                    <stop offset="100%" stop-color="rgba(0,0,0,0.96)" />
                   </linearGradient>
                   <radialGradient id="shotGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.7" />
-                    <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+                    <stop offset="0%" stop-color="#10B981" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
                   </radialGradient>
                 </defs>
-
-                <!-- Pitch background & markings -->
-                <rect x="10" y="16" width="400" height="264" rx="10" fill="url(#pitchBg)" stroke="rgba(148,163,184,0.35)" stroke-width="1.6" />
-                <!-- Goal mouth -->
-                <rect x="174" y="6" width="72" height="10" rx="2" fill="rgba(0,229,255,0.22)" stroke="#00E5FF" stroke-width="1.8" />
-                <!-- Penalty Box -->
-                <rect x="92" y="16" width="236" height="114" fill="none" stroke="rgba(148,163,184,0.32)" stroke-width="1.4" />
-                <!-- 6-yard Box -->
-                <rect x="150" y="16" width="120" height="42" fill="none" stroke="rgba(148,163,184,0.32)" stroke-width="1.4" />
-                <!-- Penalty Spot -->
-                <circle cx="210" cy="92" r="2.6" fill="rgba(248,250,252,0.55)" />
-                <!-- Penalty Arc -->
-                <path d="M164 130 A 56 56 0 0 0 256 130" fill="none" stroke="rgba(148,163,184,0.32)" stroke-width="1.4" />
-                <!-- Halfway arc -->
-                <path d="M162 280 A 48 48 0 0 1 258 280" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="1.3" />
-
-                <!-- Dynamic Shot Angle Cone -->
-                <polygon id="shotCone" points="210,104 174,16 246,16" fill="rgba(0,229,255,0.14)" stroke="rgba(0,229,255,0.45)" stroke-dasharray="4 3" stroke-width="1.2" />
-                <!-- Animated Shot Trajectory Line -->
+                <rect x="10" y="16" width="400" height="264" rx="10" fill="url(#pitchBg)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" />
+                <rect x="174" y="6" width="72" height="10" rx="2" fill="rgba(16,185,129,0.22)" stroke="#10B981" stroke-width="1.8" />
+                <rect x="92" y="16" width="236" height="114" fill="none" stroke="rgba(255,255,255,0.24)" stroke-width="1.4" />
+                <rect x="150" y="16" width="120" height="42" fill="none" stroke="rgba(255,255,255,0.24)" stroke-width="1.4" />
+                <circle cx="210" cy="92" r="2.6" fill="rgba(255,255,255,0.55)" />
+                <path d="M164 130 A 56 56 0 0 0 256 130" fill="none" stroke="rgba(255,255,255,0.24)" stroke-width="1.4" />
+                <path d="M162 280 A 48 48 0 0 1 258 280" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.3" />
+                <polygon id="shotCone" points="210,104 174,16 246,16" fill="rgba(16,185,129,0.14)" stroke="rgba(16,185,129,0.45)" stroke-dasharray="4 3" stroke-width="1.2" />
                 <line id="shotRay" class="shot-ray" x1="210" y1="104" x2="210" y2="16" stroke="#10B981" stroke-width="2" stroke-dasharray="6 5" />
-                <!-- Pulsing Sonar Ring + Shot Glow & Marker -->
-                <circle id="shotSonar" class="shot-sonar" cx="210" cy="104" r="14" fill="none" stroke="#00E5FF" stroke-width="1.8" />
+                <circle id="shotSonar" class="shot-sonar" cx="210" cy="104" r="14" fill="none" stroke="#10B981" stroke-width="1.8" />
                 <circle id="shotHalo" cx="210" cy="104" r="22" fill="url(#shotGlow)" />
-                <circle id="shotDot" cx="210" cy="104" r="7" fill="#00E5FF" stroke="#050814" stroke-width="2.5" />
+                <circle id="shotDot" cx="210" cy="104" r="7" fill="#10B981" stroke="#000000" stroke-width="2.5" />
               </svg>
             </div>
 
@@ -369,7 +526,6 @@
             </div>
           </div>
 
-          <!-- Right: Model Controls + Live Prediction + SHAP Feature Impacts -->
           <div class="sim-controls-col">
             <div class="xg-readout">
               <div>
@@ -400,261 +556,83 @@
               <div class="sim-field full-span">
                 <div class="slider-top">
                   <label class="mono" for="simPressure" data-i18n="sim_pressure">Defensive Pressure (Defenders in Cone)</label>
-                  <span class="mono cyan" id="pressureVal">1 Defender</span>
+                  <span class="mono emerald" id="pressureVal">1 Defender</span>
                 </div>
                 <input type="range" id="simPressure" min="0" max="4" step="1" value="1" />
               </div>
             </div>
 
-            <!-- Feature Contributions (SHAP-like Explainability) -->
             <div class="shap-box">
               <div class="shap-title mono" data-i18n="sim_shap">MODEL FEATURE IMPACT (LOG-ODDS CONTRIBUTION)</div>
               <div class="shap-bars" id="shapBars"></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- FEATURED CASE STUDIES -->
-    <section class="section reveal" id="projects">
-      <div class="container">
-        <div class="section-head row-head">
-          <div>
-            <span class="section-eyebrow mono" data-i18n="proj_eyebrow">// SELECTED WORK</span>
-            <h2 class="section-title" data-i18n="proj_title">Featured Case Studies</h2>
-          </div>
-          <div class="filter-bar" role="group" aria-label="Project Filter">
-            <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
-            <button class="filter-btn" data-filter="football" data-i18n="filter_football">Football &amp; ML</button>
-            <button class="filter-btn" data-filter="analytics" data-i18n="filter_analytics">BI &amp; Data Systems</button>
-          </div>
-        </div>
-
-        <div class="projects-grid" id="projectsGrid">
-          <!-- Project 1: Custom xG ML Model -->
-          <article class="project-card glass tilt-card" data-cat="football">
-            <div class="project-viz viz-emerald">
-              <div class="proj-cat mono">FOOTBALL ML · EVENT DATA</div>
-              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
-                <path id="p1Path" class="flow-stroke" d="M12 76 C55 70, 82 54, 120 38 C160 22, 200 18, 268 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M12 76 C55 70, 82 54, 120 38 C160 22, 200 18, 268 12 L268 86 L12 86 Z" fill="url(#p1Grad)" opacity="0.28"/>
-                <circle cx="120" cy="38" r="4" fill="#00E5FF" class="svg-pulse"/>
-                <circle cx="268" cy="12" r="4.5" fill="#10B981" class="svg-pulse"/>
-                <circle r="4.5" fill="#00E5FF">
-                  <animateMotion dur="3.6s" repeatCount="indefinite" path="M12 76 C55 70, 82 54, 120 38 C160 22, 200 18, 268 12"/>
-                </circle>
-                <defs>
-                  <linearGradient id="p1Grad" x1="0" y1="0" x2="0" y2="90" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#10B981"/>
-                    <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div class="proj-metric mono">CUSTOM xG MODEL · PYTHON + EVENT DATA</div>
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="p1_title">Event-Based Expected Goals (xG) ML Model</h3>
-              <p data-i18n="p1_desc">
-                Built a custom xG probability model from match event data using shot geometry (distance, angle), body part, assist type, and pressure to quantify chance quality for coaches and scouts.
-              </p>
-              <div class="chip-row small">
-                <span class="tech-chip">Python</span>
-                <span class="tech-chip">Scikit-Learn</span>
-                <span class="tech-chip">Event Data</span>
-                <span class="tech-chip">xG Modeling</span>
-              </div>
-              <div class="project-links">
-                <button class="text-link open-modal" data-project="0" type="button" data-i18n="proj_details">View Case Study →</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2: Tactical Team & Match Reports -->
-          <article class="project-card glass tilt-card" data-cat="football">
-            <div class="project-viz viz-violet">
-              <div class="proj-cat mono">PERFORMANCE &amp; SCOUTING ANALYTICS</div>
-              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
-                <polygon class="radar-outer" points="140,10 198,28 184,78 96,78 82,28" stroke="#8B5CF6" stroke-width="1.6" fill="rgba(139,92,246,0.22)"/>
-                <polygon class="radar-inner" points="140,22 178,36 168,68 112,68 102,36" stroke="#00E5FF" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
-                <line x1="140" y1="45" x2="140" y2="10" stroke="rgba(0,229,255,0.45)" stroke-width="1.4" class="radar-sweep"/>
-                <circle cx="140" cy="10" r="3.5" fill="#00E5FF" class="svg-pulse"/>
-                <circle cx="198" cy="28" r="3.5" fill="#A78BFA" class="svg-pulse"/>
-                <circle cx="184" cy="78" r="3.5" fill="#10B981" class="svg-pulse"/>
-              </svg>
-              <div class="proj-metric mono">PPDA · FIELD TILT · PRESSING · SCOUTING</div>
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="p2_title">Match, Opposition &amp; Player Scouting Intelligence</h3>
-              <p data-i18n="p2_desc">
-                Produced tactical match &amp; opposition analysis packs measuring possession structure, field tilt, PPDA pressing intensity, and player role KPIs in clear Arabic &amp; English reports.
-              </p>
-              <div class="chip-row small">
-                <span class="tech-chip">PPDA</span>
-                <span class="tech-chip">Field Tilt</span>
-                <span class="tech-chip">Power BI</span>
-                <span class="tech-chip">Python Viz</span>
-              </div>
-              <div class="project-links">
-                <button class="text-link open-modal" data-project="1" type="button" data-i18n="proj_details">View Case Study →</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: Cultural & Archival Data Architecture -->
-          <article class="project-card glass tilt-card" data-cat="analytics">
-            <div class="project-viz viz-cyan">
-              <div class="proj-cat mono">DATA ARCHITECTURE · NADIM &amp; DAFTAR AHWAL</div>
-              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
-                <rect class="wave-bar b1" x="20" y="48" width="24" height="34" rx="4" fill="#00E5FF" opacity="0.5"/>
-                <rect class="wave-bar b2" x="58" y="34" width="24" height="48" rx="4" fill="#00E5FF" opacity="0.68"/>
-                <rect class="wave-bar b3" x="96" y="40" width="24" height="42" rx="4" fill="#8B5CF6" opacity="0.7"/>
-                <rect class="wave-bar b4" x="134" y="22" width="24" height="60" rx="4" fill="#00E5FF" opacity="0.88"/>
-                <rect class="wave-bar b5" x="172" y="28" width="24" height="54" rx="4" fill="#10B981" opacity="0.82"/>
-                <rect class="wave-bar b6" x="210" y="14" width="24" height="68" rx="4" fill="#10B981"/>
-              </svg>
-              <div class="proj-metric mono">7+ RESEARCH DATASETS · CODING TAXONOMIES</div>
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="p3_title">Archival &amp; Cultural Heritage Database Systems</h3>
-              <p data-i18n="p3_desc">
-                Led end-to-end dataset methodologies, metadata validation, and cross-sheet ID integrity systems across large cultural heritage &amp; social-research archives while supervising data teams.
-              </p>
-              <div class="chip-row small">
-                <span class="tech-chip">SQL</span>
-                <span class="tech-chip">Data Validation</span>
-                <span class="tech-chip">Metadata Coding</span>
-                <span class="tech-chip">Excel / Python</span>
-              </div>
-              <div class="project-links">
-                <button class="text-link open-modal" data-project="2" type="button" data-i18n="proj_details">View Case Study →</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 4: Freelance BI & Power Query Automation -->
-          <article class="project-card glass tilt-card" data-cat="analytics">
-            <div class="project-viz viz-amber">
-              <div class="proj-cat mono">BUSINESS INTELLIGENCE · FREELANCE</div>
-              <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
-                <path class="dash-flow" d="M14 62 L58 54 L102 60 L146 36 L190 42 L234 22 L268 16" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6"/>
-                <circle cx="146" cy="36" r="4" fill="#F59E0B" class="svg-pulse"/>
-                <circle cx="234" cy="22" r="4" fill="#00E5FF" class="svg-pulse"/>
-                <circle cx="268" cy="16" r="4.5" fill="#10B981" class="svg-pulse"/>
-                <circle r="4" fill="#F59E0B">
-                  <animateMotion dur="3.2s" repeatCount="indefinite" path="M14 62 L58 54 L102 60 L146 36 L190 42 L234 22 L268 16"/>
-                </circle>
-              </svg>
-              <div class="proj-metric mono">POWER BI · DAX · POWER QUERY · SQL</div>
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="p4_title">Automated BI Dashboards &amp; Executive KPI Suites</h3>
-              <p data-i18n="p4_desc">
-                Delivered freelance Power BI &amp; Excel reporting pipelines with Power Query ETL, star-schema data modeling, DAX measures, and recurring KPI trackers—plus advanced Excel workshops.
-              </p>
-              <div class="chip-row small">
-                <span class="tech-chip">Power BI</span>
-                <span class="tech-chip">DAX</span>
-                <span class="tech-chip">Power Query</span>
-                <span class="tech-chip">Tableau</span>
-              </div>
-              <div class="project-links">
-                <button class="text-link open-modal" data-project="3" type="button" data-i18n="proj_details">View Case Study →</button>
-              </div>
-            </div>
-          </article>
+        <!-- Football Certifications Strip -->
+        <div class="foot-certs-strip">
+          <div class="cert-pill glass"><span class="cert-dot emerald"></span><div><strong>Football Analysis Course</strong><span class="muted">FP Academy</span></div></div>
+          <div class="cert-pill glass"><span class="cert-dot cyan"></span><div><strong>Intro to Football Scouting</strong><span class="muted">PFSA</span></div></div>
+          <div class="cert-pill glass"><span class="cert-dot violet"></span><div><strong>Intro to Coaching Football</strong><span class="muted">The FA</span></div></div>
+          <div class="cert-pill glass"><span class="cert-dot amber"></span><div><strong>EE Playmaker</strong><span class="muted">England Football</span></div></div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE, EDUCATION & CERTIFICATIONS -->
+    <!-- =====================================================
+         SHARED EXPERIENCE & EDUCATION
+         ===================================================== -->
     <section class="section reveal" id="experience">
       <div class="container">
         <div class="section-head">
           <span class="section-eyebrow mono" data-i18n="career_eyebrow">// TRACK RECORD</span>
-          <h2 class="section-title" data-i18n="career_title">Experience, Education &amp; Credentials</h2>
+          <h2 class="section-title" data-i18n="career_title">Experience &amp; Education</h2>
         </div>
 
         <div class="career-grid">
-          <!-- Left: Timeline -->
           <div class="timeline">
             <div class="tl-item glass">
               <div class="tl-top">
                 <span class="tl-date mono">Jun 2024 – Present</span>
-                <span class="tl-loc mono">Cairo, Egypt</span>
+                <span class="tl-badge mono data-tag">DATA &amp; ARCHIVAL</span>
               </div>
               <h3 data-i18n="role_1_t">Digital Archivist &amp; Cultural Data Analyst · Metadata Archivist</h3>
-              <div class="tl-org">NADIM Foundation</div>
+              <div class="tl-org">NADIM Foundation · Cairo, Egypt</div>
               <p data-i18n="role_1_d">Managing cultural heritage datasets, metadata standardization, cross-database ID reconciliation, and analytical reporting.</p>
             </div>
 
-            <div class="tl-item glass">
+            <div class="tl-item glass foot-tl">
               <div class="tl-top">
                 <span class="tl-date mono">Oct 2022 – Present</span>
-                <span class="tl-loc mono">Remote / Independent</span>
+                <span class="tl-badge mono foot-tag">BI &amp; FOOTBALL ANALYTICS</span>
               </div>
               <h3 data-i18n="role_2_t">Freelance Data Analyst &amp; Football Performance Analyst</h3>
-              <div class="tl-org">Self-Employed</div>
-              <p data-i18n="role_2_d">End-to-end client BI &amp; data cleaning pipelines (Excel Power Query, Power BI, DAX, SQL, Python) alongside independent football xG modeling, match/opposition reports, and scouting analytics.</p>
+              <div class="tl-org">Self-Employed · Remote / Independent</div>
+              <p data-i18n="role_2_d">End-to-end client BI &amp; data cleaning pipelines (Excel Power Query, Power BI, DAX, SQL, Python) alongside independent football xG/xT modeling, automated match reports, and scouting analytics.</p>
             </div>
 
             <div class="tl-item glass">
               <div class="tl-top">
-                <span class="tl-date mono">Sep 2017 – Sep 2022</span>
-                <span class="tl-loc mono">5 yrs 1 mo · Cairo</span>
+                <span class="tl-date mono">Sep 2017 – Sep 2022 · 5 yrs 1 mo</span>
+                <span class="tl-badge mono data-tag">DATA RESEARCH &amp; LEAD</span>
               </div>
               <h3 data-i18n="role_3_t">Senior Data Analyst &amp; Archive Officer (prev. Junior Analyst)</h3>
-              <div class="tl-org">Daftar Ahwal Data Research Institute</div>
+              <div class="tl-org">Daftar Ahwal Data Research Institute · Cairo</div>
               <p data-i18n="role_3_d">Led 7+ archival &amp; social-research dataset projects, designed data coding systems &amp; forecasting indicators in Excel &amp; Power BI, supervised data teams, and taught advanced Excel workshops.</p>
             </div>
 
             <div class="tl-item glass">
               <div class="tl-top">
                 <span class="tl-date mono">Oct 2017 – Oct 2018</span>
-                <span class="tl-loc mono">Cairo, Egypt</span>
+                <span class="tl-badge mono data-tag">WRITING &amp; COMMUNICATION</span>
               </div>
               <h3 data-i18n="role_4_t">Content Writer</h3>
-              <div class="tl-org">AlManassa</div>
+              <div class="tl-org">AlManassa · Cairo, Egypt</div>
               <p data-i18n="role_4_d">Authored analytical &amp; literary reviews, sharpening clear, structured written communication across Arabic and English audiences.</p>
             </div>
           </div>
 
-          <!-- Right: Certifications & Education -->
           <div class="creds-col">
-            <div class="cred-card glass">
-              <span class="mono cred-tag" data-i18n="cert_tag">FOOTBALL &amp; SCOUTING CERTIFICATIONS</span>
-              <ul class="cert-list">
-                <li>
-                  <span class="cert-dot emerald"></span>
-                  <div>
-                    <strong>Football Analysis Course</strong>
-                    <span class="muted">FP Academy</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="cert-dot cyan"></span>
-                  <div>
-                    <strong>Introduction to Football Scouting</strong>
-                    <span class="muted">PFSA (Professional Football Scouts Association)</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="cert-dot violet"></span>
-                  <div>
-                    <strong>Introduction to Coaching Football</strong>
-                    <span class="muted">The FA</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="cert-dot amber"></span>
-                  <div>
-                    <strong>EE Playmaker</strong>
-                    <span class="muted">England Football</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
             <div class="cred-card glass">
               <span class="mono cred-tag" data-i18n="edu_tag">EDUCATION</span>
               <h3 class="edu-title">Sadat University</h3>
@@ -663,9 +641,20 @@
             </div>
 
             <div class="cred-card glass">
-              <span class="mono cred-tag" data-i18n="langs_tag">COMMUNICATION &amp; IMPACT</span>
-              <p class="muted" style="font-size:0.92rem;" data-i18n="langs_desc">
-                Delivering clear tactical reports, executive dashboards, and technical documentation in both <strong>English &amp; Arabic</strong> for coaches, scouts, and business stakeholders.
+              <span class="mono cred-tag" data-i18n="share_tag">SMART ROLE-SPECIFIC LINKS</span>
+              <p class="muted" style="font-size:0.9rem;margin-bottom:0.9rem;" data-i18n="share_desc">
+                Applying for a specific role? Share a focused link directly to either track:
+              </p>
+              <div class="smart-links">
+                <button class="copy-track-link glass mono" data-copy-track="data" type="button">📊 ?track=data (BI &amp; ML)</button>
+                <button class="copy-track-link glass mono" data-copy-track="football" type="button">⚽ ?track=football (Football Lab)</button>
+              </div>
+            </div>
+
+            <div class="cred-card glass">
+              <span class="mono cred-tag" data-i18n="langs_tag">BILINGUAL DELIVERY</span>
+              <p class="muted" style="font-size:0.9rem;" data-i18n="langs_desc">
+                Executive BI dashboards, tactical match reports, and technical documentation delivered fluently in <strong>English &amp; Arabic</strong>.
               </p>
             </div>
           </div>
@@ -673,15 +662,15 @@
       </div>
     </section>
 
-    <!-- CONTACT / CTA SECTION -->
+    <!-- CONTACT SECTION -->
     <section class="section reveal" id="contact">
       <div class="container">
         <div class="contact-card glass">
           <div class="contact-info">
             <span class="section-eyebrow mono" data-i18n="contact_eyebrow">// LET'S COLLABORATE</span>
-            <h2 class="section-title" data-i18n="contact_title">Looking for a Data, ML or Football Analyst?</h2>
+            <h2 class="section-title" data-i18n="contact_title">Looking for a Data, BI/ML or Football Analyst?</h2>
             <p class="section-desc" data-i18n="contact_desc">
-              Open to Football Data / Performance Analyst, Data Analyst, and BI/ML roles — remote or on-site, plus freelance consulting &amp; training workshops.
+              Open to Data Analyst, BI/ML, and Football Data / Performance Analyst roles — remote or on-site, plus freelance consulting &amp; Excel/BI workshops.
             </p>
 
             <div class="contact-direct">
@@ -700,7 +689,7 @@
           <form class="contact-form" id="contactForm">
             <div class="form-group">
               <label for="fName" data-i18n="form_name">Your Name</label>
-              <input id="fName" type="text" required placeholder="Club / Company / Name" />
+              <input id="fName" type="text" required placeholder="Company / Club / Name" />
             </div>
             <div class="form-group">
               <label for="fEmail" data-i18n="form_email">Email Address</label>
@@ -720,8 +709,8 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="mono">© <span id="year">2026</span> Mostafa Saad — Data Analytics, ML &amp; Football Performance</span>
-      <span class="mono muted" data-i18n="footer_built">Turning football and business data into decisions.</span>
+      <span class="mono">© <span id="year">2026</span> Mostafa Saad — Business Data, ML &amp; Football Analytics</span>
+      <span class="mono muted" data-i18n="footer_built">Turning business and football data into decisions.</span>
     </div>
   </footer>
 
@@ -738,6 +727,7 @@
         <ul id="mBullets"></ul>
       </div>
       <div class="chip-row small" id="mTags"></div>
+      <div class="modal-footer-links" id="mLinks"></div>
     </div>
   </div>
 
