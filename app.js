@@ -52,6 +52,33 @@ const TRANSLATIONS = {
     art_3_d:
       'Practical lessons from 7+ research & heritage datasets: designing base-ID keys, catching silent duplicate/typo traps, and turning messy spreadsheets into reliable SQL models.',
     read_article: 'Read Breakdown →',
+    bento_yrs: 'Years',
+    bento_exp_desc: 'Leading 7+ archival, BI & analytics datasets, supervising data teams, and teaching advanced Excel workshops.',
+    bento_t1: 'Business BI & ML',
+    bento_t2: 'Football Performance Lab',
+    rfm_eyebrow: '// INTERACTIVE BUSINESS ML PLAYGROUND',
+    rfm_title: 'Live K-Means RFM Customer Segmentation Simulator',
+    rfm_desc:
+      'Inspired by my AdventureWorks 2022 Python → SQL pipeline: adjust Recency, Frequency & Monetary spend to watch K-Means (k=4) classify the customer on a live scatter plot with business actions and SQL write-back.',
+    rfm_plot_hdr: 'LIVE K-MEANS CLUSTER MAP (k=4)',
+    rfm_presets: 'PROFILES:',
+    rfm_seg_lbl: 'PREDICTED K-MEANS SEGMENT',
+    rfm_r_lbl: 'Recency (Days Since Last Order)',
+    rfm_f_lbl: 'Frequency (Total Orders)',
+    rfm_m_lbl: 'Monetary (Lifetime Spend USD)',
+    rfm_action_lbl: 'RECOMMENDED BUSINESS ACTION',
+    split_eyebrow: '// DUAL-RENDERER SHOWCASE · #000000 ⇄ #F5F5F5',
+    split_title: 'AMOLED vs. Print Light (Ink & Petrol) Split Comparison',
+    split_desc:
+      'Drag the center handle left or right to inspect how my Football-Match-Analysis engine renders the exact same match board for AMOLED screens and paper print with automatic kit-color contrast lifting.',
+    split_card_t: 'Built Once, Published Twice',
+    split_card_d:
+      'Every match run exports a dark AMOLED #000000 edition for X / mobile feeds and an Ink & Petrol #F5F5F5 edition for print briefings — dynamically lifting dark kit hues on black and darkening light kits on paper.',
+    intent_lbl: 'WHAT BRINGS YOU HERE? (AUTO-TAILORS MESSAGE & LINKS)',
+    int_1: '💼 Hiring: Data / BI',
+    int_2: '⚽ Club / Scouting',
+    int_3: '📊 Freelance / Audit',
+    int_4: '🎓 Excel / BI Workshop',
     hero_subtitle:
       'Data Analyst with 6+ years of experience operating across two specialized tracks: Enterprise BI, SQL & Machine Learning systems, and independent Football Data & Performance Analytics.',
     track_switch_lbl: 'CHOOSE PORTFOLIO VIEW:',
@@ -172,6 +199,33 @@ const TRANSLATIONS = {
     art_3_d:
       'خبرة عملية من قواعد بيانات التراث والأبحاث: بناء المفاتيح الأساسية، اكتشاف التكرارات والأخطاء الصامتة، وتحويل الجداول المتفرقة لنماذج SQL موثوقة.',
     read_article: 'اقرأ التحليل ←',
+    bento_yrs: 'سنوات',
+    bento_exp_desc: 'قيادة +7 قواعد بيانات أرشيفية وتحليلية، الإشراف على فرق البيانات، وتقديم ورش Excel متقدمة.',
+    bento_t1: 'ذكاء الأعمال وتعلم الآلة',
+    bento_t2: 'معمل تحليل كرة القدم',
+    rfm_eyebrow: '// تجربة تعلم آلي تفاعلية للأعمال',
+    rfm_title: 'محاكي تقسيم العملاء بـ K-Means RFM المباشر',
+    rfm_desc:
+      'مستوحى من مشروع AdventureWorks 2022: حرّك مؤشرات الحداثة والتكرار والإنفاق لتشاهد نموذج K-Means (k=4) يصنّف العميل لحظياً على خريطة العناقيد مع التوصية التجارية وكود SQL.',
+    rfm_plot_hdr: 'خريطة عناقيد K-Means المباشرة (k=4)',
+    rfm_presets: 'أمثلة عملاء:',
+    rfm_seg_lbl: 'الشريحة المتوقعة (K-Means Segment)',
+    rfm_r_lbl: 'الحداثة (أيام منذ آخر طلب)',
+    rfm_f_lbl: 'التكرار (عدد الطلبات)',
+    rfm_m_lbl: 'القيمة (إجمالي الإنفاق بالدولار)',
+    rfm_action_lbl: 'التوصية التجارية المقترحة',
+    split_eyebrow: '// مقارنة بصرية · AMOLED #000000 ⇄ طباعة #F5F5F5',
+    split_title: 'مقارنة تفاعلية: نسخة AMOLED مقابل نسخة الطباعة الفاتحة',
+    split_desc:
+      'اسحب الخط الفاصل يميناً ويساراً لترى كيف يصدّر محرك Football-Match-Analysis نفس اللوحة التكتيكية بنسختين مع ضبط تلقائي لتباين ألوان القمصان.',
+    split_card_t: 'تُبنى مرة واحدة وتُنشر بنسختين',
+    split_card_d:
+      'كل تشغيل ينتج نسخة AMOLED سوداء للسوشيال والموبايل ونسخة Ink & Petrol فاتحة للتقارير المطبوعة مع رفع ذكي لتباين الألوان الداكنة والفاتحة.',
+    intent_lbl: 'ما هدف تواصلك؟ (يخصّص الروابط والرسالة تلقائياً)',
+    int_1: '💼 توظيف: Data / BI',
+    int_2: '⚽ نادي / سكاوتنج',
+    int_3: '📊 مشروع Freelance',
+    int_4: '🎓 ورشة Excel / Power BI',
     hero_subtitle:
       'محلل بيانات بخبرة +6 سنوات أعمل عبر مسارين متخصصين منفصلين: أنظمة ذكاء الأعمال وقواعد البيانات وتعلم الآلة (SQL / Python / Power BI)، ومعمل تحليل بيانات وأداء كرة القدم.',
     track_switch_lbl: 'اختر مجال العرض:',
@@ -1043,6 +1097,8 @@ function applyLanguage(lang) {
   if (pill) pill.textContent = lang === 'en' ? 'عربي' : 'EN';
   syncSmartCvBtn(document.documentElement.getAttribute('data-track') || 'all');
   computeXG();
+  if (typeof updateRFMGlobal === 'function') updateRFMGlobal();
+  if (typeof renderIntentGlobal === 'function') renderIntentGlobal();
 }
 
 function initCountersAndReveal() {
@@ -1395,8 +1451,471 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   initXGSimulator();
+  initRFMSimulator();
+  initSplitCompare();
+  initCommandPalette();
+  initGitHubLiveSync();
+  initSmartIntent();
+  initMagneticButtons();
   initNeuralCanvas();
   initTypingRotator();
   initTiltCards();
   initCountersAndReveal();
 });
+
+/* =========================================================
+   1. LIVE K-MEANS RFM CUSTOMER SEGMENTATION SIMULATOR
+   ========================================================= */
+let updateRFMGlobal = null;
+
+function initRFMSimulator() {
+  const svg = document.getElementById('rfmChart');
+  if (!svg) return;
+
+  const CLUSTERS = [
+    {
+      id: 'VIP',
+      en: 'VIP CHAMPION',
+      ar: 'عميل VIP متميز',
+      color: '#10B981',
+      cx: 335,
+      cy: 62,
+      action: {
+        en: 'Prioritize VIP loyalty perks & cross-sell high-lift drivetrain bundles (>90x basket lift).',
+        ar: 'تقديم مزايا ولاء حصرية وعروض حزم البيع المتقاطع ذات معامل الرفع المرتفع (>90x).',
+      },
+    },
+    {
+      id: 'New-Promising',
+      en: 'NEW PROMISING',
+      ar: 'عميل جديد واعد',
+      color: '#00E5FF',
+      cx: 132,
+      cy: 78,
+      action: {
+        en: 'Trigger 60-day onboarding sequence & helmet/bottle checkout add-ons to accelerate 2nd order.',
+        ar: 'تفعيل حملة ترحيب ذكية وعروض إكسسوارات مكمّلة لتسريع الطلب الثاني قبل مرور 60 يوماً.',
+      },
+    },
+    {
+      id: 'At Risk',
+      en: 'AT RISK',
+      ar: 'عميل معرّض للمغادرة',
+      color: '#F59E0B',
+      cx: 315,
+      cy: 192,
+      action: {
+        en: 'High historical spend but approaching the 345-day churn cliff — deploy targeted win-back offer.',
+        ar: 'إنفاق تاريخي مرتفع مع اقتراب حاجز الـ 345 يوماً — إطلاق عرض استعادة مخصص فوراً.',
+      },
+    },
+    {
+      id: 'Hibernating',
+      en: 'HIBERNATING',
+      ar: 'عميل خامل',
+      color: '#A78BFA',
+      cx: 120,
+      cy: 202,
+      action: {
+        en: 'Low margin ROI for heavy discounts — include only in automated seasonal reactivation campaigns.',
+        ar: 'تجنب الخصومات المكلفة — الاكتفاء بإدراجه في حملات إعادة التنشيط الموسمية المؤتمتة.',
+      },
+    },
+  ];
+
+  // Deterministic background cluster dots
+  const bgPoints = [];
+  const seeds = [
+    [-22, -14], [18, -18], [-10, 20], [26, 12], [-30, 8], [8, -26], [34, -6], [-16, -24], [14, 24], [-26, 18],
+  ];
+  CLUSTERS.forEach((c) => {
+    seeds.forEach(([dx, dy]) => {
+      bgPoints.push({ x: c.cx + dx, y: c.cy + dy, color: c.color });
+    });
+  });
+
+  function updateRFM() {
+    const r = Number(document.getElementById('rfmR').value);
+    const f = Number(document.getElementById('rfmF').value);
+    const m = Number(document.getElementById('rfmM').value);
+
+    // Map (F, M) -> X axis [48..390], Recency -> Y axis [34..234] (low recency = top = better!)
+    const fmNorm = 0.45 * (Math.log1p(f) / Math.log1p(20)) + 0.55 * (Math.log1p(m) / Math.log1p(15000));
+    const rNorm = (r - 2) / 363;
+    const ux = 48 + fmNorm * 336;
+    const uy = 34 + rNorm * 200;
+
+    // Nearest centroid (K-Means k=4)
+    let best = CLUSTERS[0];
+    let minD = Infinity;
+    CLUSTERS.forEach((c) => {
+      const d = Math.hypot(ux - c.cx, uy - c.cy);
+      if (d < minD) {
+        minD = d;
+        best = c;
+      }
+    });
+
+    const score = Math.round(Math.min(99, Math.max(12, fmNorm * 62 + (1 - rNorm) * 38)));
+
+    document.getElementById('rfmCoords').textContent = `R: ${r}d · F: ${f} · $${m.toLocaleString()}`;
+    document.getElementById('rfmRVal').textContent = currentLang === 'ar' ? `${r} يوم` : `${r} days`;
+    document.getElementById('rfmFVal').textContent = currentLang === 'ar' ? `${f} طلب` : `${f} orders`;
+    document.getElementById('rfmMVal').textContent = `$${m.toLocaleString()}`;
+
+    const segEl = document.getElementById('rfmSegTitle');
+    segEl.textContent = best[currentLang];
+    segEl.style.color = best.color;
+
+    const badge = document.getElementById('rfmScoreBadge');
+    badge.textContent = `RFM ${score}/100`;
+    badge.style.color = best.color;
+    badge.style.borderColor = best.color;
+
+    document.getElementById('rfmActionText').textContent = best.action[currentLang];
+    document.getElementById('rfmSqlPreview').textContent =
+      `MERGE dbo.CustomerSegments SET Segment='${best.id}', RFM_Score=${score} WHERE Recency=${r} AND Freq=${f};`;
+
+    svg.innerHTML = `
+      <rect x="38" y="18" width="366" height="226" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)"/>
+      <line x1="221" y1="18" x2="221" y2="244" stroke="rgba(255,255,255,0.1)" stroke-dasharray="4 4"/>
+      <line x1="38" y1="131" x2="404" y2="131" stroke="rgba(255,255,255,0.1)" stroke-dasharray="4 4"/>
+      ${CLUSTERS.map(
+        (c) => `
+        <circle cx="${c.cx}" cy="${c.cy}" r="50" fill="${c.color}" opacity="${c.id === best.id ? 0.16 : 0.05}"/>
+        <text x="${c.cx}" y="${c.cy - 34}" text-anchor="middle" fill="${c.color}" font-size="9.2" font-family="JetBrains Mono" font-weight="700" opacity="${c.id === best.id ? 1 : 0.55}">${c.id.toUpperCase()}</text>
+      `
+      ).join('')}
+      ${bgPoints.map((pt) => `<circle cx="${pt.x}" cy="${pt.y}" r="3.1" fill="${pt.color}" opacity="0.45"/>`).join('')}
+      <line class="shot-ray" x1="${ux.toFixed(1)}" y1="${uy.toFixed(1)}" x2="${best.cx}" y2="${best.cy}" stroke="${best.color}" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <circle class="shot-sonar" cx="${ux.toFixed(1)}" cy="${uy.toFixed(1)}" r="12" fill="none" stroke="${best.color}" stroke-width="1.8"/>
+      <circle cx="${ux.toFixed(1)}" cy="${uy.toFixed(1)}" r="6.8" fill="${best.color}" stroke="#ffffff" stroke-width="2.2"/>
+      <text x="221" y="261" text-anchor="middle" fill="#6b7280" font-size="9" font-family="JetBrains Mono">Log(Frequency + Monetary Spend) →</text>
+      <text x="14" y="135" text-anchor="middle" fill="#6b7280" font-size="9" font-family="JetBrains Mono" transform="rotate(-90 14 135)">← Recent | Churn Risk →</text>
+    `;
+  }
+
+  updateRFMGlobal = updateRFM;
+
+  ['rfmR', 'rfmF', 'rfmM'].forEach((id) => {
+    document.getElementById(id).addEventListener('input', updateRFM);
+  });
+
+  const presets = {
+    vip: { r: 18, f: 14, m: 11200 },
+    promising: { r: 24, f: 2, m: 950 },
+    risk: { r: 285, f: 11, m: 8900 },
+    hibernating: { r: 330, f: 1, m: 420 },
+  };
+  document.querySelectorAll('.rfm-preset').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const p = presets[btn.dataset.rfm];
+      if (!p) return;
+      document.getElementById('rfmR').value = p.r;
+      document.getElementById('rfmF').value = p.f;
+      document.getElementById('rfmM').value = p.m;
+      updateRFM();
+    });
+  });
+
+  updateRFM();
+}
+
+/* =========================================================
+   2. AMOLED vs PRINT LIGHT SPLIT-SCREEN DRAG SLIDER
+   ========================================================= */
+function initSplitCompare() {
+  const stage = document.getElementById('splitStage');
+  const overlay = document.getElementById('splitOverlay');
+  const handle = document.getElementById('splitHandle');
+  if (!stage || !overlay || !handle) return;
+
+  let pct = 50;
+  function setSplit(val) {
+    pct = Math.min(96, Math.max(4, val));
+    overlay.style.clipPath = `inset(0 ${(100 - pct).toFixed(1)}% 0 0)`;
+    handle.style.left = `${pct.toFixed(1)}%`;
+    handle.setAttribute('aria-valuenow', String(Math.round(pct)));
+  }
+
+  let dragging = false;
+  function moveFromEvent(e) {
+    const rect = stage.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    setSplit(x);
+  }
+
+  stage.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    stage.setPointerCapture?.(e.pointerId);
+    moveFromEvent(e);
+  });
+  stage.addEventListener('pointermove', (e) => {
+    if (dragging) moveFromEvent(e);
+  });
+  stage.addEventListener('pointerup', () => (dragging = false));
+
+  handle.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') setSplit(pct - 5);
+    if (e.key === 'ArrowRight') setSplit(pct + 5);
+  });
+
+  document.querySelectorAll('[data-split-pos]').forEach((btn) => {
+    btn.addEventListener('click', () => setSplit(Number(btn.dataset.splitPos)));
+  });
+
+  setSplit(50);
+}
+
+/* =========================================================
+   3. COMMAND PALETTE (Ctrl+K / ⌘K)
+   ========================================================= */
+function initCommandPalette() {
+  const modal = document.getElementById('cmdModal');
+  const input = document.getElementById('cmdInput');
+  const listEl = document.getElementById('cmdList');
+  const trigger = document.getElementById('cmdTrigger');
+  if (!modal || !input || !listEl) return;
+
+  const commands = [
+    { title: 'Switch to Business Data & BI Track', hint: '?track=data', run: () => applyTrackMode('data', true) },
+    { title: 'Switch to Football Analytics Lab', hint: '?track=football', run: () => applyTrackMode('football', true) },
+    { title: 'Show All Tracks (Full Portfolio)', hint: 'ALL', run: () => applyTrackMode('all', false) },
+    { title: 'Download Data Analyst CV (PDF)', hint: 'PDF', run: () => window.open('cv/Mostafa_Saad_Data_Analyst_CV.pdf', '_blank') },
+    { title: 'Download Football Analyst CV (PDF)', hint: 'PDF', run: () => window.open('cv/Mostafa_Saad_Football_Analyst_CV.pdf', '_blank') },
+    { title: 'Jump to Live K-Means RFM Simulator', hint: 'ML', run: () => { applyTrackMode('all'); document.getElementById('rfm-simulator')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Jump to Live xG Pitch Simulator', hint: 'xG', run: () => { applyTrackMode('all'); document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Launch Live 6-Page Power BI Report', hint: 'BI', run: () => { applyTrackMode('all'); mountPowerBI(); document.getElementById('pbiStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Compare AMOLED vs Print Light Slider', hint: 'UI', run: () => { applyTrackMode('all'); document.getElementById('splitStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Toggle Language (Arabic / English)', hint: 'AR/EN', run: () => applyLanguage(currentLang === 'en' ? 'ar' : 'en') },
+    { title: 'Toggle Theme (AMOLED Dark / Light)', hint: 'THEME', run: () => document.getElementById('themeToggle')?.click() },
+    { title: 'Copy Email (mostafasaad044@gmail.com)', hint: 'COPY', run: () => document.getElementById('copyEmailBtn')?.click() },
+    { title: 'Open GitHub Profile (mostafasaad91)', hint: 'GITHUB', run: () => window.open(PROFILE_CONFIG.github, '_blank') },
+  ];
+
+  let filtered = commands;
+  let activeIdx = 0;
+
+  function render() {
+    const q = input.value.trim().toLowerCase();
+    filtered = commands.filter((c) => c.title.toLowerCase().includes(q) || c.hint.toLowerCase().includes(q));
+    activeIdx = Math.min(activeIdx, Math.max(0, filtered.length - 1));
+    listEl.innerHTML = filtered
+      .map(
+        (c, i) => `
+        <li class="cmd-item ${i === activeIdx ? 'selected' : ''}" data-cmd-idx="${i}" role="option">
+          <span>${c.title}</span>
+          <span class="cmd-hint">${c.hint}</span>
+        </li>
+      `
+      )
+      .join('');
+    listEl.querySelectorAll('.cmd-item').forEach((li) => {
+      li.addEventListener('click', () => runItem(Number(li.dataset.cmdIdx)));
+    });
+  }
+
+  function openCmd() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    input.value = '';
+    activeIdx = 0;
+    render();
+    setTimeout(() => input.focus(), 40);
+  }
+
+  function closeCmd() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  function runItem(idx) {
+    const item = filtered[idx];
+    closeCmd();
+    if (item) item.run();
+  }
+
+  trigger?.addEventListener('click', openCmd);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeCmd();
+  });
+  input.addEventListener('input', () => {
+    activeIdx = 0;
+    render();
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = (activeIdx + 1) % Math.max(1, filtered.length);
+      render();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = (activeIdx - 1 + Math.max(1, filtered.length)) % Math.max(1, filtered.length);
+      render();
+    } else if (e.key === 'Enter' && filtered.length) {
+      e.preventDefault();
+      runItem(activeIdx);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (modal.classList.contains('open')) closeCmd();
+      else openCmd();
+    } else if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeCmd();
+    }
+  });
+}
+
+/* =========================================================
+   4. LIVE GITHUB API SYNC (STARS & LAST UPDATED)
+   ========================================================= */
+async function initGitHubLiveSync() {
+  try {
+    const res = await fetch('https://api.github.com/users/mostafasaad91/repos?per_page=30');
+    if (!res.ok) return;
+    const repos = await res.json();
+    if (!Array.isArray(repos)) return;
+
+    const totalStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+    const liveStarsEl = document.getElementById('ghLiveStars');
+    if (liveStarsEl && totalStars > 0) liveStarsEl.textContent = String(totalStars);
+
+    const aw = repos.find((r) => r.name === 'adventure-works-sales-analytics');
+    const fma = repos.find((r) => r.name === 'Football-Match-Analysis');
+
+    if (aw) {
+      const b = document.getElementById('awStarsBadge');
+      if (b) b.textContent = `★ ${aw.stargazers_count} · LIVE BI`;
+    }
+    if (fma) {
+      const b = document.getElementById('fmaStarsBadge');
+      if (b) b.textContent = `★ ${fma.stargazers_count} STARS · LIVE`;
+    }
+
+    const latest = repos
+      .map((r) => new Date(r.pushed_at || r.updated_at))
+      .sort((a, b) => b - a)[0];
+    const syncEl = document.getElementById('ghLastSync');
+    if (syncEl && latest && !Number.isNaN(latest.getTime())) {
+      syncEl.textContent = latest.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    }
+  } catch {
+    // Graceful fallback to static counts if offline or rate-limited
+  }
+}
+
+/* =========================================================
+   5. SMART INTENT SELECTOR (CONTACT FORM)
+   ========================================================= */
+let renderIntentGlobal = null;
+
+function initSmartIntent() {
+  const banner = document.getElementById('intentBanner');
+  const msgEl = document.getElementById('fMsg');
+  if (!banner || !msgEl) return;
+
+  let activeIntent = 'data_role';
+  const INTENTS = {
+    data_role: {
+      en: {
+        text: 'Recommended for BI / Data hiring teams: AdventureWorks $110M + Live Power BI.',
+        linkLabel: '⬇ Data Analyst CV (PDF)',
+        linkHref: 'cv/Mostafa_Saad_Data_Analyst_CV.pdf',
+        placeholder: 'Hi Mostafa, we are hiring for a Data / BI Analyst role and would love to connect...',
+      },
+      ar: {
+        text: 'الأنسب لفرق توظيف البيانات و BI: مشروع AdventureWorks $110M ولوحة Power BI الحية.',
+        linkLabel: '⬇ تحميل CV محلل البيانات',
+        linkHref: 'cv/Mostafa_Saad_Data_Analyst_CV.pdf',
+        placeholder: 'أهلاً مصطفى، نبحث عن محلل بيانات / BI للانضمام لفريقنا...',
+      },
+    },
+    foot_role: {
+      en: {
+        text: 'Recommended for clubs & agencies: Football-Match-Analysis (★ 7) + FA/PFSA Certs.',
+        linkLabel: '⬇ Football Analyst CV (PDF)',
+        linkHref: 'cv/Mostafa_Saad_Football_Analyst_CV.pdf',
+        placeholder: 'Hi Mostafa, we are looking for a Football Data / Performance Analyst...',
+      },
+      ar: {
+        text: 'الأنسب للأندية والوكالات: محرك تحليل المباريات (★ 7) + شهادات FA و PFSA.',
+        linkLabel: '⬇ تحميل CV محلل كرة القدم',
+        linkHref: 'cv/Mostafa_Saad_Football_Analyst_CV.pdf',
+        placeholder: 'أهلاً مصطفى، نبحث عن محلل بيانات وأداء كرة قدم / سكاوتنج...',
+      },
+    },
+    freelance: {
+      en: {
+        text: 'Need a Power BI dashboard, SQL cleanup, or database audit? Share your dataset scope below.',
+        linkLabel: '↗ View Live Power BI',
+        linkHref: PROFILE_CONFIG.powerBiUrl,
+        placeholder: 'Hi Mostafa, I need help building a Power BI dashboard / cleaning a dataset...',
+      },
+      ar: {
+        text: 'تحتاج لوحة Power BI أو تنظيف وتدقيق قاعدة بيانات؟ اكتب تفاصيل بياناتك بالأسفل.',
+        linkLabel: '↗ معاينة لوحة Power BI',
+        linkHref: PROFILE_CONFIG.powerBiUrl,
+        placeholder: 'أهلاً مصطفى، لدي مشروع تحليل بيانات / بناء داشبورد Power BI...',
+      },
+    },
+    workshop: {
+      en: {
+        text: 'Hands-on training in Advanced Excel, Power Query, Power Pivot & Dataset Design.',
+        linkLabel: '↗ LinkedIn Profile',
+        linkHref: PROFILE_CONFIG.linkedin,
+        placeholder: 'Hi Mostafa, we would like to book an Advanced Excel / Power BI workshop for our team...',
+      },
+      ar: {
+        text: 'تدريب عملي متقدم في Excel و Power Query و Power Pivot وبناء قواعد البيانات.',
+        linkLabel: '↗ بروفايل LinkedIn',
+        linkHref: PROFILE_CONFIG.linkedin,
+        placeholder: 'أهلاً مصطفى، نرغب في تنظيم ورشة عمل Excel / Power BI لفريقنا...',
+      },
+    },
+  };
+
+  function renderIntent() {
+    const cfg = INTENTS[activeIntent][currentLang];
+    const isPdf = cfg.linkHref.endsWith('.pdf');
+    banner.innerHTML = `
+      <span>${cfg.text}</span>
+      <a href="${cfg.linkHref}" ${isPdf ? 'download' : 'target="_blank" rel="noopener"'}>${cfg.linkLabel}</a>
+    `;
+    msgEl.placeholder = cfg.placeholder;
+  }
+
+  renderIntentGlobal = renderIntent;
+
+  document.querySelectorAll('.intent-pill').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.intent-pill').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeIntent = btn.dataset.intent;
+      renderIntent();
+    });
+  });
+
+  renderIntent();
+}
+
+/* =========================================================
+   6. SUBTLE MAGNETIC HOVER BUTTONS
+   ========================================================= */
+function initMagneticButtons() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  document.querySelectorAll('.magnetic').forEach((el) => {
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      const dx = ((e.clientX - r.left) / r.width - 0.5) * 10;
+      const dy = ((e.clientY - r.top) / r.height - 0.5) * 8;
+      el.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
+  });
+}

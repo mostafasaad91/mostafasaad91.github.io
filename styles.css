@@ -1923,3 +1923,316 @@ html[data-track="football"] .insight-card[data-insight-track="data"] { display: 
   .posters-grid { grid-template-columns: 1fr; }
   .foot-tb-brand { flex-direction: column; }
 }
+
+
+/* =========================================================
+   OUT-OF-THE-BOX UPGRADES: GRAIN, BENTO, RFM, SPLIT, ⌘K, INTENT
+   ========================================================= */
+
+/* 1. Subtle 2% Cinematic Film Noise Grain on AMOLED */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+html[data-theme="light"] .noise-overlay { opacity: 0.015; }
+
+/* 2. Command Palette Trigger Button */
+.cmd-trigger {
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  color: var(--cyan);
+  border-radius: 10px;
+  padding: 0.4rem 0.68rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.cmd-trigger:hover {
+  background: rgba(0, 229, 255, 0.18);
+  border-color: var(--cyan);
+}
+
+/* 3. Asymmetric Bento Impact Grid */
+.bento-strip {
+  padding: 2.2rem 0 2.6rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.bento-card {
+  border-radius: 18px;
+  padding: 1.35rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+.bento-wide { grid-column: span 2; }
+.bento-wide-2 { grid-column: span 3; }
+.bento-tag {
+  font-size: 0.67rem;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+}
+.bento-big {
+  font-size: clamp(1.7rem, 2.8vw, 2.35rem);
+  font-weight: 700;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+}
+.bento-unit { font-size: 1.1rem; }
+.bento-sub { font-size: 0.85rem; color: var(--text-muted); }
+.bento-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 0.2rem;
+}
+.bento-duo strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+/* 4. Live K-Means RFM Simulator */
+.rfm-wrapper {
+  border-color: rgba(0, 229, 255, 0.28);
+}
+.rfm-plot-box {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-inset);
+  padding: 0.4rem;
+}
+#rfmChart { width: 100%; height: auto; display: block; }
+.rfm-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
+}
+
+/* 5. AMOLED vs Print Light Split-Screen Drag Slider */
+.split-showcase {
+  border-radius: 22px;
+  padding: 1.8rem;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 2rem;
+  align-items: center;
+  border-color: rgba(16, 185, 129, 0.3);
+  margin-bottom: 1.5rem;
+}
+.split-stage {
+  position: relative;
+  width: 100%;
+  max-width: 410px;
+  margin-inline: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+}
+.split-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+.split-overlay {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);
+}
+.split-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2.5px;
+  background: linear-gradient(180deg, #00e5ff, #10b981);
+  transform: translateX(-50%);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.75);
+  z-index: 4;
+}
+.split-knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000000;
+  border: 2px solid #00e5ff;
+  color: #00e5ff;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 0 22px rgba(0, 229, 255, 0.55);
+}
+.split-tag {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+  z-index: 3;
+  pointer-events: none;
+}
+.left-tag { left: 10px; background: rgba(0, 0, 0, 0.85); color: #00e5ff; border: 1px solid rgba(0, 229, 255, 0.4); }
+.right-tag { right: 10px; background: rgba(245, 245, 245, 0.92); color: #0f4c5c; border: 1px solid rgba(15, 76, 92, 0.35); }
+
+.split-info { display: flex; flex-direction: column; gap: 0.85rem; }
+.split-info h4 { font-family: var(--font-display); font-size: 1.4rem; }
+.split-quick-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+
+/* 6. Smart Intent Selector in Contact */
+.contact-form-wrap { display: flex; flex-direction: column; gap: 1.15rem; }
+.intent-selector { display: flex; flex-direction: column; gap: 0.6rem; }
+.intent-lbl { font-size: 0.68rem; color: var(--text-dim); letter-spacing: 0.08em; }
+.intent-pills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.intent-pill {
+  background: var(--surface-inset);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.42rem 0.78rem;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.intent-pill:hover { border-color: var(--cyan); color: var(--text); }
+.intent-pill.active {
+  background: rgba(0, 229, 255, 0.14);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.intent-banner {
+  border-radius: 12px;
+  padding: 0.78rem 0.95rem;
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  border-color: rgba(0, 229, 255, 0.24);
+}
+.intent-banner a {
+  color: var(--emerald);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+.intent-banner a:hover { text-decoration: underline; }
+
+/* 7. Command Palette (⌘K) Modal */
+.cmd-backdrop { align-items: start; padding-top: min(14vh, 110px); }
+.cmd-box {
+  width: min(94vw, 560px);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(0, 229, 255, 0.18);
+}
+.cmd-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1.15rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-inset);
+}
+.cmd-input-row input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+}
+.cmd-input-row kbd {
+  font-size: 0.68rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+.cmd-list {
+  list-style: none;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 0.45rem;
+}
+.cmd-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.68rem 0.85rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: background 0.14s;
+}
+.cmd-item:hover,
+.cmd-item.selected {
+  background: rgba(0, 229, 255, 0.14);
+  color: var(--cyan);
+}
+.cmd-item span.cmd-hint {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+.cmd-foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1.1rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface-inset);
+  font-size: 0.69rem;
+  color: var(--text-dim);
+}
+
+/* Magnetic Buttons */
+.magnetic { will-change: transform; }
+
+@media (max-width: 980px) {
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .bento-wide, .bento-wide-2 { grid-column: span 2; }
+  .split-showcase { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .bento-grid, .bento-duo { grid-template-columns: 1fr; }
+  .bento-wide, .bento-wide-2 { grid-column: span 1; }
+}

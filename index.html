@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="noise-overlay" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="ambient-orb orb-cyan" aria-hidden="true"></div>
@@ -50,13 +51,16 @@
       </nav>
 
       <div class="nav-actions">
+        <button class="cmd-trigger mono magnetic" id="cmdTrigger" type="button" aria-label="Open Command Palette" title="Quick Actions (Ctrl+K)">
+          <span>⌘K</span>
+        </button>
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
           <span id="themeIcon">☀</span>
         </button>
         <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch Language">
           <span class="lang-pill">عربي</span>
         </button>
-        <a href="#contact" class="btn btn-sm btn-primary" data-i18n="nav_cta">Hire / Collaborate</a>
+        <a href="#contact" class="btn btn-sm btn-primary magnetic" data-i18n="nav_cta">Hire / Collaborate</a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -192,24 +196,45 @@
       </div>
     </section>
 
-    <!-- IMPACT METRICS STRIP -->
-    <section class="metrics-strip reveal">
-      <div class="container metrics-grid">
-        <div class="metric-item">
-          <div class="metric-value mono"><span class="counter" data-target="6">0</span>+</div>
-          <div class="metric-label" data-i18n="stat_years">Years Data Experience</div>
+    <!-- BENTO IMPACT SHOWCASE -->
+    <section class="bento-strip reveal">
+      <div class="container bento-grid">
+        <div class="bento-card bento-wide glass tilt-card">
+          <span class="mono bento-tag cyan">EXPERIENCE &amp; LEADERSHIP</span>
+          <div class="bento-big mono"><span class="counter" data-target="6">0</span>+ <span class="bento-unit" data-i18n="bento_yrs">Years</span></div>
+          <p class="bento-sub" data-i18n="bento_exp_desc">Leading 7+ archival, BI &amp; analytics datasets, supervising data teams, and teaching advanced Excel workshops.</p>
         </div>
-        <div class="metric-item">
-          <div class="metric-value mono">$<span class="counter" data-target="110">0</span>M</div>
-          <div class="metric-label" data-i18n="stat_aw">AdventureWorks E2E Analysis</div>
+
+        <div class="bento-card glass tilt-card">
+          <span class="mono bento-tag violet">SQL → PYTHON → BI</span>
+          <div class="bento-big mono">$<span class="counter" data-target="110">0</span>M</div>
+          <p class="bento-sub" data-i18n="stat_aw">AdventureWorks E2E Analysis</p>
         </div>
-        <div class="metric-item">
-          <div class="metric-value mono">⭐ <span class="counter" data-target="8">0</span></div>
-          <div class="metric-label" data-i18n="stat_stars">GitHub Project Stars</div>
+
+        <div class="bento-card glass tilt-card">
+          <span class="mono bento-tag emerald"><span class="live-dot" style="display:inline-block;margin-inline-end:5px;"></span>LIVE GITHUB API</span>
+          <div class="bento-big mono">★ <span id="ghLiveStars" class="counter" data-target="8">0</span></div>
+          <p class="bento-sub"><span data-i18n="stat_stars">Open-Source Stars</span> · <span class="mono" id="ghLastSync" style="color:var(--cyan)">Synced</span></p>
         </div>
-        <div class="metric-item">
-          <div class="metric-value mono"><span class="counter" data-target="4">0</span></div>
-          <div class="metric-label" data-i18n="stat_certs">FA · PFSA · FP Academy Certs</div>
+
+        <div class="bento-card glass tilt-card">
+          <span class="mono bento-tag emerald">FOOTBALL CREDENTIALS</span>
+          <div class="bento-big mono"><span class="counter" data-target="4">0</span> Certs</div>
+          <p class="bento-sub" data-i18n="stat_certs">FA · PFSA · FP Academy · EE</p>
+        </div>
+
+        <div class="bento-card bento-wide-2 glass tilt-card">
+          <span class="mono bento-tag cyan">DUAL-TRACK DELIVERY · EN &amp; AR</span>
+          <div class="bento-duo">
+            <div>
+              <strong class="cyan" data-i18n="bento_t1">Business BI &amp; ML</strong>
+              <p class="bento-sub">Power BI · T-SQL · K-Means RFM · Power Query</p>
+            </div>
+            <div>
+              <strong class="emerald" data-i18n="bento_t2">Football Performance Lab</strong>
+              <p class="bento-sub">Opta Event Data · xG / xT · PPDA · AMOLED Posters</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -282,7 +307,7 @@
             <div class="project-viz viz-cyan">
               <div class="repo-top-row">
                 <span class="proj-cat mono">GITHUB REPO · SQL → PYTHON → POWER BI</span>
-                <span class="star-badge mono">★ 1 · LIVE BI</span>
+                <span class="star-badge mono" id="awStarsBadge">★ 1 · LIVE BI</span>
               </div>
               <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
                 <rect class="wave-bar b1" x="20" y="48" width="24" height="34" rx="4" fill="#00E5FF" opacity="0.5"/>
@@ -403,6 +428,78 @@
             </button>
           </div>
         </div>
+
+        <!-- LIVE INTERACTIVE K-MEANS RFM CUSTOMER SEGMENTATION SIMULATOR (Track 1 ML Playground!) -->
+        <div class="sim-header-inline">
+          <span class="section-eyebrow mono" style="color:var(--cyan)" data-i18n="rfm_eyebrow">// INTERACTIVE BUSINESS ML PLAYGROUND</span>
+          <h3 class="sub-section-title" data-i18n="rfm_title">Live K-Means RFM Customer Segmentation Simulator</h3>
+          <p class="section-desc" data-i18n="rfm_desc">
+            Inspired by my AdventureWorks 2022 Python → SQL pipeline: adjust Recency, Frequency &amp; Monetary spend to watch K-Means (k=4) classify the customer on a live scatter plot with business actions and SQL write-back.
+          </p>
+        </div>
+
+        <div class="sim-wrapper rfm-wrapper glass" id="rfm-simulator">
+          <div class="rfm-plot-col">
+            <div class="sim-pitch-head">
+              <span class="mono" data-i18n="rfm_plot_hdr">LIVE K-MEANS CLUSTER MAP (k=4)</span>
+              <span class="mono coord-pill" id="rfmCoords">R: 28d · F: 6 · $4,200</span>
+            </div>
+            <div class="rfm-plot-box">
+              <svg id="rfmChart" viewBox="0 0 420 270" role="img" aria-label="Interactive K-Means RFM Cluster Scatter Plot"></svg>
+            </div>
+            <div class="preset-row">
+              <span class="mono preset-lbl" data-i18n="rfm_presets">PROFILES:</span>
+              <button class="preset-btn rfm-preset mono" data-rfm="vip" type="button">VIP Whale</button>
+              <button class="preset-btn rfm-preset mono" data-rfm="promising" type="button">New Promising</button>
+              <button class="preset-btn rfm-preset mono" data-rfm="risk" type="button">At Risk</button>
+              <button class="preset-btn rfm-preset mono" data-rfm="hibernating" type="button">Hibernating</button>
+            </div>
+          </div>
+
+          <div class="rfm-ctrl-col">
+            <div class="xg-readout">
+              <div>
+                <span class="mono readout-label" data-i18n="rfm_seg_lbl">PREDICTED K-MEANS SEGMENT</span>
+                <div class="xg-big mono" id="rfmSegTitle" style="font-size:1.6rem;">VIP CHAMPION</div>
+              </div>
+              <span class="quality-badge mono" id="rfmScoreBadge">SCORE 92/100</span>
+            </div>
+
+            <div class="rfm-sliders">
+              <div class="sim-field">
+                <div class="slider-top">
+                  <label class="mono" for="rfmR" data-i18n="rfm_r_lbl">Recency (Days Since Last Order)</label>
+                  <span class="mono cyan" id="rfmRVal">28 days</span>
+                </div>
+                <input type="range" id="rfmR" min="2" max="365" step="1" value="28" />
+              </div>
+              <div class="sim-field">
+                <div class="slider-top">
+                  <label class="mono" for="rfmF" data-i18n="rfm_f_lbl">Frequency (Total Orders)</label>
+                  <span class="mono violet" id="rfmFVal">6 orders</span>
+                </div>
+                <input type="range" id="rfmF" min="1" max="20" step="1" value="6" />
+              </div>
+              <div class="sim-field">
+                <div class="slider-top">
+                  <label class="mono" for="rfmM" data-i18n="rfm_m_lbl">Monetary (Lifetime Spend USD)</label>
+                  <span class="mono emerald" id="rfmMVal">$4,200</span>
+                </div>
+                <input type="range" id="rfmM" min="150" max="15000" step="50" value="4200" />
+              </div>
+            </div>
+
+            <div class="shap-box" style="margin-bottom:0.85rem;">
+              <div class="shap-title mono" data-i18n="rfm_action_lbl">RECOMMENDED BUSINESS ACTION</div>
+              <p id="rfmActionText" style="font-size:0.88rem;color:var(--text);">Prioritize VIP loyalty perks &amp; cross-sell high-lift drivetrain bundles (&gt;90x lift).</p>
+            </div>
+
+            <div class="terminal-bar mono">
+              <span class="prompt">SQL&gt;</span>
+              <span id="rfmSqlPreview">MERGE dbo.CustomerSegments SET Segment='VIP' WHERE R=28 AND F=6;</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -444,7 +541,7 @@
             <div class="project-viz viz-emerald">
               <div class="repo-top-row">
                 <span class="proj-cat mono">GITHUB FLAGSHIP · PYTHON + OPTA EVENT DATA</span>
-                <span class="star-badge emerald-star mono">★ 7 STARS</span>
+                <span class="star-badge emerald-star mono" id="fmaStarsBadge">★ 7 STARS</span>
               </div>
               <svg class="mini-graph" viewBox="0 0 280 90" fill="none">
                 <path class="flow-stroke" d="M12 76 C55 70, 82 54, 120 38 C160 22, 200 18, 268 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
@@ -515,6 +612,46 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- INTERACTIVE AMOLED vs PRINT LIGHT SPLIT-SCREEN COMPARISON SLIDER -->
+        <div class="sim-header-inline">
+          <span class="section-eyebrow mono" style="color:var(--emerald)" data-i18n="split_eyebrow">// DUAL-RENDERER SHOWCASE · #000000 ⇄ #F5F5F5</span>
+          <h3 class="sub-section-title" data-i18n="split_title">AMOLED vs. Print Light (Ink &amp; Petrol) Split Comparison</h3>
+          <p class="section-desc" data-i18n="split_desc">
+            Drag the center handle left or right to inspect how my Football-Match-Analysis engine renders the exact same match board for AMOLED screens and paper print with automatic kit-color contrast lifting.
+          </p>
+        </div>
+
+        <div class="split-showcase glass">
+          <div class="split-stage" id="splitStage">
+            <img src="assets/posters/poster_1_xg_shotmap_light.png" alt="Light Print Edition Poster" class="split-img split-base" draggable="false" />
+            <div class="split-overlay" id="splitOverlay">
+              <img src="assets/posters/poster_1_xg_shotmap.png" alt="AMOLED Black Edition Poster" class="split-img" draggable="false" />
+            </div>
+            <div class="split-handle" id="splitHandle" role="slider" aria-label="Compare AMOLED vs Light Poster" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+              <div class="split-knob mono">⇄</div>
+            </div>
+            <span class="split-tag left-tag mono">AMOLED #000000</span>
+            <span class="split-tag right-tag mono">PRINT #F5F5F5</span>
+          </div>
+
+          <div class="split-info">
+            <span class="mono meta-tag">DUAL-PROCESS RENDERING ARCHITECTURE</span>
+            <h4 data-i18n="split_card_t">Built Once, Published Twice</h4>
+            <p class="muted" data-i18n="split_card_d">
+              Every match run exports a dark AMOLED #000000 edition for X / mobile feeds and an Ink &amp; Petrol #F5F5F5 edition for print briefings — dynamically lifting dark kit hues on black and darkening light kits on paper.
+            </p>
+            <div class="split-quick-btns">
+              <button class="preset-btn mono" data-split-pos="92" type="button">AMOLED 100%</button>
+              <button class="preset-btn mono" data-split-pos="50" type="button">50 / 50 Split</button>
+              <button class="preset-btn mono" data-split-pos="8" type="button">Print Light 100%</button>
+            </div>
+            <div class="terminal-bar mono" style="margin-top:0.6rem;">
+              <span class="prompt">&gt;_</span>
+              <span>python -m football_analysis.render.render_light output/match_dir</span>
+            </div>
+          </div>
         </div>
 
         <!-- AMOLED 4:5 TACTICAL MATCH POSTER GALLERY -->
@@ -823,7 +960,20 @@
             </div>
           </div>
 
-          <form class="contact-form" id="contactForm">
+          <div class="contact-form-wrap">
+            <!-- SMART INTENT SELECTOR -->
+            <div class="intent-selector">
+              <span class="mono intent-lbl" data-i18n="intent_lbl">WHAT BRINGS YOU HERE? (AUTO-TAILORS MESSAGE &amp; LINKS)</span>
+              <div class="intent-pills" role="group" aria-label="Contact Intent">
+                <button class="intent-pill active" data-intent="data_role" type="button" data-i18n="int_1">💼 Hiring: Data / BI</button>
+                <button class="intent-pill" data-intent="foot_role" type="button" data-i18n="int_2">⚽ Club / Scouting</button>
+                <button class="intent-pill" data-intent="freelance" type="button" data-i18n="int_3">📊 Freelance / Audit</button>
+                <button class="intent-pill" data-intent="workshop" type="button" data-i18n="int_4">🎓 Excel / BI Workshop</button>
+              </div>
+              <div class="intent-banner glass" id="intentBanner"></div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
             <div class="form-group">
               <label for="fName" data-i18n="form_name">Your Name</label>
               <input id="fName" type="text" required placeholder="Company / Club / Name" />
@@ -836,9 +986,10 @@
               <label for="fMsg" data-i18n="form_msg">Role or Project Details</label>
               <textarea id="fMsg" rows="4" required placeholder="Tell me about your team, data challenge, or role..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg full-w" data-i18n="form_send">Open Email Draft / Send</button>
+            <button type="submit" class="btn btn-primary btn-lg full-w magnetic" data-i18n="form_send">Open Email Draft / Send</button>
             <p class="form-feedback mono" id="formFeedback" role="status"></p>
           </form>
+          </div>
         </div>
       </div>
     </section>
@@ -884,6 +1035,23 @@
       <span class="mono modal-cat" id="aTag"></span>
       <h3 class="modal-title" id="aTitle"></h3>
       <div class="article-body" id="aBody"></div>
+    </div>
+  </div>
+
+  <!-- Command Palette (Ctrl+K / ⌘K) -->
+  <div class="modal-backdrop cmd-backdrop" id="cmdModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-box glass">
+      <div class="cmd-input-row">
+        <span class="mono cyan">&gt;_</span>
+        <input type="text" id="cmdInput" placeholder="Search actions, tracks, CVs, simulators..." autocomplete="off" />
+        <kbd class="mono">ESC</kbd>
+      </div>
+      <ul class="cmd-list" id="cmdList" role="listbox"></ul>
+      <div class="cmd-foot mono">
+        <span>↑↓ Navigate</span>
+        <span>↵ Run Action</span>
+        <span>Ctrl+K / ⌘K Toggle</span>
+      </div>
     </div>
   </div>
 
