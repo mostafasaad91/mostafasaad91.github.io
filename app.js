@@ -3,7 +3,7 @@
    ========================================================= */
 const PROFILE_CONFIG = {
   name: 'Mostafa Saad',
-  email: 'mostafasaad044@gmail.com',
+  email: 'mostafasaad0091@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mostafa-saad-171086191/',
   github: 'https://github.com/mostafasaad91',
   liveBaseUrl: 'https://mostafasaad91.github.io/',
@@ -1445,8 +1445,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const fb = document.getElementById('formFeedback');
     fb.textContent =
       currentLang === 'ar'
-        ? '✓ تم تجهيز رسالة البريد الإلكتروني إلى mostafasaad044@gmail.com'
-        : '✓ Email draft opened for mostafasaad044@gmail.com';
+        ? '✓ تم تجهيز رسالة البريد الإلكتروني إلى mostafasaad0091@gmail.com'
+        : '✓ Email draft opened for mostafasaad0091@gmail.com';
     e.target.reset();
   });
 
@@ -1689,7 +1689,7 @@ function initCommandPalette() {
     { title: 'Compare AMOLED vs Print Light Slider', hint: 'UI', run: () => { applyTrackMode('all'); document.getElementById('splitStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Toggle Language (Arabic / English)', hint: 'AR/EN', run: () => applyLanguage(currentLang === 'en' ? 'ar' : 'en') },
     { title: 'Toggle Theme (AMOLED Dark / Light)', hint: 'THEME', run: () => document.getElementById('themeToggle')?.click() },
-    { title: 'Copy Email (mostafasaad044@gmail.com)', hint: 'COPY', run: () => document.getElementById('copyEmailBtn')?.click() },
+    { title: 'Copy Email (mostafasaad0091@gmail.com)', hint: 'COPY', run: () => document.getElementById('copyEmailBtn')?.click() },
     { title: 'Open GitHub Profile (mostafasaad91)', hint: 'GITHUB', run: () => window.open(PROFILE_CONFIG.github, '_blank') },
   ];
 
