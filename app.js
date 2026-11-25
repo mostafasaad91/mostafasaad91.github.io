@@ -84,6 +84,40 @@ const TRANSLATIONS = {
     int_2: '⚽ Club / Scouting',
     int_3: '📊 Freelance / Audit',
     int_4: '🎓 Excel / BI Workshop',
+    nav_stack: 'Skills',
+    nav_services: 'Services',
+    stack_eyebrow: '// VERIFIED TOOLKIT · CLICK ANY SKILL FOR PROOF',
+    stack_title: 'Interactive Tech Stack & Project Proof Matrix',
+    stack_desc:
+      'Click any tool below to inspect exactly where and how it was deployed across production datasets, GitHub repos, and match reports.',
+    mg_sql: '01 · SQL & DATABASES',
+    mg_bi: '02 · BI & REPORTING',
+    mg_py: '03 · PYTHON & MACHINE LEARNING',
+    mg_foot: '04 · FOOTBALL & TACTICAL ANALYTICS',
+    srv_eyebrow: '// FREELANCE, CONSULTING & TRAINING',
+    srv_title: 'Services & Workshops',
+    srv_desc:
+      'Available for project-based engagements, club consulting, and hands-on corporate or 1-on-1 analytics workshops.',
+    srv_1_t: 'Power BI Dashboards, SQL & Data Auditing',
+    srv_1_d:
+      'End-to-end transformation of messy spreadsheets or OLTP databases into clean star-schema models, automated Power Query pipelines, DAX KPIs, and interactive executive dashboards.',
+    srv_1_b1: 'Multi-sheet ID reconciliation & anomaly QA',
+    srv_1_b2: 'Interactive Power BI / Tableau reporting',
+    srv_1_b3: 'Customer segmentation (RFM / K-Means) & cohorts',
+    srv_2_t: 'Match, Opposition & Player Scouting Reports',
+    srv_2_d:
+      'Evidence-led tactical packs for clubs, agencies, and sports media: custom xG/xT event analysis, PPDA pressing maps, player role percentiles, and AMOLED visual boards.',
+    srv_2_b1: 'Pre-match opposition & post-match PDF reports',
+    srv_2_b2: 'Recruitment shortlists & same-role peer profiles',
+    srv_2_b3: 'Bilingual delivery (Arabic & English) + 4:5 posters',
+    srv_3_t: 'Advanced Excel, Power Query & BI Workshops',
+    srv_3_d:
+      'Practical workshops for research teams, NGOs, and analysts — built from 6+ years of supervising data teams and teaching dataset design & Excel automation.',
+    srv_3_b1: 'Power Query ETL, Power Pivot & DAX foundations',
+    srv_3_b2: 'Dataset coding systems & data cleaning workflows',
+    srv_3_b3: 'Tailored corporate or 1-on-1 live sessions',
+    srv_cta: 'Request This Service →',
+    srv_cta_ws: 'Book a Workshop →',
     hero_subtitle:
       'Data Analyst with 6+ years of experience operating across two specialized tracks: Enterprise BI, SQL & Machine Learning systems, and independent Football Data & Performance Analytics.',
     track_switch_lbl: 'CHOOSE PORTFOLIO VIEW:',
@@ -231,6 +265,40 @@ const TRANSLATIONS = {
     int_2: '⚽ نادي / سكاوتنج',
     int_3: '📊 مشروع Freelance',
     int_4: '🎓 ورشة Excel / Power BI',
+    nav_stack: 'المهارات',
+    nav_services: 'الخدمات',
+    stack_eyebrow: '// أدوات مثبتة بالمشاريع · اضغط أي مهارة للتفاصيل',
+    stack_title: 'مصفوفة المهارات التفاعلية وإثبات التطبيق',
+    stack_desc:
+      'اضغط على أي أداة بالأسفل لترى فوراً أين وكيف تم تطبيقها فعلياً في قواعد البيانات ومشاريع GitHub وتقارير المباريات.',
+    mg_sql: '01 · قواعد البيانات و SQL',
+    mg_bi: '02 · ذكاء الأعمال والتقارير (BI)',
+    mg_py: '03 · PYTHON وتعلم الآلة',
+    mg_foot: '04 · تحليل كرة القدم التكتيكي',
+    srv_eyebrow: '// العمل الحر والاستشارات والتدريب',
+    srv_title: 'الخدمات وورش العمل',
+    srv_desc:
+      'متاح للمشاريع الاستشارية، تقارير الأندية والوكالات، وتقديم ورش عمل عملية للشركات والأفراد.',
+    srv_1_t: 'لوحات Power BI وهندسة SQL وتدقيق البيانات',
+    srv_1_d:
+      'تحويل الجداول المتفرقة وقواعد البيانات إلى نماذج Star Schema نظيفة، خطوط Power Query مؤتمتة، مقاييس DAX، ولوحات تنفيذية تفاعلية.',
+    srv_1_b1: 'مطابقة الأكواد بين الجداول واكتشاف الأخطاء آلياً',
+    srv_1_b2: 'لوحات Power BI و Tableau تفاعلية لصناع القرار',
+    srv_1_b3: 'تقسيم العملاء (RFM / K-Means) وتحليل الأفواج',
+    srv_2_t: 'تقارير تحليل المباريات والخصوم والسكاوتنج',
+    srv_2_d:
+      'حزم تحليل تكتيكي مبنية على الأدلة للأندية والوكالات والإعلام الرياضي: نماذج xG/xT، خرائط PPDA، مئويات اللاعبين، وبوسترات AMOLED.',
+    srv_2_b1: 'تقارير ما قبل المباراة (الخصم) وما بعدها بصيغة PDF',
+    srv_2_b2: 'قوائم ترشيح لاعبين وملفات أدوار مقارنة بنظراء المركز',
+    srv_2_b3: 'تسليم بالعربية والإنجليزية + بوسترات 4:5 جاهزة للنشر',
+    srv_3_t: 'ورش عمل Excel المتقدم و Power Query و Power BI',
+    srv_3_d:
+      'تدريب عملي لفرق البحث والمؤسسات والمحللين — مبني على خبرة +6 سنوات في الإشراف على فرق البيانات وتصميم قواعد البيانات.',
+    srv_3_b1: 'أساسيات واحتراف Power Query و Power Pivot و DAX',
+    srv_3_b2: 'تصميم أنظمة التكويد ومنهجيات تنظيف البيانات',
+    srv_3_b3: 'جلسات مخصصة للشركات أو تدريب فردي 1-on-1',
+    srv_cta: 'اطلب هذه الخدمة ←',
+    srv_cta_ws: 'احجز ورشة عمل ←',
     hero_subtitle:
       'محلل بيانات بخبرة +6 سنوات أعمل عبر مسارين متخصصين منفصلين: أنظمة ذكاء الأعمال وقواعد البيانات وتعلم الآلة (SQL / Python / Power BI)، ومعمل تحليل بيانات وأداء كرة القدم.',
     track_switch_lbl: 'اختر مجال العرض:',
@@ -1104,6 +1172,7 @@ function applyLanguage(lang) {
   computeXG();
   if (typeof updateRFMGlobal === 'function') updateRFMGlobal();
   if (typeof renderIntentGlobal === 'function') renderIntentGlobal();
+  if (typeof renderSkillProofGlobal === 'function') renderSkillProofGlobal();
 }
 
 function initCountersAndReveal() {
@@ -1472,6 +1541,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCommandPalette();
   initGitHubLiveSync();
   initSmartIntent();
+  initTechStackMatrix();
+  initQuickDock();
   initMagneticButtons();
   initNeuralCanvas();
   initTypingRotator();
@@ -1937,5 +2008,209 @@ function initMagneticButtons() {
     el.addEventListener('mouseleave', () => {
       el.style.transform = '';
     });
+  });
+}
+
+
+/* =========================================================
+   7. INTERACTIVE TECH STACK PROOF MATRIX + SERVICE SHORTCUTS
+   ========================================================= */
+let renderSkillProofGlobal = null;
+
+function initTechStackMatrix() {
+  const card = document.getElementById('skillProofCard');
+  if (!card) return;
+
+  const PROOFS = {
+    tsql: {
+      cat: { en: 'SQL & DATABASES', ar: 'قواعد البيانات و SQL' },
+      title: 'SQL Server (T-SQL)',
+      desc: {
+        en: 'Explored a live 72-table OLTP database ($110M revenue) using CTEs, LAG(12) YoY comparisons, NTILE(10) Pareto deciles, ROW_NUMBER() repurchase gaps, and point-in-time cost views.',
+        ar: 'تحليل قاعدة بيانات OLTP من 72 جدولاً ($110M) باستخدام CTEs ودوال LAG(12) و NTILE(10) و ROW_NUMBER() وحساب الهوامش بالتكلفة التاريخية.',
+      },
+      metrics: ['72 OLTP Tables', 'Sales.vw_LineProfit', '13/17 Qs in Pure SQL'],
+      where: { en: 'Deployed in: AdventureWorks 2022 Sales Analytics', ar: 'مطبّق في: مشروع AdventureWorks 2022' },
+      links: [{ label: 'View SQL Scripts ↗', url: 'https://github.com/mostafasaad91/adventure-works-sales-analytics' }],
+    },
+    star: {
+      cat: { en: 'DATA MODELING', ar: 'نمذجة البيانات' },
+      title: 'Star Schema & Views',
+      desc: {
+        en: 'Architected a clean `pbi` schema with 1 FactSales view (121K sales lines) and 5 conformed dimensions (Date, Product, Customer, Territory, SalesPerson) so Power BI never queries raw OLTP tables.',
+        ar: 'تصميم Star Schema نظيف يضم جدول حقائق FactSales (121 ألف صف) و 5 أبعاد متوافقة لتغذية Power BI دون المساس بالجداول الخام.',
+      },
+      metrics: ['1 Fact + 5 Dimensions', '121K Fact Rows', 'Zero Raw-Table Coupling'],
+      where: { en: 'Deployed in: AdventureWorks 2022 & Freelance BI', ar: 'مطبّق في: AdventureWorks ومشاريع BI' },
+      links: [{ label: 'Live Power BI Model ↗', url: PROFILE_CONFIG.powerBiUrl }],
+    },
+    sqlite: {
+      cat: { en: 'DATA GOVERNANCE & QA', ar: 'حوكمة وتدقيق البيانات' },
+      title: 'SQLite & Archival QA',
+      desc: {
+        en: 'Built SQLite match-history replay databases in Football-Match-Analysis alongside multi-sheet archival ID validation systems catching duplicates, transposed digits, and code drift across 7+ datasets.',
+        ar: 'بناء أرشيف SQLite لتاريخ المباريات بجانب أنظمة تدقيق ومطابقة أكواد عبر أكثر من 7 قواعد بيانات أرشيفية وبحثية.',
+      },
+      metrics: ['7+ Archival Datasets', 'SQLite Replay DB', 'Automated Anomaly QA'],
+      where: { en: 'Deployed in: NADIM Foundation · Daftar Ahwal · Football Engine', ar: 'مطبّق في: مؤسسة نديم · دفتر أحوال · محرك الكرة' },
+      links: [{ label: 'Football Repo ↗', url: 'https://github.com/mostafasaad91/Football-Match-Analysis' }],
+    },
+    powerbi: {
+      cat: { en: 'BUSINESS INTELLIGENCE', ar: 'ذكاء الأعمال' },
+      title: 'Power BI (PBIP) & DAX',
+      desc: {
+        en: 'Delivered a source-controlled PBIP 6-page executive dashboard powered by 17 DAX measures (SAMEPERIODLASTYEAR, TOTALYTD, running totals, dynamic slicer titles, rule-based conditional formatting).',
+        ar: 'بناء لوحة Power BI من 6 صفحات بنظام PBIP و 17 مقياس DAX للذكاء الزمني والعناوين الديناميكية والتنسيق الشرطي للخسائر.',
+      },
+      metrics: ['6 Interactive Pages', '17 DAX Measures', 'Live Public Embed'],
+      where: { en: 'Deployed in: AdventureWorks 2022 & Client BI', ar: 'مطبّق في: AdventureWorks ولوحات العملاء' },
+      links: [{ label: 'Open Live Dashboard ↗', url: PROFILE_CONFIG.powerBiUrl }],
+    },
+    excel: {
+      cat: { en: 'BI & AUTOMATION', ar: 'الأتمتة وتحليل الأعمال' },
+      title: 'Excel · Power Query · Power Pivot',
+      desc: {
+        en: '6+ years designing coding systems, automated Power Query ETL pipelines, Power Pivot DAX models, and facilitating hands-on Advanced Excel workshops for institutional teams.',
+        ar: 'خبرة +6 سنوات في تصميم أنظمة التكويد وأتمتة Power Query ونماذج Power Pivot وتقديم ورش عمل Excel متقدمة.',
+      },
+      metrics: ['6+ Years Production Use', 'Team Workshops Taught', 'Power Query ETL'],
+      where: { en: 'Deployed in: Daftar Ahwal · NADIM · Freelance Consulting', ar: 'مطبّق في: دفتر أحوال · نديم · الاستشارات' },
+      links: [],
+    },
+    tableau: {
+      cat: { en: 'DATA VISUALIZATION', ar: 'التصور البياني' },
+      title: 'Tableau & KPI Storytelling',
+      desc: {
+        en: 'Executive KPI architecture, visual hierarchy design, and decision-oriented storytelling delivered fluently in both English and Arabic for stakeholders.',
+        ar: 'تصميم مؤشرات الأداء التنفيذية والسرد البصري للبيانات بلغة واضحة بالعربية والإنجليزية لصناع القرار.',
+      },
+      metrics: ['KPI Architecture', 'EN & AR Storytelling', 'Executive Ready'],
+      where: { en: 'Deployed in: BI Consulting & Research Reporting', ar: 'مطبّق في: استشارات BI والتقارير البحثية' },
+      links: [],
+    },
+    kmeans: {
+      cat: { en: 'MACHINE LEARNING', ar: 'تعلم الآلة' },
+      title: 'K-Means & RFM Segmentation',
+      desc: {
+        en: 'Log-transformed heavily right-skewed Frequency/Monetary distributions, validated k=4 via elbow method, ranked centroids into VIP / At Risk / Hibernating / New-Promising, and wrote results back to SQL.',
+        ar: 'معالجة التواء التوزيع بالتحويل اللوغاريتمي وتطبيق K-Means (k=4) لتصنيف العملاء وإعادة حفظ الشرائح مباشرة في SQL Server.',
+      },
+      metrics: ['k=4 Elbow Validated', 'SQL Live Write-Back', 'Interactive Simulator Above'],
+      where: { en: 'Deployed in: AdventureWorks 2022 (01_customer_segmentation.ipynb)', ar: 'مطبّق في: مشروع AdventureWorks 2022' },
+      links: [{ label: 'Open Notebook Repo ↗', url: 'https://github.com/mostafasaad91/adventure-works-sales-analytics' }],
+    },
+    python: {
+      cat: { en: 'DATA ENGINEERING & ML', ar: 'هندسة البيانات وتعلم الآلة' },
+      title: 'Python · Pandas · Scikit-Learn · pyodbc',
+      desc: {
+        en: 'End-to-end Python workflows: live SQL Server connections via pyodbc, automated Selenium/Opta match pipelines, Matplotlib AMOLED visual engines, and Scikit-Learn modeling.',
+        ar: 'بناء خطوط عمل كاملة بـ Python: اتصال مباشر بـ SQL عبر pyodbc، محرك تحليل المباريات المؤتمت، وتوليد الرسوم ونماذج Scikit-Learn.',
+      },
+      metrics: ['pyodbc Live DB', 'Automated Pipelines', 'Matplotlib + Sklearn'],
+      where: { en: 'Deployed in: Both GitHub Flagship Repositories', ar: 'مطبّق في: مشروعي GitHub الرئيسيين' },
+      links: [{ label: 'GitHub Profile ↗', url: PROFILE_CONFIG.github }],
+    },
+    basket: {
+      cat: { en: 'GROWTH ANALYTICS', ar: 'تحليلات النمو' },
+      title: 'Cohort Retention & Market Basket',
+      desc: {
+        en: 'Built monthly cohort retention heatmaps confirming a ~345-day repurchase cycle and computed support/confidence/lift across product pairs, uncovering drivetrain bundles with >90x lift.',
+        ar: 'بناء خرائط الاحتفاظ بالأفواج (~345 يوماً) وحساب معامل الرفع بين المنتجات لاكتشاف حزم بيع متقاطع برفع يتجاوز 90 ضعفاً.',
+      },
+      metrics: ['~345d Repurchase Cycle', 'Drivetrain Lift > 90x', 'Checkout Attach Rates'],
+      where: { en: 'Deployed in: AdventureWorks 2022 (02_cohorts_market_basket.ipynb)', ar: 'مطبّق في: مشروع AdventureWorks 2022' },
+      links: [{ label: 'View Repo ↗', url: 'https://github.com/mostafasaad91/adventure-works-sales-analytics' }],
+    },
+    xgxt: {
+      cat: { en: 'FOOTBALL ML MODELING', ar: 'نمذجة كرة القدم' },
+      title: 'xG, xT, xGChain & xGBuildup',
+      desc: {
+        en: 'Engineered custom Expected Goals (xG) and Expected Threat (xT per 100 touches) models from event coordinates alongside xGChain, xGBuildup, and progressive-pass share.',
+        ar: 'بناء نماذج الأهداف المتوقعة (xG) والتهديد المتوقع (xT لكل 100 لمسة) و xGChain و xGBuildup من إحداثيات أحداث المباراة.',
+      },
+      metrics: ['Custom xG & xT', 'xGChain & xGBuildup', 'Live xG Simulator Above'],
+      where: { en: 'Deployed in: Football-Match-Analysis (★ 7)', ar: 'مطبّق في: محرك Football-Match-Analysis (★ 7)' },
+      links: [{ label: 'GitHub Repo (★ 7) ↗', url: 'https://github.com/mostafasaad91/Football-Match-Analysis' }],
+    },
+    opta: {
+      cat: { en: 'AUTOMATED SPORTS PIPELINE', ar: 'أتمتة تحليل المباريات' },
+      title: 'Opta / WhoScored Engine',
+      desc: {
+        en: 'One match URL in → full evidence-led PDF report, 8 AMOLED & Light 4:5 posters with adaptive kit-color contrast lift, .docx article, CSV tables, and package_manifest.json provenance.',
+        ar: 'رابط مباراة واحد ينتج تقرير PDF، 8 بوسترات AMOLED و Light، مقال .docx، جداول CSV، وملف provenance تلقائياً.',
+      },
+      metrics: ['1 URL -> Full Package', 'AMOLED + Print Dual Copy', 'EPL · La Liga · Serie A'],
+      where: { en: 'Deployed in: Football-Match-Analysis & @TacTical_41', ar: 'مطبّق في: Football-Match-Analysis وحساب @TacTical_41' },
+      links: [
+        { label: 'GitHub Repo ↗', url: 'https://github.com/mostafasaad91/Football-Match-Analysis' },
+        { label: '𝕏 @TacTical_41 ↗', url: PROFILE_CONFIG.x },
+      ],
+    },
+    scouting: {
+      cat: { en: 'TACTICAL & RECRUITMENT', ar: 'التحليل التكتيكي والسكاوتنج' },
+      title: 'PPDA, Field Tilt & Scouting Profiles',
+      desc: {
+        en: 'Combines FA, PFSA & FP Academy training with event metrics: PPDA pressing intensity, Field Tilt, passing sonars, nested possession funnels, and same-role player percentiles (n ≥ 8).',
+        ar: 'دمج شهادات FA و PFSA و FP Academy مع مؤشرات PPDA و Field Tilt وسونار التمريرات وملفات مئويات اللاعبين.',
+      },
+      metrics: ['FP Academy · PFSA · FA', 'Role Percentiles (n≥8)', 'Substack Articles'],
+      where: { en: 'Published on: Substack & @TacTical_41', ar: 'منشور على: Substack وحساب @TacTical_41' },
+      links: [{ label: 'Read on Substack ↗', url: PROFILE_CONFIG.substack }],
+    },
+  };
+
+  let activeKey = 'tsql';
+
+  function renderProof() {
+    const p = PROOFS[activeKey];
+    if (!p) return;
+    document.getElementById('proofCat').textContent = p.cat[currentLang];
+    document.getElementById('proofTitle').textContent = p.title;
+    document.getElementById('proofDesc').textContent = p.desc[currentLang];
+    document.getElementById('proofMetrics').innerHTML = p.metrics.map((m) => `<span>${m}</span>`).join('');
+    document.getElementById('proofWhere').textContent = p.where[currentLang];
+    document.getElementById('proofActions').innerHTML = (p.links || [])
+      .map((l) => `<a href="${l.url}" target="_blank" rel="noopener" class="repo-link mono">${l.label}</a>`)
+      .join('');
+  }
+
+  renderSkillProofGlobal = renderProof;
+
+  document.querySelectorAll('.skill-pill').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.skill-pill').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeKey = btn.dataset.skill;
+      renderProof();
+    });
+  });
+
+  // Service cards jump straight to Contact + auto-select matching Smart Intent!
+  document.querySelectorAll('.srv-cta[data-pick-intent]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const intentKey = btn.dataset.pickIntent;
+      const pill = document.querySelector(`.intent-pill[data-intent="${intentKey}"]`);
+      if (pill) pill.click();
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  renderProof();
+}
+
+/* =========================================================
+   8. FLOATING QUICK-ACTION DOCK (ON SCROLL)
+   ========================================================= */
+function initQuickDock() {
+  const dock = document.getElementById('quickDock');
+  const dockCmd = document.getElementById('dockCmdBtn');
+  if (!dock) return;
+
+  window.addEventListener('scroll', () => {
+    dock.classList.toggle('show', window.scrollY > 420);
+  });
+
+  dockCmd?.addEventListener('click', () => {
+    document.getElementById('cmdTrigger')?.click();
   });
 }

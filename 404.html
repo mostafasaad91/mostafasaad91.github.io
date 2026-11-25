@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Mostafa Saad Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #000000;
+      color: #ffffff;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .card {
+      max-width: 520px;
+      padding: 2.4rem 2rem;
+      border-radius: 22px;
+      background: rgba(12, 14, 20, 0.9);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      box-shadow: 0 24px 64px rgba(0, 229, 255, 0.14);
+    }
+    .code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 4.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00e5ff, #8b5cf6, #10b981);
+      -webkit-background-clip: text;
+      color: transparent;
+      line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+    p { color: #9ca3af; margin: 0.7rem 0 1.6rem; line-height: 1.6; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
+    a {
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 11px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .primary { background: linear-gradient(135deg, #00c8ff, #7c3aed); color: #fff; }
+    .emerald { background: linear-gradient(135deg, #059669, #10b981); color: #fff; }
+    .ghost { border: 1px solid rgba(255,255,255,0.16); color: #e2e8f0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="code">404</div>
+    <h1>Route Not Found in Dataset</h1>
+    <p>The page you requested doesn't exist — jump straight back to Mostafa Saad's portfolio tracks:</p>
+    <div class="links">
+      <a href="/" class="primary">Full Portfolio</a>
+      <a href="/?track=data" class="ghost">📊 Data &amp; BI Track</a>
+      <a href="/?track=football" class="emerald">⚽ Football Lab</a>
+    </div>
+  </div>
+</body>
+</html>
