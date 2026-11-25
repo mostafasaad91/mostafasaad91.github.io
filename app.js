@@ -141,6 +141,12 @@ const TRANSLATIONS = {
     aw_title: 'AdventureWorks 2022 — End-to-End Sales Analytics',
     aw_desc:
       'Complete SQL Server → Python (pyodbc live DB write-back) → 6-page Power BI investigation answering 17 business questions: point-in-time profit margins, K-Means RFM clustering, cohort retention (~345d window), and market-basket cross-sell bundles.',
+    telco_title: 'Telco Churn Prediction, SHAP & Retention ROI Engine',
+    telco_desc:
+      'End-to-end zero-leakage churn pipeline on 7,043 IBM Telco clients: SQLite data mart, 5-model benchmark (XGBoost 0.848 Test AUC, Brier 0.135), profit-curve threshold optimization (+27.2% net retention lift), SHAP drivers, and automated QA tests.',
+    credit_title: 'FinTech Credit Risk Scorecard & Basel Expected Loss',
+    credit_desc:
+      'Banking-grade credit scoring across 30,000 UCI bank clients: SQL QA cleaning of 399 undocumented codes, train-only WoE/IV audit, LightGBM scorecard (KS 0.429, Brier 0.134), 300–850 credit score tiering, Basel Expected Loss (LGD 45%), and age fairness audit.',
     arch_title: 'Archival & Cultural Heritage Database Systems',
     arch_desc:
       'Designed dataset coding taxonomies, automated cross-sheet ID reconciliation scripts, metadata validation workflows, and executive Power BI / Excel reporting while supervising data teams and delivering advanced Excel workshops.',
@@ -154,6 +160,12 @@ const TRANSLATIONS = {
     fma_title: 'Football Match Analysis — Automated Tactical Pipeline',
     fma_desc:
       'End-to-end Python engine turning a single WhoScored/Opta URL into xG/xT/xGChain models, passing sonars, touch-density heatmaps, player role profiles, 8 AMOLED & Light 4:5 posters, a full PDF report, publishable .docx article, and SQLite match archive across EPL, La Liga & Serie A.',
+    sbxg_title: 'StatsBomb xG Calibration & Freeze-Frame Ablation Lab',
+    sbxg_desc:
+      'Match-grouped zero-leakage xG modeling on 3,685 real StatsBomb shots (WC 2022, Euro 2024 & Invincible Leverkusen). Proves Freeze-Frame defender/GK coordinates cut Log-Loss by -0.0236 (0.816 AUC vs official StatsBomb 0.827) with SHAP & finisher leaderboards.',
+    scsim_title: 'Football Scouting & Tactical Player Similarity Engine',
+    scsim_desc:
+      'Recruitment "Find a Replacement" ML system over 1,305 real StatsBomb players: SQLite per-90 mart (270+ min gate), Silhouette-optimized K-Means archetypes, 2D PCA role map, and role-gated Cosine Similarity surfacing Lamine Yamal (96% Wirtz) & Vitinha (92% Xhaka).',
     scout_title: 'Match, Opposition & Player Recruitment Scouting',
     scout_desc:
       'Translating possession funnels, pressing intensity (PPDA), field tilt, progressive-pass share, and xT per 100 touches into concise tactical briefs and scouting dossiers for coaches and recruitment staff.',
@@ -322,6 +334,12 @@ const TRANSLATIONS = {
     aw_title: 'AdventureWorks 2022 — تحليل مبيعات متكامل ($110M)',
     aw_desc:
       'مشروع كامل يربط SQL Server بـ Python (مع كتابة نتائج K-Means مباشرة في قاعدة البيانات عبر pyodbc) ولوحة Power BI من 6 صفحات للإجابة على 17 سؤال عمل: هوامش الربح، تقسيم RFM، الاحتفاظ بالأفواج (~345 يوم)، وحزم البيع المتقاطع (Lift > 90x).',
+    telco_title: 'توقع تسرب العملاء (Churn) وتحسين عائد الاحتفاظ و SHAP',
+    telco_desc:
+      'مشروع تعلم آلة متكامل على 7,043 عميل اتصالات حقيقي: SQLite Data Mart، مقارنة 5 نماذج (XGBoost بدقة 0.848 ROC-AUC)، تحسين عتبة القرار المالي لرفع صافي الربح +27.2%، تفسير SHAP، واختبارات جودة مؤتمتة.',
+    credit_title: 'بطاقة تقييم المخاطر الائتمانية وحساب خسائر بازل المتوقعة',
+    credit_desc:
+      'نظام تقييم ائتماني بنكي على 30,000 عميل حقيقي: تنظيف SQL لـ 399 كود غير موثّق، تحليل IV/WoE، نموذج LightGBM بمؤشر KS 0.429 و Gini 0.564، تحويل لاحتمالات لسكور 300–850 وحساب Basel Expected Loss وفحص العدالة العمرية.',
     arch_title: 'أنظمة قواعد بيانات التراث والأرشيف البحثي',
     arch_desc:
       'تصميم أنظمة التكويد، سكريبتات مطابقة وتدقيق الأكواد بين قواعد البيانات، إدارة الميتاداتا، وبناء تقارير Power BI و Excel مع الإشراف على فرق العمل وتقديم ورش تدريبية متقدمة.',
@@ -335,6 +353,12 @@ const TRANSLATIONS = {
     fma_title: 'Football Match Analysis — منصة تحليل المباريات المؤتمتة',
     fma_desc:
       'أداة Python متكاملة تحوّل رابط مباراة WhoScored/Opta واحد إلى نماذج xG و xT و xGChain، خرائط اللمسات والتمريرات، ملفات اللاعبين، 8 بوسترات AMOLED و Light، تقرير PDF ومقال .docx وأرشيف SQLite للدوريات الكبرى.',
+    sbxg_title: 'معمل معايرة الأهداف المتوقعة (xG) وبيانات Freeze-Frame (StatsBomb)',
+    sbxg_desc:
+      'نمذجة xG بدون تسرب بيانات على 3,685 تسديدة حقيقية (149 مباراة: مونديال 2022، يورو 2024، وليفركوزن 23/24). إثبات أثر إحداثيات المدافعين والحارس (-0.0236 Log-Loss و 0.816 AUC مقابل 0.827 لـ StatsBomb الرسمي) مع SHAP وقائمة أفضل الهدافين.',
+    scsim_title: 'محرك السكاوتنج واكتشاف البدائل التكتيكية (Cosine Similarity)',
+    scsim_desc:
+      'نظام توظيف واكتشاف بدائل على 1,305 لاعب حقيقي من StatsBomb: SQLite لكل 90 دقيقة، اكتشاف الأدوار بـ K-Means Silhouette و PCA، وتشابه جيب التمام داخل نفس المركز (رشّح لامين يامال بنسبة 96% كبديل لفيرتز وفيتينيا 92% لتشاكا).',
     scout_title: 'تحليل المباريات والخصوم واستكشاف اللاعبين',
     scout_desc:
       'تحويل مؤشرات الاستحواذ، شدة الضغط (PPDA)، Field Tilt، نسبة التمريرات التقدمية، و xT لكل 100 لمسة إلى تقارير مختصرة وعملية للمدربين وكشافي الأندية.',
@@ -499,6 +523,130 @@ const CASE_STUDIES = [
     tags: ['PPDA', 'Field Tilt', 'Scouting', 'Opposition Analysis', 'Bilingual Reports'],
     links: [
       { label: 'Football Toolkit Repo ↗', url: 'https://github.com/mostafasaad91/Football-Match-Analysis', cls: 'repo-link emerald-link' },
+    ],
+  },
+  {
+    cat: { en: 'GITHUB REPO · BUSINESS ML · SQLITE + XGBOOST + SHAP', ar: 'مشروع GitHub · تعلم الآلة للأعمال · XGBoost + SHAP' },
+    title: {
+      en: 'Telco Churn Explainable ML & Retention ROI Optimization',
+      ar: 'توقع تسرب العملاء وتحسين العائد المالي للاحتفاظ (SHAP + ROI)',
+    },
+    summary: {
+      en: 'Production-style retention pipeline over 7,043 real IBM Telco subscribers proving why optimizing decision thresholds for net profit outperforms default 0.50 cutoffs by +27.2% ($40,492 vs $31,835 on held-out test).',
+      ar: 'نظام متكامل للتنبؤ بتسرب العملاء على 7,043 مشترك حقيقي يثبت بالأرقام أن اختيار عتبة القرار بناءً على صافي الربح يرفع العائد بنسبة +27.2% مقارنة بالعتبة التقليدية 0.50.',
+    },
+    metrics: ['0.8478 Test ROC-AUC', '+27.2% Net Retention Profit', '0.1347 Brier · Full SHAP'],
+    bullets: {
+      en: [
+        'SQLite Mart QA: Preserved all 11 tenure=0 customers with blank TotalCharges via SQL imputation + explicit missing indicator (0 rows silently dropped).',
+        'Zero-Leakage 60/20/20 Benchmark: Benchmarked 5 models with 5-fold CV & bootstrap 95% CIs; XGBoost won validation & achieved 0.8478 Test AUC [0.8256, 0.8688] and 0.1347 Brier.',
+        'Profit-Curve Optimization: Selected 0.37 decision threshold strictly on validation, lifting held-out 12-month net retention profit from $31,835 to $40,492 (+27.2%).',
+        'Explainability & QA: SHAP identified contract length, tenure, Fiber Optic & lack of OnlineSecurity as primary drivers; verified by automated pytest-style pipeline tests.',
+      ],
+      ar: [
+        'تنظيف SQLite: معالجة 11 عميلاً جديداً (tenure=0) بقيم TotalCharges فارغة داخل SQL مع مؤشر صريح دون حذف أي عميل.',
+        'مقارنة 5 نماذج بدون تسرب بيانات: فاز XGBoost بـ 0.8478 Test ROC-AUC و Brier 0.1347 مع فترات ثقة 95%.',
+        'تحسين عتبة العائد المالي: اختيار عتبة 0.37 على مجموعة التحقق رفع صافي الربح على الاختبار من $31,835 إلى $40,492 (+27.2%).',
+        'تفسير SHAP واختبارات مؤتمتة: تحديد العقود الشهرية والألياف الضوئية وغياب الحماية كأكبر أسباب التسرب.',
+      ],
+    },
+    tags: ['SQLite', 'XGBoost', 'LightGBM', 'SHAP', 'Calibration', 'ROI Curve', 'Automated Tests'],
+    links: [
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/telco-churn-explainable-ml', cls: 'repo-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/telco-churn-explainable-ml/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'GITHUB REPO · FINTECH CREDIT RISK · BASEL III EL', ar: 'مشروع GitHub · مخاطر الائتمان و FinTech' },
+    title: {
+      en: 'FinTech Credit Risk Scorecard & Basel Expected Loss Engine',
+      ar: 'بطاقة تقييم المخاطر الائتمانية وحساب خسائر بازل المتوقعة',
+    },
+    summary: {
+      en: 'Banking-grade default risk scorecard over 30,000 real Taiwanese bank clients combining WoE/IV auditing, LightGBM vs Logistic/XGBoost benchmarking, 300–850 score scaling, and Basel Expected Loss quantification.',
+      ar: 'نظام تقييم مخاطر ائتمانية على 30,000 عميل بنكي حقيقي يجمع بين تحليل IV/WoE، ومقارنة LightGBM و XGBoost و Logistic، وبناء سكور 300–850، وحساب خسائر بازل المتوقعة.',
+    },
+    metrics: ['KS 0.4293 · Gini 0.5637', 'NT$29.62M Held-Out Basel EL', 'Top 2 Deciles = 50.9% Defaults'],
+    bullets: {
+      en: [
+        'SQL Data QA: Normalized 345 undocumented EDUCATION codes & 54 MARRIAGE codes in SQLite and explicitly flagged 2,115 over-limit accounts (BILL_AMT1 > LIMIT_BAL).',
+        'Train-Only WoE/IV Audit: Confirmed 6-month delinquency count (IV 0.888) and recent payment delay PAY_0 (IV 0.823) as dominant credit risk predictors.',
+        'Pre-Registered Model Selection: LightGBM won validation (0.7885 AUC), reaching Test AUC 0.7818, KS 0.4293, Gini 0.5637, and well-calibrated Brier 0.1344.',
+        'Basel EL & Fairness Audit: Mapped PDs to 300–850 scores (High Risk <540 holds 56% of NT$29.62M EL) and verified stable AUC (0.771–0.788) across all 4 age bands.',
+      ],
+      ar: [
+        'تدقيق SQL: تصحيح 345 كود تعليم و 54 كود زواج غير موثقين، وتحديد 2,115 عميلاً تجاوزوا الحد الائتماني.',
+        'تحليل WoE/IV بدون تسرب: إثبات أن عدد أشهر التأخير (IV 0.888) وآخر حالة سداد PAY_0 (IV 0.823) هما الأقوى تنبؤياً.',
+        'اختيار منهجي للنموذج: حقق LightGBM مؤشر KS 0.4293 و Gini 0.5637 ومعايرة Brier 0.1344.',
+        'خسائر بازل وفحص العدالة: 56% من الخسائر المتوقعة (NT$29.62M) تتركز في شريحة الخطر المرتفع (<540) مع ثبات الأداء عبر كل الفئات العمرية.',
+      ],
+    },
+    tags: ['Credit Risk', 'WoE / IV', 'LightGBM', 'KS & Gini', 'Basel III EL', 'SHAP', 'SQLite'],
+    links: [
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/fintech-credit-risk-scorecard', cls: 'repo-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/fintech-credit-risk-scorecard/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'GITHUB REPO · STATSBOMB OPEN DATA · 360 FREEZE-FRAME', ar: 'مشروع GitHub · StatsBomb xG و Freeze-Frame' },
+    title: {
+      en: 'StatsBomb Expected Goals (xG) Calibration & Freeze-Frame Lab',
+      ar: 'معمل معايرة الأهداف المتوقعة (xG) وبيانات Freeze-Frame',
+    },
+    summary: {
+      en: 'Match-grouped xG calibration lab built on 3,685 real StatsBomb shots (149 matches: WC 2022, Euro 2024 & Invincible Bayer Leverkusen) quantifying the exact predictive value of defender & goalkeeper Freeze-Frame coordinates.',
+      ar: 'معمل معايرة xG على 3,685 تسديدة حقيقية من 149 مباراة رسمية في StatsBomb يثبت بالأرقام القيمة المضافة لإحداثيات المدافعين وحارس المرمى مقارنة بموديل StatsBomb الرسمي.',
+    },
+    metrics: ['0.2531 Test Log-Loss (vs 0.2422 SB)', 'Freeze-Frame Gain: +0.062 AUC', '70.9 xG vs 73 Actual Goals'],
+    bullets: {
+      en: [
+        'Strict Match-Grouped Splits: 89 Train / 30 Val / 30 Test matches (43 penalties excluded in SQL) eliminating intra-match data leakage.',
+        'Freeze-Frame Ablation: Adding defenders in shooting cone, blockers within 2.5yd & GK positioning cut Test Log-Loss from 0.2767 to 0.2531 and boosted AUC from 0.7540 to 0.8163.',
+        'Real-World ML Insight: Regularized Logistic Regression on engineered spatial physics beat LightGBM (0.2599) & XGBoost (0.2588) on small-sample shots (~2,183 train).',
+        'Finisher Leaderboard: Highlighted Leverkusen over-performers (Grimaldo +4.29, Wirtz +3.86) and tournament under-performers (Lukaku -3.31, Ronaldo -3.28).',
+      ],
+      ar: [
+        'تقسيم على مستوى المباريات: 89 تدريب / 30 تحقق / 30 اختبار مع استبعاد 43 ركلة جزاء في SQL لمنع أي تسرب.',
+        'تجربة عزل Freeze-Frame: إضافة مواقع المدافعين والحارس خفضت Log-Loss من 0.2767 إلى 0.2531 ورفعت AUC إلى 0.8163.',
+        'ملاحظة علمية مهمة: تفوق Logistic Regression المنظّم مع هندسة الميزات الفيزيائية على XGBoost و LightGBM في العينات المتوسطة.',
+        'قائمة الهدافين: رصد تفوق جريمالدو (+4.29) وفيرتز (+3.86) مقابل تراجع لوكاكو (-3.31) ورونالدو (-3.28).',
+      ],
+    },
+    tags: ['StatsBomb Open Data', 'Freeze-Frame', 'Expected Goals (xG)', 'Calibration', 'SHAP', 'SQLite'],
+    links: [
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/statsbomb-xg-calibration-lab', cls: 'repo-link emerald-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/statsbomb-xg-calibration-lab/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'GITHUB REPO · FOOTBALL RECRUITMENT & SCOUTING ML', ar: 'مشروع GitHub · سكاوتنج واكتشاف البدائل التكتيكية' },
+    title: {
+      en: 'Football Scouting & Tactical Player Similarity Engine',
+      ar: 'محرك السكاوتنج واكتشاف البدائل التكتيكية للاعبين',
+    },
+    summary: {
+      en: 'Unsupervised club recruitment engine over 1,305 real StatsBomb players combining SQLite per-90 engineering, Silhouette-optimized K-Means archetypes, 2D PCA role mapping, and role-gated Cosine Similarity replacement shortlists.',
+      ar: 'محرك سكاوتنج واكتشاف بدائل للأندية على 1,305 لاعب حقيقي من StatsBomb يجمع بين SQLite لكل 90 دقيقة و K-Means Silhouette و PCA وتشابه جيب التمام داخل نفس المركز.',
+    },
+    metrics: ['361 Eligible Players (270+ min)', 'Optimal k=4 · PCA 56.3% Var', 'Wirtz → Yamal 96% · Xhaka → Vitinha 92%'],
+    bullets: {
+      en: [
+        'SQLite Reliability Gate: Excluded 81 goalkeepers and 863 low-minute cameos (<270 mins) so per-90 stats never explode from 15-minute sub appearances.',
+        'Data-Driven Role Discovery: Programmatically selected optimal k=4 archetypes via Silhouette Score (0.1961) across 13 standardized per-90 attacking, progression & pressing KPIs.',
+        'Role-Gated Cosine Similarity: Surfaced Lamine Yamal (96.0%), Nico Williams (95.0%) & Amine Adli (94.3%) for Florian Wirtz, and Vitinha (92.2%) & Modrić (86.7%) for Granit Xhaka.',
+        'Same-Role Percentile Cards: Generated head-to-head 0–100 percentile scouting cards plus JSON API-ready shortlists verified by automated tests.',
+      ],
+      ar: [
+        'فلترة الموثوقية في SQL: استبعاد 81 حارس مرمى و 863 لاعباً أقل من 270 دقيقة لمنع تشوه أرقام كل 90 دقيقة.',
+        'اكتشاف الأدوار بدون تحيز: اختيار k=4 تلقائياً عبر Silhouette Score (0.1961) على 13 مؤشر أداء تكتيكي.',
+        'تشابه جيب التمام داخل نفس المركز: رشّح لامين يامال (96.0%) ونيكو ويليامز (95.0%) لفيرتز، وفيتينيا (92.2%) ومودريتش (86.7%) لتشاكا.',
+        'بطاقات مقارنة مئوية: توليد بطاقات مقارنة 0–100 داخل المركز مع مخرجات JSON جاهزة للربط.',
+      ],
+    },
+    tags: ['StatsBomb Open Data', 'K-Means Silhouette', 'PCA', 'Cosine Similarity', 'Scouting', 'SQLite'],
+    links: [
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/football-scouting-similarity-engine', cls: 'repo-link emerald-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/football-scouting-similarity-engine/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
 ];
