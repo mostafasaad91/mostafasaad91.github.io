@@ -139,6 +139,9 @@ const TRANSLATIONS = {
     dp_2: 'K-Means RFM clustering, cohort retention heatmaps, market basket lift, and automated QA scripts.',
     dp_3: 'PBIP source-controlled dashboards, DAX time intelligence, Power Query ETL, and Excel workshops.',
     aw_title: 'AdventureWorks 2022 — End-to-End Sales Analytics',
+    olist_title: 'Olist E-Commerce — Full-Stack Analytics (SQL · Excel · Python · Data Science)',
+    olist_desc:
+      'All-in-one enterprise analytics stack across 99,441 real Brazilian orders (8 relational tables): zero-fan-out SQLite Star Schema, Python statistical testing (5.88x late-delivery bad-review risk), LightGBM + SHAP (+45.4% CS recovery ROI), 3.50% MAPE GMV forecasting, and a 6-sheet formula-driven Executive Excel Dashboard & What-If SLA Simulator.',
     aw_desc:
       'Complete SQL Server → Python (pyodbc live DB write-back) → 6-page Power BI investigation answering 17 business questions: point-in-time profit margins, K-Means RFM clustering, cohort retention (~345d window), and market-basket cross-sell bundles.',
     telco_title: 'Telco Churn Prediction, SHAP & Retention ROI Engine',
@@ -332,6 +335,9 @@ const TRANSLATIONS = {
     dp_2: 'تقسيم العملاء بـ K-Means RFM، خرائط الاحتفاظ بالأفواج (Cohorts)، تحليل سلة المشتريات، وفحص الجودة بـ Python.',
     dp_3: 'لوحات Power BI (PBIP)، مقاييس DAX للذكاء الزمني، أتمتة Power Query، وورش عمل Excel متقدمة.',
     aw_title: 'AdventureWorks 2022 — تحليل مبيعات متكامل ($110M)',
+    olist_title: 'Olist E-Commerce — المشروع الجامع (SQL + Excel + Python + Data Science)',
+    olist_desc:
+      'مشروع متكامل يجمع كل مهارات تحليل وعلم البيانات على 99,441 طلب حقيقي عبر 8 جداول مترابطة: SQLite Star Schema بدون تكرار، اختبارات إحصائية بـ Python (تأخير الشحن يضاعف التقييم السيئ 5.88x)، نموذج LightGBM + SHAP (+45.4% عائد)، توقع مبيعات بدقة 3.50% MAPE، وملف Excel تنفيذي من 6 شيتات بمعادلات حية و What-If Simulator.',
     aw_desc:
       'مشروع كامل يربط SQL Server بـ Python (مع كتابة نتائج K-Means مباشرة في قاعدة البيانات عبر pyodbc) ولوحة Power BI من 6 صفحات للإجابة على 17 سؤال عمل: هوامش الربح، تقسيم RFM، الاحتفاظ بالأفواج (~345 يوم)، وحزم البيع المتقاطع (Lift > 90x).',
     telco_title: 'توقع تسرب العملاء (Churn) وتحسين عائد الاحتفاظ و SHAP',
@@ -647,6 +653,38 @@ const CASE_STUDIES = [
     links: [
       { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/football-scouting-similarity-engine', cls: 'repo-link emerald-link' },
       { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/football-scouting-similarity-engine/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'FULL-STACK FLAGSHIP · SQL + EXCEL + PYTHON + DATA SCIENCE', ar: 'المشروع الجامع · SQL + Excel + Python + Data Science' },
+    title: {
+      en: 'Olist E-Commerce — Full-Stack Supply Chain, Excel BI & ML Engine',
+      ar: 'Olist E-Commerce — مشروع متكامل في SQL و Excel و Python وعلم البيانات',
+    },
+    summary: {
+      en: 'End-to-end 4-pillar business analytics & data science masterpiece over 99,441 real Brazilian e-commerce orders (8 official relational tables, R$15.29M GMV) linking SQLite Star Schema, statistical causality, LightGBM + SHAP, time-series forecasting, and a 6-sheet formula-driven Executive Excel Workbook.',
+      ar: 'مشروع جامع على 99,441 طلب حقيقي (8 جداول مترابطة بإيرادات R$15.29M) يربط SQL Star Schema والتحليل الإحصائي وتعلم الآلة وتوقع السلاسل الزمنية بملف Excel تنفيذي من 6 شيتات بمعادلات حية و What-If Simulator.',
+    },
+    metrics: ['99,441 Orders · 8 SQL Tables', 'LightGBM +45.4% CS ROI · 3.50% MAPE', '6-Sheet Live Formula Excel Workbook'],
+    bullets: {
+      en: [
+        'SQL Star Schema: Pre-aggregated items, payments & multi-review orders at order_id grain (95,824 delivered orders, zero fan-out) + SQL Window Functions for MoM growth, category Pareto (top 10 = 62.4%), seller Pareto & true repeat rate (2.98% via customer_unique_id).',
+        'Python Statistical Testing: Proved late deliveries suffer 53.99% bad reviews vs 9.19% on-time (5.88x Relative Risk, Chi-Square = 12,696.5, p < 1e-300) and mapped Rio de Janeiro (13.3% late) as the primary bottleneck.',
+        'Data Science (2 Out-of-Time Models): LightGBM won Val PR-AUC (0.397 -> 0.309 Test PR-AUC, 0.0777 Brier) lifting CS recovery net profit by +45.4% (R$18,270 vs R$12,567); Ridge Damped-Trend + Seasonality cut GMV backtest MAPE from 7.87% to 3.50% (beating Naive 3.86%).',
+        'Executive Excel Workbook (.xlsx): 6 tabs with 50+ live formulas (SUM, SUMPRODUCT, IFERROR, IF), conditional formatting, 2 embedded Excel charts, interactive What-If SLA Simulator, and Top-100 High-Risk CS Queue.',
+      ],
+      ar: [
+        'SQL Star Schema: تجميع مسبق للجداول لمنع التكرار (95,824 طلب مكتمل بدون Fan-out) ودوال Window Functions لتحليل باريتو واكتشاف معدل تكرار الشراء الحقيقي (2.98%).',
+        'تحليل إحصائي بـ Python: إثبات أن تأخر الشحن يرفع التقييم السيئ من 9.19% إلى 53.99% (5.88 ضعف الخطر) وتحديد ريو دي جانيرو كأكبر عنق زجاجة لوجستي.',
+        'علم البيانات (موديلين بـ Out-of-Time): فاز LightGBM على PR-AUC ورفع صافي عائد خدمة العملاء +45.4%، وتفوق Ridge Damped-Trend بدقة 3.50% MAPE على الـ Naive Baseline.',
+        'ملف Excel تنفيذي (.xlsx): 6 شيتات بأكثر من 50 معادلة حية ورسوم بيانية مدمجة ومحاكي What-If SLA Simulator وقائمة أول 100 طلب عالي الخطورة.',
+      ],
+    },
+    tags: ['SQL Star Schema', 'Excel Dashboard', 'What-If Simulator', 'Python Stats', 'LightGBM', 'SHAP', 'Time Series'],
+    links: [
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics', cls: 'repo-link' },
+      { label: '⬇ Download Excel Workbook (.xlsx)', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics/raw/main/outputs/Olist_Executive_Analytics_Workbook.xlsx', cls: 'repo-link live-bi' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
 ];
