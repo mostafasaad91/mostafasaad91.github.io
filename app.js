@@ -6,6 +6,8 @@ const PROFILE_CONFIG = {
   email: 'mostafasaad0091@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mostafa-saad-171086191/',
   github: 'https://github.com/mostafasaad91',
+  substack: 'https://mostafasaad.substack.com/',
+  x: 'https://x.com/TacTical_41',
   liveBaseUrl: 'https://mostafasaad91.github.io/',
   powerBiUrl:
     'https://app.powerbi.com/view?r=eyJrIjoiODk5NTM5YjQtMTk4Ny00NGU2LWFiMzUtYTg1N2YwZDUyYWU4IiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9',
@@ -1691,6 +1693,8 @@ function initCommandPalette() {
     { title: 'Toggle Theme (AMOLED Dark / Light)', hint: 'THEME', run: () => document.getElementById('themeToggle')?.click() },
     { title: 'Copy Email (mostafasaad0091@gmail.com)', hint: 'COPY', run: () => document.getElementById('copyEmailBtn')?.click() },
     { title: 'Open GitHub Profile (mostafasaad91)', hint: 'GITHUB', run: () => window.open(PROFILE_CONFIG.github, '_blank') },
+    { title: 'Read Articles on Substack', hint: 'SUBSTACK', run: () => window.open(PROFILE_CONFIG.substack, '_blank') },
+    { title: 'Open X / Twitter (@TacTical_41)', hint: 'X / TACTICAL', run: () => window.open(PROFILE_CONFIG.x, '_blank') },
   ];
 
   let filtered = commands;
