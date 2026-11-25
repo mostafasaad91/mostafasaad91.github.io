@@ -2256,3 +2256,45 @@ html[data-theme="light"] .noise-overlay { opacity: 0.015; }
   .bento-grid, .bento-duo { grid-template-columns: 1fr; }
   .bento-wide, .bento-wide-2 { grid-column: span 1; }
 }
+
+
+/* =========================================================
+   APP BRAND ICONS & PHONE / WHATSAPP CONTACT PILLS
+   ========================================================= */
+.direct-copy-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.direct-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+.app-ico {
+  flex-shrink: 0;
+  display: inline-block;
+}
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.92rem;
+}
+.wa-pill {
+  border-color: rgba(37, 211, 102, 0.42);
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.1);
+}
+.wa-pill:hover {
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.2);
+  color: #4ade80;
+}
+.phone-pill:hover { border-color: var(--emerald); color: var(--emerald); }
+.li-pill:hover { border-color: #0a66c2; color: #38bdf8; }
+.gh-pill:hover { border-color: #ffffff; color: #ffffff; }
+.sub-pill:hover { border-color: #ff6719; color: #fb923c; }
+.x-pill:hover { border-color: #e2e8f0; color: #ffffff; }
+.mail-pill:hover { border-color: var(--cyan); color: var(--cyan); }

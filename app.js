@@ -4,6 +4,9 @@
 const PROFILE_CONFIG = {
   name: 'Mostafa Saad',
   email: 'mostafasaad0091@gmail.com',
+  phone: '+20 101 009 8727',
+  phoneRaw: '+201010098727',
+  whatsapp: 'https://wa.me/201010098727',
   linkedin: 'https://www.linkedin.com/in/mostafa-saad-171086191/',
   github: 'https://github.com/mostafasaad91',
   substack: 'https://mostafasaad.substack.com/',
@@ -1422,7 +1425,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Copy Email
+  // Copy Email & Copy Phone
   document.getElementById('copyEmailBtn').addEventListener('click', async () => {
     const status = document.getElementById('copyStatus');
     try {
@@ -1430,6 +1433,17 @@ document.addEventListener('DOMContentLoaded', () => {
       status.textContent = currentLang === 'ar' ? 'تم النسخ ✓' : 'COPIED ✓';
     } catch {
       status.textContent = PROFILE_CONFIG.email;
+    }
+    setTimeout(() => (status.textContent = 'COPY'), 2200);
+  });
+
+  document.getElementById('copyPhoneBtn')?.addEventListener('click', async () => {
+    const status = document.getElementById('copyPhoneStatus');
+    try {
+      await navigator.clipboard.writeText('01010098727');
+      status.textContent = currentLang === 'ar' ? 'تم النسخ ✓' : 'COPIED ✓';
+    } catch {
+      status.textContent = '01010098727';
     }
     setTimeout(() => (status.textContent = 'COPY'), 2200);
   });
@@ -1692,6 +1706,8 @@ function initCommandPalette() {
     { title: 'Toggle Language (Arabic / English)', hint: 'AR/EN', run: () => applyLanguage(currentLang === 'en' ? 'ar' : 'en') },
     { title: 'Toggle Theme (AMOLED Dark / Light)', hint: 'THEME', run: () => document.getElementById('themeToggle')?.click() },
     { title: 'Copy Email (mostafasaad0091@gmail.com)', hint: 'COPY', run: () => document.getElementById('copyEmailBtn')?.click() },
+    { title: 'Chat on WhatsApp (+20 101 009 8727)', hint: 'WHATSAPP', run: () => window.open(PROFILE_CONFIG.whatsapp, '_blank') },
+    { title: 'Copy Phone Number (01010098727)', hint: 'PHONE', run: () => document.getElementById('copyPhoneBtn')?.click() },
     { title: 'Open GitHub Profile (mostafasaad91)', hint: 'GITHUB', run: () => window.open(PROFILE_CONFIG.github, '_blank') },
     { title: 'Read Articles on Substack', hint: 'SUBSTACK', run: () => window.open(PROFILE_CONFIG.substack, '_blank') },
     { title: 'Open X / Twitter (@TacTical_41)', hint: 'X / TACTICAL', run: () => window.open(PROFILE_CONFIG.x, '_blank') },
