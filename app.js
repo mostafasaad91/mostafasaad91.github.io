@@ -156,6 +156,12 @@ const TRANSLATIONS = {
     pbi_title: '6-Page Executive Power BI Dashboard (Live)',
     pbi_load_btn: '▶ Load Interactive Dashboard',
     pbi_launch: '▶ Launch Live 6-Page Power BI Report',
+    olist_live_title: '4-Page Olist Executive BI, Forecast & LightGBM Queue (Live)',
+    olist_load_btn: '▶ Load Olist Dashboard',
+    olist_launch: '▶ Launch Live 4-Page Olist BI & ML Dashboard',
+    sbxg_live_title: '3-Page StatsBomb xG Calibration & 3,642-Shot Pitch Explorer (Live)',
+    sbxg_load_btn: '▶ Load xG Explorer',
+    sbxg_launch: '▶ Launch Live 3,642-Shot StatsBomb xG Dashboard',
     foot_zone_title: 'Football Analytics, xG/xT Models & Tactical Scouting',
     foot_zone_desc:
       'Turning Opta / WhoScored match-event data into automated tactical match reports, AMOLED visual posters, player role profiles, and recruitment intelligence — backed by FA, PFSA & FP Academy credentials.',
@@ -361,6 +367,12 @@ const TRANSLATIONS = {
     pbi_title: 'لوحة Power BI التنفيذية التفاعلية (6 صفحات لايف)',
     pbi_load_btn: '▶ تشغيل اللوحة التفاعلية',
     pbi_launch: '▶ افتح تقرير Power BI التفاعلي (6 صفحات)',
+    olist_live_title: 'لوحة Olist التنفيذية التفاعلية (4 صفحات: GMV و SLA و LightGBM لايف)',
+    olist_load_btn: '▶ تشغيل لوحة Olist',
+    olist_launch: '▶ افتح لوحة Olist التفاعلية (95,824 طلب حقيقي)',
+    sbxg_live_title: 'لوحة StatsBomb xG التفاعلية ومستكشف 3,642 تسديدة (3 صفحات لايف)',
+    sbxg_load_btn: '▶ تشغيل مستكشف xG',
+    sbxg_launch: '▶ افتح مستكشف 3,642 تسديدة حقيقية (StatsBomb 360)',
     foot_zone_title: 'تحليل كرة القدم، نماذج xG/xT والاستكشاف التكتيكي',
     foot_zone_desc:
       'تحويل بيانات أحداث المباريات (Opta / WhoScored) إلى تقارير PDF مؤتمتة، بوسترات AMOLED، ملفات أدوار اللاعبين، ورؤى استكشافية — مدعومة بشهادات The FA و PFSA و FP Academy.',
@@ -1742,6 +1754,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initXGSimulator();
   initScoutingTwinFinder();
+  initLiveWebDashboards();
   initRFMSimulator();
   initSplitCompare();
   initCommandPalette();
@@ -1980,6 +1993,8 @@ function initCommandPalette() {
     { title: 'Jump to Live xG Pitch Simulator', hint: 'xG', run: () => { applyTrackMode('all'); document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Jump to Live StatsBomb Player Twin Finder (361 Players)', hint: 'SCOUT', run: () => { applyTrackMode('all'); document.getElementById('scouting-widget')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 6-Page Power BI Report', hint: 'BI', run: () => { applyTrackMode('all'); mountPowerBI(); document.getElementById('pbiStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Launch Live 4-Page Olist Executive BI & ML Dashboard', hint: 'OLIST', run: () => { applyTrackMode('all'); document.getElementById('loadOlistBtn')?.click(); document.getElementById('olistLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Launch Live 3,642-Shot StatsBomb xG Explorer Dashboard', hint: 'xG LAB', run: () => { applyTrackMode('all'); document.getElementById('loadSbXgBtn')?.click(); document.getElementById('sbXgLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Compare AMOLED vs Print Light Slider', hint: 'UI', run: () => { applyTrackMode('all'); document.getElementById('splitStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Toggle Language (Arabic / English)', hint: 'AR/EN', run: () => applyLanguage(currentLang === 'en' ? 'ar' : 'en') },
     { title: 'Toggle Theme (AMOLED Dark / Light)', hint: 'THEME', run: () => document.getElementById('themeToggle')?.click() },
@@ -2763,4 +2778,35 @@ function initScoutingTwinFinder() {
     .catch(() => {
       twinsListEl.innerHTML = `<div class="muted mono" style="padding:1rem;font-size:0.8rem;">Open via HTTP/GitHub Pages to load assets/scouting_players.json (361 StatsBomb players).</div>`;
     });
+}
+
+/* =========================================================
+   10. LIVE WEB DASHBOARD EMBED LAUNCHERS (OLIST + STATSBOMB xG)
+   ========================================================= */
+function initLiveWebDashboards() {
+  const configs = [
+    {
+      stageId: 'olistLiveStage',
+      btnIds: ['loadOlistBtn', 'loadOlistOverlayBtn'],
+      url: 'https://mostafasaad91.github.io/olist-ecommerce-fullstack-analytics/?embed=1',
+      title: 'Olist E-Commerce Live Executive BI & ML Dashboard',
+    },
+    {
+      stageId: 'sbXgLiveStage',
+      btnIds: ['loadSbXgBtn', 'loadSbXgOverlayBtn'],
+      url: 'https://mostafasaad91.github.io/statsbomb-xg-calibration-lab/?embed=1',
+      title: 'StatsBomb 360 xG Calibration & 3,642-Shot Explorer Dashboard',
+    },
+  ];
+
+  configs.forEach(({ stageId, btnIds, url, title }) => {
+    let mounted = false;
+    const mount = () => {
+      const stage = document.getElementById(stageId);
+      if (!stage || mounted) return;
+      mounted = true;
+      stage.innerHTML = `<iframe title="${title}" src="${url}" loading="lazy" allowfullscreen="true" style="width:100%;height:700px;border:0;border-radius:14px;background:#000;"></iframe>`;
+    };
+    btnIds.forEach((id) => document.getElementById(id)?.addEventListener('click', mount));
+  });
 }
