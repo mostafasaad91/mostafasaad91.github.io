@@ -99,40 +99,40 @@ build_cv(
     role_line='Data Analyst | BI, SQL, Python & Machine Learning | Power BI, DAX & Excel',
     portfolio_url='https://mostafasaad91.github.io/?track=data',
     summary=(
-        "Data Analyst with 6+ years of experience turning complex institutional, operational, and sales datasets "
-        "into decision-ready intelligence. Proven track record across SQL Server (T-SQL), Python (Pandas, Scikit-Learn, "
-        "K-Means, RFM), Power BI (DAX, PBIP Star Schema), and Excel (Power Query, Power Pivot). Experienced in leading "
-        "7+ archival and social-research database projects, supervising data teams, designing coding taxonomies, and "
-        "facilitating advanced Excel workshops."
+        "Data Analyst & Analytics Engineer with 6+ years of experience turning complex institutional, operational, and "
+        "sales datasets into live interactive BI dashboards and zero-leakage ML systems. Proven track record across "
+        "SQL Server (T-SQL), SQLite Star Schema, Python (Pandas, Scikit-Learn, LightGBM, XGBoost, SHAP), Power BI "
+        "(DAX, PBIP), and Excel (Power Query, Power Pivot, What-If modeling). Experienced in leading 7+ archival and "
+        "research database projects, supervising data teams, and facilitating advanced Excel workshops."
     ),
     project_block=[
         {
-            'title': 'Olist E-Commerce — Full-Stack Analytics (SQL · Excel · Python · Data Science | 99,441 Orders)',
-            'meta': 'github.com/mostafasaad91/olist-ecommerce-fullstack-analytics  |  SQLite Star Schema · 6-Sheet Live Excel · LightGBM + SHAP · Time Series',
+            'title': 'Olist E-Commerce — Full-Stack Analytics & Live 4-Page BI/ML Dashboard (99,441 Orders)',
+            'meta': 'Live App: mostafasaad91.github.io/olist-ecommerce-fullstack-analytics  |  SQLite Star Schema · 6-Sheet Excel · LightGBM + SHAP · CI',
             'bullets': [
-                'Built a zero-fan-out SQLite Star Schema across 8 official relational tables (R$15.29M GMV), proved 5.88x late-delivery bad-review risk (Chi-Square p<1e-300), trained Out-of-Time LightGBM (+45.4% CS recovery ROI) & Damped-Trend GMV forecast (3.50% MAPE vs 3.86% Naive), and delivered a 6-sheet formula-driven Executive Excel Dashboard & What-If SLA Simulator.'
+                'Built a zero-fan-out SQLite Star Schema across 8 official tables (R$15.29M GMV, pytest CI), proved 5.88x late-delivery bad-review risk (p<1e-300), trained Out-of-Time LightGBM (+45.4% CS ROI) & Ridge GMV forecast (3.50% MAPE vs 3.86% Naive), and deployed a Live 4-Page Web Dashboard + 6-sheet formula-driven Excel What-If Simulator.'
             ]
         },
         {
-            'title': 'AdventureWorks 2022 — End-to-End Sales Analytics ($110M OLTP Dataset)',
-            'meta': 'github.com/mostafasaad91/adventure-works-sales-analytics  |  SQL Server · Python K-Means · Live 6-Page Power BI',
+            'title': 'AdventureWorks 2022 — End-to-End Sales Analytics & Live 6-Page Power BI ($110M OLTP)',
+            'meta': 'github.com/mostafasaad91/adventure-works-sales-analytics  |  SQL Server · Python pyodbc K-Means · Live Power BI (17 DAX)',
             'bullets': [
-                'Analyzed a 72-table SQL Server 2022 OLTP database (121K sales lines, $110M revenue) via point-in-time cost views, Star Schema, Python pyodbc K-Means RFM write-back (k=4), cohort retention (~345d), market basket (lift > 90x), and 6-page Power BI (17 DAX measures).'
+                'Analyzed a 72-table SQL Server 2022 OLTP database (121K sales lines, $110M revenue) via point-in-time cost views, Star Schema, Python pyodbc K-Means RFM write-back (k=4), cohort retention (~345d), market basket (lift > 90x), and live 6-page Power BI (17 DAX measures).'
             ]
         },
         {
-            'title': 'Telco Churn Explainable ML & FinTech Credit Risk Scorecard (2 End-to-End ML Repos)',
+            'title': 'Telco Churn Explainable ML & FinTech Credit Risk Scorecard (2 CI-Tested ML Repos)',
             'meta': 'github.com/mostafasaad91/telco-churn-explainable-ml  |  github.com/mostafasaad91/fintech-credit-risk-scorecard',
             'bullets': [
-                'Telco Churn (7,043 clients): Calibrated XGBoost (0.848 Test AUC, Brier 0.135) + ROI threshold optimization (+27.2% net profit) & SHAP. Credit Risk (30,000 clients): SQL QA + WoE/IV + LightGBM scorecard (KS 0.429, Gini 0.564) + 300–850 scoring & NT$29.6M Basel Expected Loss.'
+                'Telco Churn (7,043 clients): Calibrated XGBoost (0.848 Test AUC, Brier 0.135) + ROI threshold (0.37, +27.2% profit) & SHAP. Credit Risk (30,000 clients): SQL QA (399 codes) + WoE/IV + LightGBM scorecard (KS 0.429, Gini 0.564) + 300–850 scoring & NT$29.6M Basel EL.'
             ]
         }
     ],
     skills_rows=[
-        ('BI & Reporting', 'Power BI (PBIP, DAX, Star Schema), Excel (Power Query, Power Pivot, Advanced Modeling), Tableau'),
-        ('SQL & Databases', 'SQL Server (T-SQL, CTEs, Window Functions, Views), SQLite, Database Structuring & Schema QA'),
-        ('Python & ML', 'Python, Pandas, NumPy, Scikit-Learn, XGBoost, LightGBM, SHAP, Calibration, K-Means, pyodbc'),
-        ('Data Governance', 'Data Cleaning & Validation, Metadata Standards, Coding Systems, Team Supervision, Technical Workshops'),
+        ('BI & Live Apps', 'Power BI (PBIP, DAX, Star Schema), Excel (Power Query, Power Pivot, What-If), Interactive Web BI, Tableau'),
+        ('SQL & Databases', 'SQL Server (T-SQL, CTEs, Window Functions, Views), SQLite, Star Schema Modeling & Automated QA Tests'),
+        ('Python & ML', 'Python, Pandas, NumPy, Scikit-Learn, LightGBM, XGBoost, SHAP, Calibration, K-Means, Time-Series, pyodbc'),
+        ('Data Governance', 'Data Cleaning & Validation, Metadata Standards, Coding Systems, GitHub Actions CI, Team Lead & Workshops'),
     ],
     exp_blocks=[
         {
@@ -194,17 +194,17 @@ build_cv(
             ]
         },
         {
-            'title': 'StatsBomb xG Calibration & Freeze-Frame Ablation Lab (3,685 Real Shots · 149 Matches)',
-            'meta': 'github.com/mostafasaad91/statsbomb-xg-calibration-lab  |  StatsBomb 360 · Match-Grouped CV · SHAP',
+            'title': 'StatsBomb 360 xG Calibration Lab & Live 3,642-Shot Pitch Explorer (149 Matches)',
+            'meta': 'Live App: mostafasaad91.github.io/statsbomb-xg-calibration-lab  |  StatsBomb 360 · Match-Grouped CV · SHAP · CI',
             'bullets': [
-                'Built a match-grouped zero-leakage xG benchmark across WC 2022, Euro 2024 & Invincible Bayer Leverkusen; proved Freeze-Frame defender/GK coordinates cut Test Log-Loss by -0.0236 (0.2531 LL, 0.816 AUC vs official StatsBomb 0.2422 / 0.827) with SHAP & finisher leaderboards.'
+                'Built a match-grouped zero-leakage xG benchmark across WC 2022, Euro 2024 & Invincible Bayer Leverkusen; proved Freeze-Frame coordinates cut Test Log-Loss by -0.0236 (0.2531 LL, 0.816 AUC vs official StatsBomb 0.2422 / 0.827) and deployed a Live 3,642-Shot Interactive Pitch Explorer & 73-Player Finishing Leaderboard.'
             ]
         },
         {
-            'title': 'Football Scouting & Tactical Player Similarity Engine (1,305 Real StatsBomb Players)',
-            'meta': 'github.com/mostafasaad91/football-scouting-similarity-engine  |  SQLite · Silhouette K-Means · PCA · Cosine Similarity',
+            'title': 'Football Scouting Similarity Engine & Live 361-Player Twin Finder (StatsBomb Open Data)',
+            'meta': 'Live Widget: mostafasaad91.github.io/?track=football#scouting-widget  |  SQLite · K-Means · PCA · Cosine Similarity · CI',
             'bullets': [
-                'Engineered a club recruitment "Find a Replacement" engine (270+ min gate, 361 eligible players, optimal k=4 archetypes, 56.3% 2D PCA variance) surfacing same-role statistical twins including Lamine Yamal (96.0% match for Florian Wirtz) and Vitinha (92.2% for Granit Xhaka).'
+                'Engineered a club recruitment "Find a Replacement" engine (1,305 → 361 eligible outfielders, optimal k=4 archetypes, 56.3% 2D PCA variance) surfacing same-role twins including Lamine Yamal (96.0% Wirtz) & Vitinha (92.2% Xhaka) — playable live in browser with Head-to-Head percentiles.'
             ]
         }
     ],
