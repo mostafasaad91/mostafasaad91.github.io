@@ -183,6 +183,15 @@ const TRANSLATIONS = {
     sim_assist: 'Situation / Assist',
     sim_pressure: 'Defensive Pressure (Defenders in Cone)',
     sim_shap: 'MODEL FEATURE IMPACT (LOG-ODDS CONTRIBUTION)',
+    twin_eyebrow: '// LIVE STATSBOMB RECRUITMENT ENGINE · 361 REAL PLAYERS',
+    twin_title: 'Live StatsBomb Player Twin Finder (Cosine Similarity)',
+    twin_desc:
+      'Powered directly by my 361-player StatsBomb Open Data scouting database (WC 2022, Euro 2024 & Invincible Leverkusen 23/24): search any outfield player to compute real-time 13D standardized Cosine Similarity twins, same-role percentiles, and 2D PCA tactical proximity.',
+    twin_same_role: 'Same Role Only',
+    twin_stars: 'STARS:',
+    twin_top5_lbl: 'TOP-5 STATISTICAL TWINS (CLICK TO COMPARE)',
+    twin_h2h_lbl: 'HEAD-TO-HEAD SAME-ROLE PERCENTILES (0–100)',
+    twin_pca_lbl: 'LIVE 2D PCA TACTICAL SPACE (56.3% VAR · k=4)',
     proj_details: 'Case Study →',
     career_eyebrow: '// TRACK RECORD',
     career_title: 'Experience & Education',
@@ -379,6 +388,15 @@ const TRANSLATIONS = {
     sim_assist: 'نوع التمريرة / الموقف',
     sim_pressure: 'الضغط الدفاعي (المدافعون أمام التسديدة)',
     sim_shap: 'تأثير كل متغير على توقع النموذج (Feature Impact)',
+    twin_eyebrow: '// محرك السكاوتنج التفاعلي · 361 لاعب حقيقي من STATSBOMB',
+    twin_title: 'مكتشف توأم اللاعبين المباشر (StatsBomb Cosine Similarity)',
+    twin_desc:
+      'يعمل مباشرة على قاعدة بيانات السكاوتنج الحقيقية لـ 361 لاعب من StatsBomb (مونديال 2022، يورو 2024، وليفركوزن 23/24): ابحث عن أي لاعب لحساب أقرب 5 بدائل تكتيكية لحظياً بتشابه جيب التمام ومقارنة المئويات وخريطة PCA.',
+    twin_same_role: 'نفس المركز فقط',
+    twin_stars: 'نجوم:',
+    twin_top5_lbl: 'أقرب 5 بدائل تكتيكية (اضغط للمقارنة)',
+    twin_h2h_lbl: 'مقارنة المئويات داخل نفس المركز (0–100)',
+    twin_pca_lbl: 'خريطة الأدوار التكتيكية PCA 2D (تباين 56.3% · k=4)',
     proj_details: 'تفاصيل المشروع ←',
     career_eyebrow: '// المسيرة المهنية',
     career_title: 'الخبرات العملية والتعليم',
@@ -1359,6 +1377,7 @@ function applyLanguage(lang) {
   if (typeof updateRFMGlobal === 'function') updateRFMGlobal();
   if (typeof renderIntentGlobal === 'function') renderIntentGlobal();
   if (typeof renderSkillProofGlobal === 'function') renderSkillProofGlobal();
+  if (typeof renderScoutingGlobal === 'function') renderScoutingGlobal();
 }
 
 function initCountersAndReveal() {
@@ -1722,6 +1741,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   initXGSimulator();
+  initScoutingTwinFinder();
   initRFMSimulator();
   initSplitCompare();
   initCommandPalette();
@@ -1958,6 +1978,7 @@ function initCommandPalette() {
     { title: 'Download Football Analyst CV (PDF)', hint: 'PDF', run: () => window.open('cv/Mostafa_Saad_Football_Analyst_CV.pdf', '_blank') },
     { title: 'Jump to Live K-Means RFM Simulator', hint: 'ML', run: () => { applyTrackMode('all'); document.getElementById('rfm-simulator')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Jump to Live xG Pitch Simulator', hint: 'xG', run: () => { applyTrackMode('all'); document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Jump to Live StatsBomb Player Twin Finder (361 Players)', hint: 'SCOUT', run: () => { applyTrackMode('all'); document.getElementById('scouting-widget')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 6-Page Power BI Report', hint: 'BI', run: () => { applyTrackMode('all'); mountPowerBI(); document.getElementById('pbiStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Compare AMOLED vs Print Light Slider', hint: 'UI', run: () => { applyTrackMode('all'); document.getElementById('splitStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Toggle Language (Arabic / English)', hint: 'AR/EN', run: () => applyLanguage(currentLang === 'en' ? 'ar' : 'en') },
@@ -2399,4 +2420,347 @@ function initQuickDock() {
   dockCmd?.addEventListener('click', () => {
     document.getElementById('cmdTrigger')?.click();
   });
+}
+
+/* =========================================================
+   9. LIVE INTERACTIVE STATSBOMB PLAYER TWIN FINDER (361 REAL PLAYERS)
+   ========================================================= */
+let renderScoutingGlobal = null;
+
+function initScoutingTwinFinder() {
+  const widget = document.getElementById('scouting-widget');
+  if (!widget) return;
+
+  const searchInput = document.getElementById('scoutSearch');
+  const suggestBox = document.getElementById('scoutSuggest');
+  const sameRoleCb = document.getElementById('scoutSameRole');
+  const minMinsSel = document.getElementById('scoutMinMins');
+  const twinsListEl = document.getElementById('scoutTwinsList');
+  const compareBarsEl = document.getElementById('scoutCompareBars');
+  const pcaSvg = document.getElementById('scoutPcaSvg');
+
+  const PCTL_LABELS = [
+    'npxG / 90',
+    'xA / 90',
+    'Key Passes',
+    'Prog. Passes',
+    'Box Entries',
+    'Prog. Carries',
+    'Dribbles',
+    'Pressures',
+    'Tkl + Int',
+  ];
+
+  const ARCH_COLORS = {
+    'Creative Winger / #10': '#10B981',
+    'Deep Playmaker / Metronome': '#00E5FF',
+    'Penalty-Box Finisher / #9': '#F59E0B',
+    'Balanced Wide / Fullback': '#A78BFA',
+  };
+
+  let players = [];
+  let targetIdx = 0;
+  let activeTwinIdx = -1;
+  let currentTwins = [];
+
+  function shortName(full) {
+    const known = ['Wirtz', 'Yamal', 'Xhaka', 'Vitinha', 'Mbappé', 'Neymar', 'Bellingham', 'Musiala', 'Saka', 'Kane', 'Hakimi', 'Stones', 'Modrić', 'Vinícius', 'Leão', 'Dembélé', 'Olmo', 'Griezmann', 'Rodri'];
+    for (const k of known) {
+      if (full.toLowerCase().includes(k.toLowerCase())) return k;
+    }
+    if (full.includes('Vitor Machado')) return 'Vitinha';
+    const parts = full.split(' ');
+    return parts.length > 2 ? `${parts[0]} ${parts[1]}` : full;
+  }
+
+  function cosinePct(zA, zB) {
+    let dot = 0;
+    for (let i = 0; i < zA.length; i++) dot += zA[i] * zB[i];
+    return Math.round(((dot + 1) / 2) * 1000) / 10;
+  }
+
+  function findByName(q) {
+    const ql = q.trim().toLowerCase();
+    if (!ql) return -1;
+    let best = -1;
+    let bestMins = -1;
+    for (let i = 0; i < players.length; i++) {
+      if (players[i].n.toLowerCase().includes(ql) && players[i].m > bestMins) {
+        best = i;
+        bestMins = players[i].m;
+      }
+    }
+    return best;
+  }
+
+  function computeTwins() {
+    const src = players[targetIdx];
+    const sameRole = sameRoleCb.checked;
+    const minMins = Number(minMinsSel.value) || 270;
+    const scored = [];
+    let poolCount = 0;
+
+    for (let i = 0; i < players.length; i++) {
+      const p = players[i];
+      if (p.m < minMins) continue;
+      if (sameRole && p.r !== src.r) continue;
+      poolCount++;
+      if (i === targetIdx) continue;
+      scored.push({ idx: i, sim: cosinePct(src.z, p.z) });
+    }
+    scored.sort((a, b) => b.sim - a.sim);
+    currentTwins = scored.slice(0, 5);
+    if (!currentTwins.some((t) => t.idx === activeTwinIdx)) {
+      activeTwinIdx = currentTwins.length ? currentTwins[0].idx : -1;
+    }
+
+    const poolEl = document.getElementById('scoutPoolCount');
+    if (poolEl) {
+      poolEl.textContent = currentLang === 'ar' ? `${poolCount} لاعب مؤهل` : `${poolCount} CANDIDATES`;
+    }
+  }
+
+  function renderPcaMap() {
+    if (!pcaSvg || !players.length) return;
+    const W = 420;
+    const H = 215;
+    const padX = 28;
+    const padY = 20;
+
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const p of players) {
+      if (p.xy[0] < minX) minX = p.xy[0];
+      if (p.xy[0] > maxX) maxX = p.xy[0];
+      if (p.xy[1] < minY) minY = p.xy[1];
+      if (p.xy[1] > maxY) maxY = p.xy[1];
+    }
+    const sx = (x) => padX + ((x - minX) / (maxX - minX || 1)) * (W - padX * 2);
+    const sy = (y) => H - padY - ((y - minY) / (maxY - minY || 1)) * (H - padY * 2);
+
+    const src = players[targetIdx];
+    const tx = sx(src.xy[0]);
+    const ty = sy(src.xy[1]);
+
+    const twinSet = new Set(currentTwins.map((t) => t.idx));
+    let parts = [];
+
+    // Subtle axes
+    const zx = sx(0);
+    const zy = sy(0);
+    parts.push(`<line x1="${padX}" y1="${zy.toFixed(1)}" x2="${W - padX}" y2="${zy.toFixed(1)}" stroke="rgba(148,163,184,0.16)" stroke-dasharray="3 3" />`);
+    parts.push(`<line x1="${zx.toFixed(1)}" y1="${padY}" x2="${zx.toFixed(1)}" y2="${H - padY}" stroke="rgba(148,163,184,0.16)" stroke-dasharray="3 3" />`);
+
+    // Background 361 players
+    for (let i = 0; i < players.length; i++) {
+      if (i === targetIdx || twinSet.has(i)) continue;
+      const p = players[i];
+      const col = ARCH_COLORS[p.a] || '#94A3B8';
+      parts.push(`<circle cx="${sx(p.xy[0]).toFixed(1)}" cy="${sy(p.xy[1]).toFixed(1)}" r="2.2" fill="${col}" opacity="0.32" />`);
+    }
+
+    // Connectors to Top-5 twins
+    for (const t of currentTwins) {
+      const tp = players[t.idx];
+      const px = sx(tp.xy[0]);
+      const py = sy(tp.xy[1]);
+      const isAct = t.idx === activeTwinIdx;
+      parts.push(
+        `<line x1="${tx.toFixed(1)}" y1="${ty.toFixed(1)}" x2="${px.toFixed(1)}" y2="${py.toFixed(1)}" stroke="${isAct ? '#00E5FF' : 'rgba(0,229,255,0.42)'}" stroke-width="${isAct ? 2 : 1.1}" stroke-dasharray="${isAct ? '' : '3 2'}" />`
+      );
+      parts.push(
+        `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${isAct ? 5.6 : 4}" fill="#00E5FF" stroke="#000000" stroke-width="1.4" style="cursor:pointer" data-twin-idx="${t.idx}" />`
+      );
+      if (isAct) {
+        const lx = Math.min(Math.max(px + 8, 36), W - 92);
+        const ly = Math.max(py - 8, 16);
+        parts.push(`<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" fill="#00E5FF" font-size="9.5" font-weight="700" font-family="JetBrains Mono, monospace">${shortName(tp.n)} (${t.sim.toFixed(1)}%)</text>`);
+      }
+    }
+
+    // Target player halo
+    parts.push(`<circle cx="${tx.toFixed(1)}" cy="${ty.toFixed(1)}" r="10" fill="rgba(16,185,129,0.22)" />`);
+    parts.push(`<circle cx="${tx.toFixed(1)}" cy="${ty.toFixed(1)}" r="6" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />`);
+    const tlx = Math.min(Math.max(tx + 9, 36), W - 82);
+    const tly = Math.min(ty + 14, H - 10);
+    parts.push(`<text x="${tlx.toFixed(1)}" y="${tly.toFixed(1)}" fill="#FFFFFF" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace">${shortName(src.n)}</text>`);
+
+    // Axis micro labels
+    parts.push(`<text x="${W - padX}" y="${H - 5}" text-anchor="end" fill="#64748B" font-size="8.2" font-family="JetBrains Mono, monospace">PC1: Attacking Threat →</text>`);
+    parts.push(`<text x="${padX}" y="13" fill="#64748B" font-size="8.2" font-family="JetBrains Mono, monospace">↑ PC2: Progression &amp; Circulation</text>`);
+
+    pcaSvg.innerHTML = parts.join('');
+    pcaSvg.querySelectorAll('[data-twin-idx]').forEach((el) => {
+      el.addEventListener('click', () => {
+        activeTwinIdx = Number(el.dataset.twinIdx);
+        renderAll();
+      });
+    });
+  }
+
+  function renderAll() {
+    if (!players.length) return;
+    computeTwins();
+    const src = players[targetIdx];
+
+    document.getElementById('scoutTargetRole').textContent = src.r;
+    document.getElementById('scoutTargetName').textContent = src.n;
+    document.getElementById('scoutTargetMeta').textContent = `${src.t} · ${src.m.toLocaleString()} mins · ${src.c}`;
+    document.getElementById('scoutTargetArch').textContent = src.a;
+    document.getElementById('scoutTargetKpis').innerHTML = [
+      ['npxG/90', src.v[0].toFixed(2)],
+      ['xA/90', src.v[1].toFixed(2)],
+      ['Prog Pass', src.v[2].toFixed(1)],
+      ['Prog Carry', src.v[3].toFixed(1)],
+    ]
+      .map(([k, v]) => `<div class="scout-mkpi"><span>${k}</span><strong>${v}</strong></div>`)
+      .join('');
+
+    // Render Top-5 Twins
+    if (!currentTwins.length) {
+      twinsListEl.innerHTML = `<div class="muted mono" style="padding:1rem;font-size:0.8rem;">No matching candidates at this minutes threshold — lower Min Minutes or disable Same Role Only.</div>`;
+    } else {
+      twinsListEl.innerHTML = currentTwins
+        .map((t, rank) => {
+          const p = players[t.idx];
+          const isAct = t.idx === activeTwinIdx;
+          return `
+            <button class="twin-card ${isAct ? 'active' : ''}" type="button" data-idx="${t.idx}">
+              <div class="twin-row-top">
+                <div class="twin-name-wrap">
+                  <span class="twin-rank">#${rank + 1}</span>
+                  <span class="twin-name">${p.n}</span>
+                </div>
+                <span class="twin-score">${t.sim.toFixed(1)}%</span>
+              </div>
+              <div class="twin-meta">
+                <span>${p.t} · ${p.m.toLocaleString()}' · ${p.r}</span>
+                <span>npxG ${p.v[0].toFixed(2)} · xA ${p.v[1].toFixed(2)}</span>
+              </div>
+              <div class="twin-bar-bg"><div class="twin-bar-fill" style="width:${Math.max(15, t.sim)}%"></div></div>
+            </button>`;
+        })
+        .join('');
+
+      twinsListEl.querySelectorAll('.twin-card').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          activeTwinIdx = Number(btn.dataset.idx);
+          renderAll();
+        });
+      });
+    }
+
+    // Head-to-Head Percentile Bars
+    const activeTwinObj = currentTwins.find((t) => t.idx === activeTwinIdx) || currentTwins[0];
+    const twin = activeTwinObj ? players[activeTwinObj.idx] : src;
+    document.getElementById('scoutLegA').textContent = shortName(src.n);
+    document.getElementById('scoutLegB').textContent = shortName(twin.n);
+    document.getElementById('scoutSimPill').textContent = activeTwinObj
+      ? `${activeTwinObj.sim.toFixed(1)}% COSINE MATCH`
+      : '—';
+
+    compareBarsEl.innerHTML = PCTL_LABELS.map((lbl, i) => {
+      const pa = src.p[i];
+      const pb = twin.p[i];
+      return `
+        <div class="cmp-row">
+          <span class="cmp-lbl">${lbl}</span>
+          <div class="cmp-tracks">
+            <div class="cmp-track"><div class="cmp-fill-a" style="width:${pa}%"></div></div>
+            <div class="cmp-track"><div class="cmp-fill-b" style="width:${pb}%"></div></div>
+          </div>
+          <span class="cmp-vals"><span class="va">${Math.round(pa)}</span> / <span class="vb">${Math.round(pb)}</span></span>
+        </div>`;
+    }).join('');
+
+    // Update Star preset active state
+    document.querySelectorAll('.scout-preset').forEach((b) => {
+      b.classList.toggle('active', src.n.toLowerCase().includes(b.dataset.player.toLowerCase()));
+    });
+
+    // Update terminal provenance line
+    const fb = document.getElementById('scoutFormulaBar');
+    if (fb && activeTwinObj) {
+      fb.textContent = `target="${shortName(src.n)}" -> #1="${shortName(twin.n)}" (${activeTwinObj.sim.toFixed(1)}%) · role_gate=${sameRoleCb.checked} · min_mins=${minMinsSel.value}`;
+    }
+
+    renderPcaMap();
+  }
+
+  renderScoutingGlobal = renderAll;
+
+  // Search autocomplete
+  searchInput?.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    if (!q || !players.length) {
+      suggestBox.classList.remove('open');
+      return;
+    }
+    const matches = players
+      .map((p, idx) => ({ p, idx }))
+      .filter(({ p }) => p.n.toLowerCase().includes(q) || p.t.toLowerCase().includes(q) || p.r.toLowerCase().includes(q))
+      .sort((a, b) => b.p.m - a.p.m)
+      .slice(0, 8);
+
+    if (!matches.length) {
+      suggestBox.innerHTML = `<div class="scout-sug-item"><span class="muted">No matching players</span></div>`;
+    } else {
+      suggestBox.innerHTML = matches
+        .map(
+          ({ p, idx }) => `
+          <button class="scout-sug-item" type="button" data-pick="${idx}">
+            <span><strong>${p.n}</strong> · <span class="muted">${p.t}</span></span>
+            <span class="scout-sug-meta">${p.r} · ${p.m}'</span>
+          </button>`
+        )
+        .join('');
+      suggestBox.querySelectorAll('[data-pick]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          targetIdx = Number(btn.dataset.pick);
+          activeTwinIdx = -1;
+          searchInput.value = players[targetIdx].n;
+          suggestBox.classList.remove('open');
+          renderAll();
+        });
+      });
+    }
+    suggestBox.classList.add('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.scout-search-wrap')) suggestBox?.classList.remove('open');
+  });
+
+  sameRoleCb?.addEventListener('change', () => {
+    activeTwinIdx = -1;
+    renderAll();
+  });
+  minMinsSel?.addEventListener('change', () => {
+    activeTwinIdx = -1;
+    renderAll();
+  });
+
+  document.querySelectorAll('.scout-preset').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const idx = findByName(btn.dataset.player);
+      if (idx >= 0) {
+        targetIdx = idx;
+        activeTwinIdx = -1;
+        if (searchInput) searchInput.value = '';
+        renderAll();
+      }
+    });
+  });
+
+  // Load real 361-player StatsBomb JSON
+  fetch('assets/scouting_players.json')
+    .then((r) => r.json())
+    .then((data) => {
+      players = data;
+      const wIdx = findByName('Florian Wirtz');
+      targetIdx = wIdx >= 0 ? wIdx : 0;
+      renderAll();
+    })
+    .catch(() => {
+      twinsListEl.innerHTML = `<div class="muted mono" style="padding:1rem;font-size:0.8rem;">Open via HTTP/GitHub Pages to load assets/scouting_players.json (361 StatsBomb players).</div>`;
+    });
 }

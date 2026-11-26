@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -992,6 +992,101 @@
           </div>
         </div>
 
+        <!-- LIVE INTERACTIVE STATSBOMB PLAYER TWIN FINDER WIDGET (361 Real Players) -->
+        <div class="sim-header-inline">
+          <span class="section-eyebrow mono" style="color:var(--emerald)" data-i18n="twin_eyebrow">// LIVE STATSBOMB RECRUITMENT ENGINE · 361 REAL PLAYERS</span>
+          <h3 class="sub-section-title" data-i18n="twin_title">Live StatsBomb Player Twin Finder (Cosine Similarity)</h3>
+          <p class="section-desc" data-i18n="twin_desc">
+            Powered directly by my 361-player StatsBomb Open Data scouting database (WC 2022, Euro 2024 &amp; Invincible Leverkusen 23/24): search any outfield player to compute real-time 13D standardized Cosine Similarity twins, same-role percentiles, and 2D PCA tactical proximity.
+          </p>
+        </div>
+
+        <div class="scout-widget glass" id="scouting-widget">
+          <div class="scout-toolbar">
+            <div class="scout-search-wrap">
+              <span class="mono scout-search-ico">⌕</span>
+              <input type="text" id="scoutSearch" placeholder="Search 361 real StatsBomb players (e.g. Wirtz, Xhaka, Mbappé, Yamal, Rodri)..." autocomplete="off" aria-label="Search StatsBomb players" />
+              <div class="scout-suggest glass" id="scoutSuggest" role="listbox"></div>
+            </div>
+            <div class="scout-filters">
+              <label class="scout-toggle mono" for="scoutSameRole">
+                <input type="checkbox" id="scoutSameRole" checked />
+                <span data-i18n="twin_same_role">Same Role Only</span>
+              </label>
+              <select id="scoutMinMins" class="mono" aria-label="Minimum minutes filter">
+                <option value="270" selected>Min 270' (All 361)</option>
+                <option value="450">Min 450' (Regulars)</option>
+                <option value="700">Min 700' (Core XI)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="preset-row scout-presets">
+            <span class="mono preset-lbl" data-i18n="twin_stars">STARS:</span>
+            <button class="preset-btn scout-preset mono active" data-player="Florian Wirtz" type="button">Florian Wirtz</button>
+            <button class="preset-btn scout-preset mono" data-player="Granit Xhaka" type="button">Granit Xhaka</button>
+            <button class="preset-btn scout-preset mono" data-player="Kylian Mbappé" type="button">Kylian Mbappé</button>
+            <button class="preset-btn scout-preset mono" data-player="Jude Bellingham" type="button">Jude Bellingham</button>
+            <button class="preset-btn scout-preset mono" data-player="Bukayo Saka" type="button">Bukayo Saka</button>
+            <button class="preset-btn scout-preset mono" data-player="Harry Kane" type="button">Harry Kane</button>
+            <button class="preset-btn scout-preset mono" data-player="Achraf Hakimi" type="button">Achraf Hakimi</button>
+            <button class="preset-btn scout-preset mono" data-player="John Stones" type="button">John Stones</button>
+          </div>
+
+          <div class="scout-grid">
+            <!-- Left: Target Player Profile + Top-5 Statistical Twins -->
+            <div class="scout-left">
+              <div class="scout-target-card" id="scoutTargetCard">
+                <div class="scout-target-top">
+                  <div>
+                    <span class="mono scout-role-badge" id="scoutTargetRole">Attacking Mid / Winger</span>
+                    <h4 id="scoutTargetName">Florian Wirtz</h4>
+                    <div class="scout-target-sub mono" id="scoutTargetMeta">Germany · 2,734 mins · WC22 · Euro24 · BL23/24</div>
+                  </div>
+                  <span class="scout-arch-pill mono" id="scoutTargetArch">Creative Winger / #10</span>
+                </div>
+                <div class="scout-mini-kpis mono" id="scoutTargetKpis"></div>
+              </div>
+
+              <div class="scout-twins-head">
+                <span class="mono" data-i18n="twin_top5_lbl">TOP-5 STATISTICAL TWINS (CLICK TO COMPARE)</span>
+                <span class="mono emerald" id="scoutPoolCount">361 PLAYERS</span>
+              </div>
+              <div class="scout-twins-list" id="scoutTwinsList"></div>
+            </div>
+
+            <!-- Right: Head-to-Head Same-Role Percentiles + Live 2D PCA Map -->
+            <div class="scout-right">
+              <div class="scout-panel">
+                <div class="scout-panel-head">
+                  <span class="mono" data-i18n="twin_h2h_lbl">HEAD-TO-HEAD SAME-ROLE PERCENTILES (0–100)</span>
+                  <div class="scout-legend mono">
+                    <span><i class="lg-dot em"></i><em id="scoutLegA">Wirtz</em></span>
+                    <span><i class="lg-dot cy"></i><em id="scoutLegB">Lamine Yamal</em></span>
+                  </div>
+                </div>
+                <div class="scout-compare-bars" id="scoutCompareBars"></div>
+              </div>
+
+              <div class="scout-panel">
+                <div class="scout-panel-head">
+                  <span class="mono" data-i18n="twin_pca_lbl">LIVE 2D PCA TACTICAL SPACE (56.3% VAR · k=4)</span>
+                  <span class="mono muted" id="scoutSimPill">96.0% COSINE MATCH</span>
+                </div>
+                <div class="scout-pca-box">
+                  <svg id="scoutPcaSvg" viewBox="0 0 420 215" role="img" aria-label="2D PCA Tactical Map of 361 StatsBomb Players"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="terminal-bar mono scout-foot-bar">
+            <span class="prompt">SCOUT&gt;</span>
+            <span id="scoutFormulaBar">cosine_similarity(StandardScaler(13_per90_KPIs)) · Role-Gated · 361 StatsBomb Outfield Players</span>
+            <a href="https://github.com/mostafasaad91/football-scouting-similarity-engine" target="_blank" rel="noopener" class="scout-repo-btn">GitHub Repo ↗</a>
+          </div>
+        </div>
+
         <!-- Football Certifications Strip -->
         <div class="foot-certs-strip">
           <div class="cert-pill glass"><span class="cert-dot emerald"></span><div><strong>Football Analysis Course</strong><span class="muted">FP Academy</span></div></div>
@@ -1429,6 +1524,6 @@
     <a href="#hero" class="dock-btn mono" title="Back to Top" aria-label="Back to Top">↑</a>
   </div>
 
-  <script src="app.js?v=10"></script>
+  <script src="app.js?v=11"></script>
 </body>
 </html>
