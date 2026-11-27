@@ -340,6 +340,41 @@
 
         <!-- Track 1 Flagship Projects -->
         <div class="projects-grid">
+          <!-- DATA SCIENCE FLAGSHIP: 1.067M-Row UK Retail Multi-Model CLV & Market Basket Engine -->
+          <article class="project-card glass tilt-card featured-repo" data-cat="analytics" style="grid-column: 1 / -1;">
+            <div class="project-viz viz-violet">
+              <div class="repo-top-row">
+                <span class="proj-cat mono">DATA SCIENCE FLAGSHIP · MULTI-SHEET EXCEL + SQL + 5 ML ENGINES</span>
+                <span class="star-badge mono">1,067,371 ROWS · 0.7979 AUC · 8-SHEET EXCEL</span>
+              </div>
+              <button class="proj-chart-preview lightbox-trigger" type="button" data-src="https://raw.githubusercontent.com/mostafasaad91/retail-1m-clv-datascience-engine/main/outputs/figures/04_clv_regression_decile_lift.png" data-cap="1.067M-Row UK Retail CLV Engine — Top 20% Predicted VIPs Capture 73.22% of Actual Next-90-Day Revenue">
+                <img src="https://raw.githubusercontent.com/mostafasaad91/retail-1m-clv-datascience-engine/main/outputs/figures/04_clv_regression_decile_lift.png" alt="1.067M-Row Retail Two-Stage CLV Decile Lift" loading="lazy" style="height:170px;object-fit:contain;background:#000;" />
+                <span class="zoom-pill mono">🔍 ZOOM</span>
+              </button>
+              <div class="proj-metric mono">2 EXCEL SHEETS · £17.07M GMV · 73.22% TOP-20% CLV · 89.4% SURVIVAL · 31.6x SVD BASKET · 8 AMOLED CHARTS</div>
+            </div>
+            <div class="project-body">
+              <h3 data-i18n="retail_title">1.067M-Row UK Retail — Multi-Model Data Science, CLV &amp; Market Basket Engine</h3>
+              <p data-i18n="retail_desc">
+                Production Data Science powerhouse built on the official 1,067,371-row multi-sheet UCI Online Retail II Excel dataset: zero-fan-out SQLite Star Schema (9 views, £17.07M GMV), out-of-time Two-Stage CLV (Stacking Ensemble 0.7979 Test AUC; Top 20% VIPs = 73.22% of actual 90d revenue; TreeSHAP), Kaplan-Meier survival (89.4% vs 25.2% M12), Isolation Forest anomaly audit (67.3% of canceled value in 2% accounts), 20D TruncatedSVD market basket (31.63x lift), LightGBM weekly forecast (13.78% MAPE), 8 AMOLED figures, and an 8-sheet live-formula Excel workbook (100+ formulas).
+              </p>
+              <div class="chip-row small">
+                <span class="tech-chip">Multi-Sheet Excel (8 Tabs)</span>
+                <span class="tech-chip">SQLite Star Schema</span>
+                <span class="tech-chip">Two-Stage CLV + Stacking</span>
+                <span class="tech-chip">TreeSHAP &amp; Survival</span>
+                <span class="tech-chip">Isolation Forest &amp; SVD</span>
+              </div>
+              <div class="project-links multi-links">
+                <a href="https://mostafasaad91.github.io/retail-1m-clv-datascience-engine/" target="_blank" rel="noopener" class="repo-link live-bi mono">▶ Live Dashboard ↗</a>
+                <a href="https://github.com/mostafasaad91/retail-1m-clv-datascience-engine" target="_blank" rel="noopener" class="repo-link mono">GitHub Repo ↗</a>
+                <a href="https://github.com/mostafasaad91/retail-1m-clv-datascience-engine/raw/main/outputs/Retail_1M_DataScience_Executive_Workbook.xlsx" target="_blank" rel="noopener" class="repo-link mono">⬇ 8-Sheet Excel (.xlsx)</a>
+                <a href="https://github.com/mostafasaad91/retail-1m-clv-datascience-engine/blob/main/docs/PROJECT_STORY.md" target="_blank" rel="noopener" class="repo-link mono">Story (EN/AR) ↗</a>
+                <button class="text-link open-modal" data-project="9" type="button" data-i18n="proj_details">Case Study →</button>
+              </div>
+            </div>
+          </article>
+
           <!-- FULL-STACK MASTERPIECE: Olist E-Commerce (SQL + Excel + Python + Data Science) -->
           <article class="project-card glass tilt-card featured-repo" data-cat="analytics" style="grid-column: 1 / -1;">
             <div class="project-viz viz-cyan">
@@ -511,6 +546,30 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- LIVE INTERACTIVE 1.067M RETAIL DATA SCIENCE & CLV DASHBOARD EMBED -->
+        <div class="pbi-embed-card glass" style="margin-bottom:1.8rem;">
+          <div class="pbi-head">
+            <div>
+              <span class="mono meta-tag">LIVE DATA SCIENCE WEB APP · 1,067,371 MULTI-SHEET EXCEL ROWS</span>
+              <h3 class="viz-title" data-i18n="retail_live_title">4-Page UK Retail 1M+ CLV, Survival, Anomalies &amp; SVD Basket App (Live)</h3>
+            </div>
+            <div class="pbi-actions">
+              <button class="btn btn-sm btn-primary" id="loadRetailBtn" type="button" data-i18n="retail_load_btn">▶ Load 1M+ CLV Dashboard</button>
+              <a href="https://mostafasaad91.github.io/retail-1m-clv-datascience-engine/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Full Screen ↗</a>
+            </div>
+          </div>
+
+          <div class="pbi-stage" id="retailLiveStage">
+            <div class="pbi-preview" id="retailLivePreview">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/retail-1m-clv-datascience-engine/main/assets/social-preview.png" alt="1.067M-Row UK Retail Live Multi-Model Data Science Dashboard" loading="lazy" />
+              <div class="pbi-overlay">
+                <button class="btn btn-primary btn-lg" id="loadRetailOverlayBtn" type="button" data-i18n="retail_launch">▶ Launch Live 4-Page 1.067M Retail Data Science App</button>
+                <span class="mono pbi-sub">£17.07M GMV · Stacking 0.7979 AUC · 73.22% Top-20% CLV · What-If Simulator · 118 Anomalies · 1,798 SVD Bundles</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- LIVE INTERACTIVE OLIST BI & ML DASHBOARD EMBED (4 Pages · Real 95,824 Orders) -->
@@ -1574,6 +1633,6 @@
     <a href="#hero" class="dock-btn mono" title="Back to Top" aria-label="Back to Top">↑</a>
   </div>
 
-  <script src="app.js?v=12"></script>
+  <script src="app.js?v=13"></script>
 </body>
 </html>

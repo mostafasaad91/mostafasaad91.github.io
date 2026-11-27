@@ -139,6 +139,9 @@ const TRANSLATIONS = {
     dp_2: 'K-Means RFM clustering, cohort retention heatmaps, market basket lift, and automated QA scripts.',
     dp_3: 'PBIP source-controlled dashboards, DAX time intelligence, Power Query ETL, and Excel workshops.',
     aw_title: 'AdventureWorks 2022 — End-to-End Sales Analytics',
+    retail_title: '1.067M-Row UK Retail — Multi-Model Data Science, CLV & Market Basket Engine',
+    retail_desc:
+      'Production Data Science powerhouse built on the official 1,067,371-row multi-sheet UCI Online Retail II Excel dataset: zero-fan-out SQLite Star Schema (9 views, £17.07M GMV), out-of-time Two-Stage CLV (Stacking Ensemble 0.7979 Test AUC; Top 20% VIPs = 73.22% of actual 90d revenue; TreeSHAP), Kaplan-Meier survival (89.4% vs 25.2% M12), Isolation Forest anomaly audit (67.3% of canceled value in 2% accounts), 20D TruncatedSVD market basket (31.63x lift), LightGBM weekly forecast (13.78% MAPE), 8 AMOLED figures, and an 8-sheet live-formula Excel workbook (100+ formulas).',
     olist_title: 'Olist E-Commerce — Full-Stack Analytics (SQL · Excel · Python · Data Science)',
     olist_desc:
       'All-in-one enterprise analytics stack across 99,441 real Brazilian orders (8 relational tables): zero-fan-out SQLite Star Schema, Python statistical testing (5.88x late-delivery bad-review risk), LightGBM + SHAP (+45.4% CS recovery ROI), 3.50% MAPE GMV forecasting, and a 6-sheet formula-driven Executive Excel Dashboard & What-If SLA Simulator.',
@@ -156,6 +159,9 @@ const TRANSLATIONS = {
     pbi_title: '6-Page Executive Power BI Dashboard (Live)',
     pbi_load_btn: '▶ Load Interactive Dashboard',
     pbi_launch: '▶ Launch Live 6-Page Power BI Report',
+    retail_live_title: '4-Page UK Retail 1M+ CLV, Survival, Anomalies & SVD Basket App (Live)',
+    retail_load_btn: '▶ Load 1M+ CLV Dashboard',
+    retail_launch: '▶ Launch Live 4-Page 1.067M Retail Data Science App',
     olist_live_title: '4-Page Olist Executive BI, Forecast & LightGBM Queue (Live)',
     olist_load_btn: '▶ Load Olist Dashboard',
     olist_launch: '▶ Launch Live 4-Page Olist BI & ML Dashboard',
@@ -350,6 +356,9 @@ const TRANSLATIONS = {
     dp_2: 'تقسيم العملاء بـ K-Means RFM، خرائط الاحتفاظ بالأفواج (Cohorts)، تحليل سلة المشتريات، وفحص الجودة بـ Python.',
     dp_3: 'لوحات Power BI (PBIP)، مقاييس DAX للذكاء الزمني، أتمتة Power Query، وورش عمل Excel متقدمة.',
     aw_title: 'AdventureWorks 2022 — تحليل مبيعات متكامل ($110M)',
+    retail_title: 'منظومة علم البيانات وتوقع CLV على 1.067 مليون صف (Excel متعدد الشيتات + SQL + Python ML)',
+    retail_desc:
+      'مشروع علم بيانات متكامل على داتا حقيقية ضخمة من شيتين إكسيل (1,067,371 معاملة بريطانية): مستودع SQLite Star Schema بدون تكرار (£17.07M مبيعات)، نموذج CLV ثنائي المرحلة (Stacking Ensemble بدقة 0.7979 AUC؛ أعلى 20% VIP يحققون 73.22% من إيرادات الـ 90 يوماً) وتفسير TreeSHAP، تحليل البقاء Kaplan-Meier (89.4% مقابل 25.2%)، كشف الشذوذ Isolation Forest (67.3% من الإلغاءات في 2% حسابات)، توصيات 20D TruncatedSVD (رفع 31.63x)، توقع أسبوعي بـ LightGBM (13.78% MAPE)، 8 رسوم AMOLED، وملف Excel تنفيذي من 8 شيتات بأكثر من 100 معادلة حية.',
     olist_title: 'Olist E-Commerce — المشروع الجامع (SQL + Excel + Python + Data Science)',
     olist_desc:
       'مشروع متكامل يجمع كل مهارات تحليل وعلم البيانات على 99,441 طلب حقيقي عبر 8 جداول مترابطة: SQLite Star Schema بدون تكرار، اختبارات إحصائية بـ Python (تأخير الشحن يضاعف التقييم السيئ 5.88x)، نموذج LightGBM + SHAP (+45.4% عائد)، توقع مبيعات بدقة 3.50% MAPE، وملف Excel تنفيذي من 6 شيتات بمعادلات حية و What-If Simulator.',
@@ -367,6 +376,9 @@ const TRANSLATIONS = {
     pbi_title: 'لوحة Power BI التنفيذية التفاعلية (6 صفحات لايف)',
     pbi_load_btn: '▶ تشغيل اللوحة التفاعلية',
     pbi_launch: '▶ افتح تقرير Power BI التفاعلي (6 صفحات)',
+    retail_live_title: 'لوحة علم البيانات التفاعلية لـ 1.067 مليون صف (CLV والبقاء والشذوذ وسلة المشتريات لايف)',
+    retail_load_btn: '▶ تشغيل لوحة 1M+ CLV',
+    retail_launch: '▶ افتح تطبيق علم البيانات التفاعلي (1,067,371 صف حقيقي)',
     olist_live_title: 'لوحة Olist التنفيذية التفاعلية (4 صفحات: GMV و SLA و LightGBM لايف)',
     olist_load_btn: '▶ تشغيل لوحة Olist',
     olist_launch: '▶ افتح لوحة Olist التفاعلية (95,824 طلب حقيقي)',
@@ -715,6 +727,39 @@ const CASE_STUDIES = [
       { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics', cls: 'repo-link' },
       { label: '⬇ Download Excel Workbook (.xlsx)', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics/raw/main/outputs/Olist_Executive_Analytics_Workbook.xlsx', cls: 'repo-link live-bi' },
       { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'DATA SCIENCE FLAGSHIP · MULTI-SHEET EXCEL + SQL + 5 ML MODELS', ar: 'مشروع علم البيانات الرائد · Excel متعدد الشيتات + SQL + 5 نماذج ML' },
+    title: {
+      en: '1.067M-Row UK Retail — Multi-Model Data Science, CLV & Market Basket Engine',
+      ar: 'منظومة علم البيانات وتوقع CLV على 1.067 مليون صف حقيقي (UK Retail)',
+    },
+    summary: {
+      en: 'End-to-end production Data Science system ingesting 1,067,371 real transactions across 2 native Excel sheets (UCI Online Retail II) into a zero-fan-out SQLite Star Schema (£17.07M GMV), powering 5 leak-free ML engines, 8 AMOLED figures, an 8-sheet live-formula Excel workbook, and a live 4-page web dashboard.',
+      ar: 'منظومة علم بيانات متكاملة تبدأ من ملف إكسيل حقيقي من شيتين (1,067,371 صفاً) مروراً بمستودع SQLite Star Schema بدون تكرار (£17.07M مبيعات) و5 نماذج تعلم آلة وإحصاء متقدم و8 رسوم AMOLED وملف إكسيل من 8 شيتات بأكثر من 100 معادلة حية وداشبورد ويب تفاعلي.',
+    },
+    metrics: ['1,067,371 Rows · £17.07M GMV', 'Stacking 0.7979 AUC · Top 20% = 73.22% CLV', '8-Sheet Excel (100+ Formulas) · 31.63x Lift'],
+    bullets: {
+      en: [
+        'Multi-Sheet Excel -> SQLite Star Schema: Reconciled 2 native Excel tabs (525,461 + 541,910 rows) across 9 SQL views into 776,575 clean lines & 36,594 zero-fan-out invoices (5,852 customers, 4,619 SKUs, 41 countries) while preserving 19,494 canceled rows (£719.7K) as behavioral ML features.',
+        'Strict Out-of-Time Two-Stage CLV + TreeSHAP: Stacking Ensemble achieved 0.7979 Test ROC-AUC (95% CI [0.785, 0.810], Brier 0.1904); XGBoost Regressor cut MAE from £596.88 to £394.21 (Spearman ρ 0.549) with Top 20% predicted VIPs capturing 73.22% of actual 90d revenue; honest ROI audit proved CLV-gating cuts blanket campaign loss by 68.0%.',
+        'Survival, Anomaly & Basket Intelligence: Kaplan-Meier M12 survival separated Loyal 5+ (89.41%) vs One-Time (25.22%); Isolation Forest Top 2% (118 accounts) captured 67.26% of all canceled value (£484K+); 20D TruncatedSVD + lift mined 1,798 bundles up to 31.63x lift; LightGBM Weekly Forecast hit 13.78% MAPE vs 20.86% Naive.',
+        'Boardroom Deliverables: 8 publication-grade True AMOLED visuals, 8-sheet openpyxl live-formula Executive Excel Workbook (with interactive What-If CLV Simulator), automated pytest CI, and Live 4-Page Web Dashboard.',
+      ],
+      ar: [
+        'Excel متعدد الشيتات → SQLite Star Schema: دمج وتدقيق شيتين إكسيل (1,067,371 صفاً) عبر 9 عروض SQL إلى 776,575 سطر مبيعات و36,594 فاتورة بدون تكرار مع حفظ 19,494 صف إلغاء (£719.7K) كمؤشرات سلوكية للتعلم الآلي.',
+        'نموذج CLV ثنائي المرحلة بدون تسرب زمني: حقق Stacking Ensemble دقة 0.7979 Test AUC، وحقق أعلى 20% عملاء VIP نسبة 73.22% من إيرادات الـ 90 يوماً الفعلية، مع إثبات مالي يقلّص خسارة الحملات العشوائية 68.0%.',
+        'البقاء والشذوذ وسلة المشتريات: تحليل Kaplan-Meier (بقاء 89.41% للأوفياء مقابل 25.22% للطلب الواحد)، Isolation Forest (118 حساباً تمثّل 67.26% من الإلغاءات)، 20D TruncatedSVD (1,798 حزمة برفع حتى 31.63x)، وتوقع LightGBM بدقة 13.78% MAPE.',
+        'مخرجات تنفيذية: 8 رسوم AMOLED احترافية، ملف Excel من 8 شيتات بأكثر من 100 معادلة حية ومحاكي What-If، اختبارات pytest تلقائية، وداشبورد ويب لايف من 4 صفحات.',
+      ],
+    },
+    tags: ['Multi-Sheet Excel', 'SQLite Star Schema', 'Stacking Ensemble', 'XGBoost CLV', 'TreeSHAP', 'Kaplan-Meier', 'Isolation Forest', 'TruncatedSVD'],
+    links: [
+      { label: '▶ Live 4-Page Dashboard ↗', url: 'https://mostafasaad91.github.io/retail-1m-clv-datascience-engine/', cls: 'repo-link live-bi' },
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/retail-1m-clv-datascience-engine', cls: 'repo-link' },
+      { label: '⬇ 8-Sheet Excel (.xlsx)', url: 'https://github.com/mostafasaad91/retail-1m-clv-datascience-engine/raw/main/outputs/Retail_1M_DataScience_Executive_Workbook.xlsx', cls: 'repo-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/retail-1m-clv-datascience-engine/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
 ];
@@ -1993,6 +2038,7 @@ function initCommandPalette() {
     { title: 'Jump to Live xG Pitch Simulator', hint: 'xG', run: () => { applyTrackMode('all'); document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Jump to Live StatsBomb Player Twin Finder (361 Players)', hint: 'SCOUT', run: () => { applyTrackMode('all'); document.getElementById('scouting-widget')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 6-Page Power BI Report', hint: 'BI', run: () => { applyTrackMode('all'); mountPowerBI(); document.getElementById('pbiStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Launch Live 4-Page 1.067M Retail CLV & Data Science App', hint: '1M+ DS', run: () => { applyTrackMode('all'); document.getElementById('loadRetailBtn')?.click(); document.getElementById('retailLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 4-Page Olist Executive BI & ML Dashboard', hint: 'OLIST', run: () => { applyTrackMode('all'); document.getElementById('loadOlistBtn')?.click(); document.getElementById('olistLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 3,642-Shot StatsBomb xG Explorer Dashboard', hint: 'xG LAB', run: () => { applyTrackMode('all'); document.getElementById('loadSbXgBtn')?.click(); document.getElementById('sbXgLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Compare AMOLED vs Print Light Slider', hint: 'UI', run: () => { applyTrackMode('all'); document.getElementById('splitStage')?.scrollIntoView({ behavior: 'smooth' }); } },
@@ -2785,6 +2831,12 @@ function initScoutingTwinFinder() {
    ========================================================= */
 function initLiveWebDashboards() {
   const configs = [
+    {
+      stageId: 'retailLiveStage',
+      btnIds: ['loadRetailBtn', 'loadRetailOverlayBtn'],
+      url: 'https://mostafasaad91.github.io/retail-1m-clv-datascience-engine/?embed=1',
+      title: '1.067M-Row UK Retail CLV & Multi-Model Data Science Dashboard',
+    },
     {
       stageId: 'olistLiveStage',
       btnIds: ['loadOlistBtn', 'loadOlistOverlayBtn'],
