@@ -107,29 +107,29 @@ build_cv(
     ),
     project_block=[
         {
-            'title': '1.067M-Row UK Retail — CLV Prediction, Survival & Market Basket Engine (Live 4-Page App)',
-            'meta': 'Live App: mostafasaad91.github.io/retail-1m-clv-datascience-engine  |  Multi-Sheet Excel · SQLite Star Schema · Stacking + SHAP · 8-Sheet Excel',
+            'title': 'UK Retail — CLV Prediction, Survival & Market Basket Engine (Live 4-Page App)',
+            'meta': 'Live App: mostafasaad91.github.io/uk-retail-clv-survival-engine  |  Multi-Sheet Excel · SQLite Star Schema · Stacking + SHAP · 8-Sheet Excel',
             'bullets': [
                 'Engineered a 1,067,371-row multi-sheet Excel -> zero-fan-out SQLite Star Schema pipeline (£17.07M GMV, 36,594 invoices, 5,852 customers, pytest CI), built a strict out-of-time Two-Stage CLV engine (Stacking Ensemble 0.7979 Test AUC; Top 20% VIPs = 73.22% of 90d revenue; TreeSHAP), Kaplan-Meier survival (89.4% vs 25.2% M12), Isolation Forest anomaly audit (67.3% of canceled value in 2% accounts), 20D TruncatedSVD basket (31.6x lift), LightGBM weekly forecast (13.78% MAPE), and an 8-sheet live-formula Excel workbook.'
             ]
         },
         {
-            'title': 'Olist E-Commerce — Full-Stack Analytics & Live 4-Page BI/ML Dashboard (99,441 Orders)',
-            'meta': 'Live App: mostafasaad91.github.io/olist-ecommerce-fullstack-analytics  |  SQLite Star Schema · 6-Sheet Excel · LightGBM + SHAP · CI',
+            'title': 'Olist Supply Chain — SLA Risk, GMV Forecasting & Live 4-Page BI Platform (99,441 Orders)',
+            'meta': 'Live App: mostafasaad91.github.io/olist-supply-chain-sla-forecasting  |  SQLite Star Schema · 6-Sheet Excel · LightGBM + SHAP · CI',
             'bullets': [
                 'Built a zero-fan-out SQLite Star Schema across 8 official tables (R$15.29M GMV, pytest CI), proved 5.88x late-delivery bad-review risk (p<1e-300), trained Out-of-Time LightGBM (+45.4% CS ROI) & Ridge GMV forecast (3.50% MAPE vs 3.86% Naive), and deployed a Live 4-Page Web Dashboard + 6-sheet formula-driven Excel What-If Simulator.'
             ]
         },
         {
-            'title': 'AdventureWorks 2022 — End-to-End Sales Analytics & Live 6-Page Power BI ($110M OLTP)',
+            'title': 'AdventureWorks — Enterprise SQL, RFM & Power BI Analytics & Live 6-Page Power BI ($110M OLTP)',
             'meta': 'github.com/mostafasaad91/adventure-works-sales-analytics  |  SQL Server · Python pyodbc K-Means · Live Power BI (17 DAX)',
             'bullets': [
                 'Analyzed a 72-table SQL Server 2022 OLTP database (121K sales lines, $110M revenue) via point-in-time cost views, Star Schema, Python pyodbc K-Means RFM write-back (k=4), cohort retention (~345d), market basket (lift > 90x), and live 6-page Power BI (17 DAX measures).'
             ]
         },
         {
-            'title': 'Telco Churn Explainable ML & FinTech Credit Risk Scorecard (2 CI-Tested ML Repos)',
-            'meta': 'github.com/mostafasaad91/telco-churn-explainable-ml  |  github.com/mostafasaad91/fintech-credit-risk-scorecard',
+            'title': 'Telco Churn Retention ROI & FinTech Credit Risk Scorecard (2 CI-Tested ML Repos)',
+            'meta': 'github.com/mostafasaad91/telco-churn-retention-roi  |  github.com/mostafasaad91/fintech-credit-risk-scorecard',
             'bullets': [
                 'Telco Churn (7,043 clients): Calibrated XGBoost (0.848 Test AUC, Brier 0.135) + ROI threshold (0.37, +27.2% profit) & SHAP. Credit Risk (30,000 clients): SQL QA (399 codes) + WoE/IV + LightGBM scorecard (KS 0.429, Gini 0.564) + 300–850 scoring & NT$29.6M Basel EL.'
             ]
@@ -202,13 +202,13 @@ build_cv(
         },
         {
             'title': 'StatsBomb 360 xG Calibration Lab & Live 3,642-Shot Pitch Explorer (149 Matches)',
-            'meta': 'Live App: mostafasaad91.github.io/statsbomb-xg-calibration-lab  |  StatsBomb 360 · Match-Grouped CV · SHAP · CI',
+            'meta': 'Live App: mostafasaad91.github.io/statsbomb-360-xg-calibration  |  StatsBomb 360 · Match-Grouped CV · SHAP · CI',
             'bullets': [
                 'Built a match-grouped zero-leakage xG benchmark across WC 2022, Euro 2024 & Invincible Bayer Leverkusen; proved Freeze-Frame coordinates cut Test Log-Loss by -0.0236 (0.2531 LL, 0.816 AUC vs official StatsBomb 0.2422 / 0.827) and deployed a Live 3,642-Shot Interactive Pitch Explorer & 73-Player Finishing Leaderboard.'
             ]
         },
         {
-            'title': 'Football Scouting Similarity Engine & Live 361-Player Twin Finder (StatsBomb Open Data)',
+            'title': 'Football Scouting — Role & Similarity Engine & Live 361-Player Twin Finder (StatsBomb Open Data)',
             'meta': 'Live Widget: mostafasaad91.github.io/?track=football#scouting-widget  |  SQLite · K-Means · PCA · Cosine Similarity · CI',
             'bullets': [
                 'Engineered a club recruitment "Find a Replacement" engine (1,305 → 361 eligible outfielders, optimal k=4 archetypes, 56.3% 2D PCA variance) surfacing same-role twins including Lamine Yamal (96.0% Wirtz) & Vitinha (92.2% Xhaka) — playable live in browser with Head-to-Head percentiles.'

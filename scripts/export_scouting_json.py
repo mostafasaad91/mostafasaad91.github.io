@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 SRC_CSV = Path(r"D:\Data\Projects\football-scouting-similarity-engine\outputs\scouting_database.csv")
-OUT_JSON = Path(r"D:\Data\Projects\portfolio-landing\assets\scouting_players.json")
+OUT_JSON = Path(r"D:\Data\Projects\mostafasaad91.github.io\assets\scouting_players.json")
 
 FEATURE_COLS = [
     "shots_p90", "npxg_p90", "xa_p90", "key_passes_p90",

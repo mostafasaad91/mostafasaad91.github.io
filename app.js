@@ -138,19 +138,19 @@ const TRANSLATIONS = {
     dp_1: 'T-SQL window functions, CTEs, Star Schema views, and point-in-time profitability auditing.',
     dp_2: 'K-Means RFM clustering, cohort retention heatmaps, market basket lift, and automated QA scripts.',
     dp_3: 'PBIP source-controlled dashboards, DAX time intelligence, Power Query ETL, and Excel workshops.',
-    aw_title: 'AdventureWorks 2022 — End-to-End Sales Analytics',
-    retail_title: '1.067M-Row UK Retail — CLV Prediction, Survival & Market Basket Engine',
+    aw_title: 'AdventureWorks — Enterprise SQL, RFM & Power BI Analytics',
+    retail_title: 'UK Retail — CLV Prediction, Survival & Market Basket Engine',
     retail_desc:
       'Production Data Science powerhouse built on the official 1,067,371-row multi-sheet UCI Online Retail II Excel dataset: zero-fan-out SQLite Star Schema (9 views, £17.07M GMV), out-of-time Two-Stage CLV (Stacking Ensemble 0.7979 Test AUC; Top 20% VIPs = 73.22% of actual 90d revenue; TreeSHAP), Kaplan-Meier survival (89.4% vs 25.2% M12), Isolation Forest anomaly audit (67.3% of canceled value in 2% accounts), 20D TruncatedSVD market basket (31.63x lift), LightGBM weekly forecast (13.78% MAPE), 8 AMOLED figures, and an 8-sheet live-formula Excel workbook (100+ formulas).',
-    olist_title: 'Olist E-Commerce — Full-Stack Analytics (SQL · Excel · Python · Data Science)',
+    olist_title: 'Olist Supply Chain — SLA Risk, GMV Forecasting & BI Platform',
     olist_desc:
       'All-in-one enterprise analytics stack across 99,441 real Brazilian orders (8 relational tables): zero-fan-out SQLite Star Schema, Python statistical testing (5.88x late-delivery bad-review risk), LightGBM + SHAP (+45.4% CS recovery ROI), 3.50% MAPE GMV forecasting, and a 6-sheet formula-driven Executive Excel Dashboard & What-If SLA Simulator.',
     aw_desc:
       'Complete SQL Server → Python (pyodbc live DB write-back) → 6-page Power BI investigation answering 17 business questions: point-in-time profit margins, K-Means RFM clustering, cohort retention (~345d window), and market-basket cross-sell bundles.',
-    telco_title: 'Telco Churn Prediction, SHAP & Retention ROI Engine',
+    telco_title: 'Telco Churn — Predictive Modeling & Retention ROI Optimization',
     telco_desc:
       'End-to-end zero-leakage churn pipeline on 7,043 IBM Telco clients: SQLite data mart, 5-model benchmark (XGBoost 0.848 Test AUC, Brier 0.135), profit-curve threshold optimization (+27.2% net retention lift), SHAP drivers, and automated QA tests.',
-    credit_title: 'FinTech Credit Risk Scorecard & Basel Expected Loss',
+    credit_title: 'FinTech Credit Risk — Basel III Scorecard & Expected Loss',
     credit_desc:
       'Banking-grade credit scoring across 30,000 UCI bank clients: SQL QA cleaning of 399 undocumented codes, train-only WoE/IV audit, LightGBM scorecard (KS 0.429, Brier 0.134), 300–850 credit score tiering, Basel Expected Loss (LGD 45%), and age fairness audit.',
     arch_title: 'Archival & Cultural Heritage Database Systems',
@@ -175,10 +175,10 @@ const TRANSLATIONS = {
     fma_title: 'Football Match Analysis — Automated Tactical Pipeline',
     fma_desc:
       'End-to-end Python engine turning a single WhoScored/Opta URL into xG/xT/xGChain models, passing sonars, touch-density heatmaps, player role profiles, 8 AMOLED & Light 4:5 posters, a full PDF report, publishable .docx article, and SQLite match archive across EPL, La Liga & Serie A.',
-    sbxg_title: 'StatsBomb xG Calibration & Freeze-Frame Ablation Lab',
+    sbxg_title: 'StatsBomb 360 — Freeze-Frame xG Calibration Model',
     sbxg_desc:
       'Match-grouped zero-leakage xG modeling on 3,685 real StatsBomb shots (WC 2022, Euro 2024 & Invincible Leverkusen). Proves Freeze-Frame defender/GK coordinates cut Log-Loss by -0.0236 (0.816 AUC vs official StatsBomb 0.827) with SHAP & finisher leaderboards.',
-    scsim_title: 'Football Scouting & Tactical Player Similarity Engine',
+    scsim_title: 'Football Scouting — Tactical Role & Player Similarity Engine',
     scsim_desc:
       'Recruitment "Find a Replacement" ML system over 1,305 real StatsBomb players: SQLite per-90 mart (270+ min gate), Silhouette-optimized K-Means archetypes, 2D PCA role map, and role-gated Cosine Similarity surfacing Lamine Yamal (96% Wirtz) & Vitinha (92% Xhaka).',
     scout_title: 'Match, Opposition & Player Recruitment Scouting',
@@ -463,7 +463,7 @@ const CASE_STUDIES = [
   {
     cat: { en: 'GITHUB REPO · SQL → PYTHON ML → POWER BI', ar: 'مشروع GitHub · SQL + Python + Power BI' },
     title: {
-      en: 'AdventureWorks 2022 — End-to-End Sales Analytics ($110M)',
+      en: 'AdventureWorks — Enterprise SQL, RFM & Power BI Analytics ($110M)',
       ar: 'AdventureWorks 2022 — تحليل مبيعات متكامل ($110M)',
     },
     summary: {
@@ -600,14 +600,14 @@ const CASE_STUDIES = [
     },
     tags: ['SQLite', 'XGBoost', 'LightGBM', 'SHAP', 'Calibration', 'ROI Curve', 'Automated Tests'],
     links: [
-      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/telco-churn-explainable-ml', cls: 'repo-link' },
-      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/telco-churn-explainable-ml/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/telco-churn-retention-roi', cls: 'repo-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/telco-churn-retention-roi/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
   {
     cat: { en: 'GITHUB REPO · FINTECH CREDIT RISK · BASEL III EL', ar: 'مشروع GitHub · مخاطر الائتمان و FinTech' },
     title: {
-      en: 'FinTech Credit Risk Scorecard & Basel Expected Loss Engine',
+      en: 'FinTech Credit Risk — Basel III Scorecard & Expected Loss Engine',
       ar: 'بطاقة تقييم المخاطر الائتمانية وحساب خسائر بازل المتوقعة',
     },
     summary: {
@@ -662,14 +662,14 @@ const CASE_STUDIES = [
     },
     tags: ['StatsBomb Open Data', 'Freeze-Frame', 'Expected Goals (xG)', 'Calibration', 'SHAP', 'SQLite'],
     links: [
-      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/statsbomb-xg-calibration-lab', cls: 'repo-link emerald-link' },
-      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/statsbomb-xg-calibration-lab/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/statsbomb-360-xg-calibration', cls: 'repo-link emerald-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/statsbomb-360-xg-calibration/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
   {
     cat: { en: 'GITHUB REPO · FOOTBALL RECRUITMENT & SCOUTING ML', ar: 'مشروع GitHub · سكاوتنج واكتشاف البدائل التكتيكية' },
     title: {
-      en: 'Football Scouting & Tactical Player Similarity Engine',
+      en: 'Football Scouting — Tactical Role & Player Similarity Engine',
       ar: 'محرك السكاوتنج واكتشاف البدائل التكتيكية للاعبين',
     },
     summary: {
@@ -700,7 +700,7 @@ const CASE_STUDIES = [
   {
     cat: { en: 'FULL-STACK FLAGSHIP · SQL + EXCEL + PYTHON + DATA SCIENCE', ar: 'المشروع الجامع · SQL + Excel + Python + Data Science' },
     title: {
-      en: 'Olist E-Commerce — Full-Stack Supply Chain, Excel BI & ML Engine',
+      en: 'Olist Supply Chain — SLA Risk, GMV Forecasting & BI Platform',
       ar: 'Olist E-Commerce — مشروع متكامل في SQL و Excel و Python وعلم البيانات',
     },
     summary: {
@@ -724,15 +724,15 @@ const CASE_STUDIES = [
     },
     tags: ['SQL Star Schema', 'Excel Dashboard', 'What-If Simulator', 'Python Stats', 'LightGBM', 'SHAP', 'Time Series'],
     links: [
-      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics', cls: 'repo-link' },
-      { label: '⬇ Download Excel Workbook (.xlsx)', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics/raw/main/outputs/Olist_Executive_Analytics_Workbook.xlsx', cls: 'repo-link live-bi' },
-      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/olist-ecommerce-fullstack-analytics/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/olist-supply-chain-sla-forecasting', cls: 'repo-link' },
+      { label: '⬇ Download Excel Workbook (.xlsx)', url: 'https://github.com/mostafasaad91/olist-supply-chain-sla-forecasting/raw/main/outputs/Olist_Executive_Analytics_Workbook.xlsx', cls: 'repo-link live-bi' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/olist-supply-chain-sla-forecasting/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
   {
     cat: { en: 'DATA SCIENCE FLAGSHIP · MULTI-SHEET EXCEL + SQL + 5 ML MODELS', ar: 'مشروع علم البيانات الرائد · Excel متعدد الشيتات + SQL + 5 نماذج ML' },
     title: {
-      en: '1.067M-Row UK Retail — CLV Prediction, Survival & Market Basket Engine',
+      en: 'UK Retail — CLV Prediction, Survival & Market Basket Engine',
       ar: 'منظومة علم البيانات وتوقع CLV على 1.067 مليون صف حقيقي (UK Retail)',
     },
     summary: {
@@ -756,10 +756,10 @@ const CASE_STUDIES = [
     },
     tags: ['Multi-Sheet Excel', 'SQLite Star Schema', 'Stacking Ensemble', 'XGBoost CLV', 'TreeSHAP', 'Kaplan-Meier', 'Isolation Forest', 'TruncatedSVD'],
     links: [
-      { label: '▶ Live 4-Page Dashboard ↗', url: 'https://mostafasaad91.github.io/retail-1m-clv-datascience-engine/', cls: 'repo-link live-bi' },
-      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/retail-1m-clv-datascience-engine', cls: 'repo-link' },
-      { label: '⬇ 8-Sheet Excel (.xlsx)', url: 'https://github.com/mostafasaad91/retail-1m-clv-datascience-engine/raw/main/outputs/Retail_1M_DataScience_Executive_Workbook.xlsx', cls: 'repo-link' },
-      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/retail-1m-clv-datascience-engine/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+      { label: '▶ Live 4-Page Dashboard ↗', url: 'https://mostafasaad91.github.io/uk-retail-clv-survival-engine/', cls: 'repo-link live-bi' },
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/uk-retail-clv-survival-engine', cls: 'repo-link' },
+      { label: '⬇ 8-Sheet Excel (.xlsx)', url: 'https://github.com/mostafasaad91/uk-retail-clv-survival-engine/raw/main/outputs/Retail_1M_DataScience_Executive_Workbook.xlsx', cls: 'repo-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/uk-retail-clv-survival-engine/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
 ];
@@ -2298,7 +2298,7 @@ function initTechStackMatrix() {
         ar: 'تحليل قاعدة بيانات OLTP من 72 جدولاً ($110M) باستخدام CTEs ودوال LAG(12) و NTILE(10) و ROW_NUMBER() وحساب الهوامش بالتكلفة التاريخية.',
       },
       metrics: ['72 OLTP Tables', 'Sales.vw_LineProfit', '13/17 Qs in Pure SQL'],
-      where: { en: 'Deployed in: AdventureWorks 2022 Sales Analytics', ar: 'مطبّق في: مشروع AdventureWorks 2022' },
+      where: { en: 'Deployed in: AdventureWorks — Enterprise SQL, RFM & Power BI', ar: 'مطبّق في: مشروع AdventureWorks 2022' },
       links: [{ label: 'View SQL Scripts ↗', url: 'https://github.com/mostafasaad91/adventure-works-sales-analytics' }],
     },
     star: {
@@ -2834,19 +2834,19 @@ function initLiveWebDashboards() {
     {
       stageId: 'retailLiveStage',
       btnIds: ['loadRetailBtn', 'loadRetailOverlayBtn'],
-      url: 'https://mostafasaad91.github.io/retail-1m-clv-datascience-engine/?embed=1',
+      url: 'https://mostafasaad91.github.io/uk-retail-clv-survival-engine/?embed=1',
       title: '1.067M-Row UK Retail CLV & Multi-Model Data Science Dashboard',
     },
     {
       stageId: 'olistLiveStage',
       btnIds: ['loadOlistBtn', 'loadOlistOverlayBtn'],
-      url: 'https://mostafasaad91.github.io/olist-ecommerce-fullstack-analytics/?embed=1',
+      url: 'https://mostafasaad91.github.io/olist-supply-chain-sla-forecasting/?embed=1',
       title: 'Olist E-Commerce Live Executive BI & ML Dashboard',
     },
     {
       stageId: 'sbXgLiveStage',
       btnIds: ['loadSbXgBtn', 'loadSbXgOverlayBtn'],
-      url: 'https://mostafasaad91.github.io/statsbomb-xg-calibration-lab/?embed=1',
+      url: 'https://mostafasaad91.github.io/statsbomb-360-xg-calibration/?embed=1',
       title: 'StatsBomb 360 xG Calibration & 3,642-Shot Explorer Dashboard',
     },
   ];
