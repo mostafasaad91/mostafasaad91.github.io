@@ -107,7 +107,7 @@ build_cv(
     ),
     project_block=[
         {
-            'title': '1.067M-Row UK Retail — Multi-Model Data Science, CLV & Market Basket Engine (Live 4-Page App)',
+            'title': '1.067M-Row UK Retail — CLV Prediction, Survival & Market Basket Engine (Live 4-Page App)',
             'meta': 'Live App: mostafasaad91.github.io/retail-1m-clv-datascience-engine  |  Multi-Sheet Excel · SQLite Star Schema · Stacking + SHAP · 8-Sheet Excel',
             'bullets': [
                 'Engineered a 1,067,371-row multi-sheet Excel -> zero-fan-out SQLite Star Schema pipeline (£17.07M GMV, 36,594 invoices, 5,852 customers, pytest CI), built a strict out-of-time Two-Stage CLV engine (Stacking Ensemble 0.7979 Test AUC; Top 20% VIPs = 73.22% of 90d revenue; TreeSHAP), Kaplan-Meier survival (89.4% vs 25.2% M12), Isolation Forest anomaly audit (67.3% of canceled value in 2% accounts), 20D TruncatedSVD basket (31.6x lift), LightGBM weekly forecast (13.78% MAPE), and an 8-sheet live-formula Excel workbook.'

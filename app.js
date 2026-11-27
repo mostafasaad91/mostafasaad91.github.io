@@ -139,7 +139,7 @@ const TRANSLATIONS = {
     dp_2: 'K-Means RFM clustering, cohort retention heatmaps, market basket lift, and automated QA scripts.',
     dp_3: 'PBIP source-controlled dashboards, DAX time intelligence, Power Query ETL, and Excel workshops.',
     aw_title: 'AdventureWorks 2022 — End-to-End Sales Analytics',
-    retail_title: '1.067M-Row UK Retail — Multi-Model Data Science, CLV & Market Basket Engine',
+    retail_title: '1.067M-Row UK Retail — CLV Prediction, Survival & Market Basket Engine',
     retail_desc:
       'Production Data Science powerhouse built on the official 1,067,371-row multi-sheet UCI Online Retail II Excel dataset: zero-fan-out SQLite Star Schema (9 views, £17.07M GMV), out-of-time Two-Stage CLV (Stacking Ensemble 0.7979 Test AUC; Top 20% VIPs = 73.22% of actual 90d revenue; TreeSHAP), Kaplan-Meier survival (89.4% vs 25.2% M12), Isolation Forest anomaly audit (67.3% of canceled value in 2% accounts), 20D TruncatedSVD market basket (31.63x lift), LightGBM weekly forecast (13.78% MAPE), 8 AMOLED figures, and an 8-sheet live-formula Excel workbook (100+ formulas).',
     olist_title: 'Olist E-Commerce — Full-Stack Analytics (SQL · Excel · Python · Data Science)',
@@ -732,7 +732,7 @@ const CASE_STUDIES = [
   {
     cat: { en: 'DATA SCIENCE FLAGSHIP · MULTI-SHEET EXCEL + SQL + 5 ML MODELS', ar: 'مشروع علم البيانات الرائد · Excel متعدد الشيتات + SQL + 5 نماذج ML' },
     title: {
-      en: '1.067M-Row UK Retail — Multi-Model Data Science, CLV & Market Basket Engine',
+      en: '1.067M-Row UK Retail — CLV Prediction, Survival & Market Basket Engine',
       ar: 'منظومة علم البيانات وتوقع CLV على 1.067 مليون صف حقيقي (UK Retail)',
     },
     summary: {
