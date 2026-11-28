@@ -208,6 +208,20 @@ build_cv(
             ]
         },
         {
+            'title': 'Football Action Valuation — Markov xT, VAEP & Pass Risk-Reward Engine (543,651 Events · 10 Visuals)',
+            'meta': 'Live App: mostafasaad91.github.io/football-vaep-xt-action-valuation  |  Markov xT · LightGBM VAEP · xPass · TreeSHAP',
+            'bullets': [
+                'Solved exact 12×8 Bellman Markov xT (30 iters, 0.0034→0.1840), match-grouped zero-leakage VAEP (0.7839 Test AUC, #1 Lionel Messi 1.054 VAEP/90, #1 Bayer Leverkusen 3.025/M) & xPass (0.9308 Test AUC over 161,617 passes) across 149 StatsBomb matches — deployed as a Live Interactive xT Pitch Simulator.'
+            ]
+        },
+        {
+            'title': 'Football Tactical Intelligence — Pressing, Counter-Press Survival & Build-Up Lab (149 Matches · 10 Visuals)',
+            'meta': 'Live App: mostafasaad91.github.io/football-pressing-tactical-intelligence  |  Kaplan-Meier 5s · PPDA · K-Means PCA',
+            'bullets': [
+                'Proved Field Tilt→xG (Spearman ρ=0.618, p=7.8e-33) & +1.14 High-Press xG swing, tested the 5-Second Counter-Pressing Rule via Kaplan-Meier survival across 19,445 losses (34.6% vs 30.4%), quantified Zone 14 traps (49.7% shot), and clustered champions (Leverkusen, Spain, Argentina) in 81.5%-variance 2D PCA.'
+            ]
+        },
+        {
             'title': 'StatsBomb 360 xG Calibration Lab & Live 3,642-Shot Pitch Explorer (149 Matches)',
             'meta': 'Live App: mostafasaad91.github.io/statsbomb-360-xg-calibration  |  StatsBomb 360 · Match-Grouped CV · SHAP · CI',
             'bullets': [

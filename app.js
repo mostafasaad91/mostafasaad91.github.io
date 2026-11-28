@@ -174,6 +174,12 @@ const TRANSLATIONS = {
     sbxg_live_title: '3-Page StatsBomb xG Calibration & 3,642-Shot Pitch Explorer (Live)',
     sbxg_load_btn: '▶ Load xG Explorer',
     sbxg_launch: '▶ Launch Live 3,642-Shot StatsBomb xG Dashboard',
+    vaep_live_title: 'Interactive 12×8 Markov xT Pitch Simulator & 358-Player VAEP App (Live)',
+    vaep_load_btn: '▶ Load xT & VAEP App',
+    vaep_launch: '▶ Launch Live Markov xT Pitch Simulator & VAEP Explorer',
+    press_live_title: 'Counter-Pressing Survival, PPDA & Tactical Style Intelligence App (Live)',
+    press_load_btn: '▶ Load Tactical Lab',
+    press_launch: '▶ Launch Live Pressing & Counter-Pressing Survival Lab',
     foot_zone_title: 'Football Analytics, xG/xT Models & Tactical Scouting',
     foot_zone_desc:
       'Turning Opta / WhoScored match-event data into automated tactical match reports, AMOLED visual posters, player role profiles, and recruitment intelligence — backed by FA, PFSA & FP Academy credentials.',
@@ -181,6 +187,12 @@ const TRANSLATIONS = {
     fma_title: 'Football Match Analysis — Automated Tactical Pipeline',
     fma_desc:
       'End-to-end Python engine turning a single WhoScored/Opta URL into xG/xT/xGChain models, passing sonars, touch-density heatmaps, player role profiles, 8 AMOLED & Light 4:5 posters, a full PDF report, publishable .docx article, and SQLite match archive across EPL, La Liga & Serie A.',
+    vaep_title: 'Football Action Valuation — Markov xT, VAEP & Pass Risk-Reward Engine',
+    vaep_desc:
+      'Values all 99.3% non-shot actions across 149 official StatsBomb matches (543,651 events): exact 12×8 Bellman Markov xT, Match-Grouped LightGBM VAEP + TreeSHAP (0.784 AUC, #1 Messi 1.054 VAEP/90, #1 Bayer Leverkusen 3.025/M), xPass completion (0.931 AUC across 161K passes), 10 AMOLED visuals & Live Interactive xT Pitch Simulator.',
+    press_title: 'Football Tactical Intelligence — Pressing, Counter-Press Survival & Build-Up',
+    press_desc:
+      'Statistical proofs of modern pressing across 149 StatsBomb matches (298 team-matches): Field Tilt→xG Spearman ρ=0.618 (p=7.8e-33), +1.14 High-Press xG swing, Kaplan-Meier 5-Second Counter-Pressing Rule (34.6% vs 30.4%), Zone 14 traps (49.7% shot), k=4 PCA archetypes (81.5% var: Leverkusen, Spain & Argentina) & 10 AMOLED visuals.',
     sbxg_title: 'StatsBomb 360 — Freeze-Frame xG Calibration Model',
     sbxg_desc:
       'Match-grouped zero-leakage xG modeling on 3,685 real StatsBomb shots (WC 2022, Euro 2024 & Invincible Leverkusen). Proves Freeze-Frame defender/GK coordinates cut Log-Loss by -0.0236 (0.816 AUC vs official StatsBomb 0.827) with SHAP & finisher leaderboards.',
@@ -397,6 +409,12 @@ const TRANSLATIONS = {
     sbxg_live_title: 'لوحة StatsBomb xG التفاعلية ومستكشف 3,642 تسديدة (3 صفحات لايف)',
     sbxg_load_btn: '▶ تشغيل مستكشف xG',
     sbxg_launch: '▶ افتح مستكشف 3,642 تسديدة حقيقية (StatsBomb 360)',
+    vaep_live_title: 'محاكي التهديد المتوقع Markov xT وداشبورد VAEP لـ 358 لاعب (لايف)',
+    vaep_load_btn: '▶ تشغيل محاكي xT و VAEP',
+    vaep_launch: '▶ افتح محاكي ملعب Markov xT التفاعلي وترتيب VAEP',
+    press_live_title: 'منصة الذكاء التكتيكي ومنحنيات البقاء للضغط العكسي 5 ثوانٍ (لايف)',
+    press_load_btn: '▶ تشغيل معمل الضغط',
+    press_launch: '▶ افتح تطبيق الضغط العكسي Kaplan-Meier وأنماط اللعب',
     foot_zone_title: 'تحليل كرة القدم، نماذج xG/xT والاستكشاف التكتيكي',
     foot_zone_desc:
       'تحويل بيانات أحداث المباريات (Opta / WhoScored) إلى تقارير PDF مؤتمتة، بوسترات AMOLED، ملفات أدوار اللاعبين، ورؤى استكشافية — مدعومة بشهادات The FA و PFSA و FP Academy.',
@@ -404,6 +422,12 @@ const TRANSLATIONS = {
     fma_title: 'Football Match Analysis — منصة تحليل المباريات المؤتمتة',
     fma_desc:
       'أداة Python متكاملة تحوّل رابط مباراة WhoScored/Opta واحد إلى نماذج xG و xT و xGChain، خرائط اللمسات والتمريرات، ملفات اللاعبين، 8 بوسترات AMOLED و Light، تقرير PDF ومقال .docx وأرشيف SQLite للدوريات الكبرى.',
+    vaep_title: 'تقييم كل لمسة في كرة القدم — محرك Markov xT و VAEP و xPass',
+    vaep_desc:
+      'تقييم الـ 99.3% من اللمسات خارج التسديدات عبر 149 مباراة رسمية من StatsBomb (543,651 حدثاً): مصفوفة Markov xT (12×8)، نموذج LightGBM VAEP + TreeSHAP (دقة 0.784؛ تصدر ميسي 1.054 VAEP/90 وباير ليفركوزن 3.025/مباراة)، نموذج xPass (0.931 AUC لـ 161 ألف تمريرة)، 10 رسوم AMOLED ومحاكي ملعب xT تفاعلي لايف.',
+    press_title: 'الذكاء التكتيكي لكرة القدم — الضغط، بقاء الضغط العكسي وبناء اللعب',
+    press_desc:
+      'براهين إحصائية لتكتيك الضغط الحديث عبر 149 مباراة StatsBomb: ارتباط Field Tilt→xG (ρ=0.618)، تفوق الضغط العالي +1.14 xG/مباراة، اختبار قاعدة الـ 5 ثوانٍ بـ Kaplan-Meier (34.6% مقابل 30.4%)، فخاخ Zone 14 (49.7% تسديد)، تصنيف الأبطال (ليفركوزن وإسبانيا والأرجنتين بتباين 81.5% PCA) و10 رسوم AMOLED.',
     sbxg_title: 'معمل معايرة الأهداف المتوقعة (xG) وبيانات Freeze-Frame (StatsBomb)',
     sbxg_desc:
       'نمذجة xG بدون تسرب بيانات على 3,685 تسديدة حقيقية (149 مباراة: مونديال 2022، يورو 2024، وليفركوزن 23/24). إثبات أثر إحداثيات المدافعين والحارس (-0.0236 Log-Loss و 0.816 AUC مقابل 0.827 لـ StatsBomb الرسمي) مع SHAP وقائمة أفضل الهدافين.',
@@ -804,6 +828,70 @@ const CASE_STUDIES = [
       { label: '▶ Live 6-Page Power BI ↗', url: 'https://app.powerbi.com/view?r=eyJrIjoiMjFjMTllYzQtZDcyYi00MGJlLTlmZGYtMTg4NmY5YzdlNDBjIiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9', cls: 'repo-link live-bi' },
       { label: 'GitHub & Power BI PBIP ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence', cls: 'repo-link' },
       { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'FOOTBALL ML · MARKOV xT · VAEP · xPass', ar: 'تعلم آلة كرة القدم · Markov xT و VAEP و xPass' },
+    title: {
+      en: 'Football Action Valuation — Markov xT, VAEP & Pass Risk-Reward Engine',
+      ar: 'تقييم كل لمسة في كرة القدم — محرك Markov xT و VAEP و xPass',
+    },
+    summary: {
+      en: 'Club-grade football action valuation engine across 543,651 real StatsBomb Open Data events (149 matches: WC 2022, Euro 2024 & Invincible Bayer Leverkusen 23/24) uniting exact 12×8 Bellman Markov xT, match-grouped zero-leakage LightGBM VAEP + TreeSHAP, xPass completion modeling, 10 AMOLED visuals, and a Live Interactive xT Pitch Simulator.',
+      ar: 'محرك تقييم شامل لكل لمسة داخل الملعب على 543,651 حدثاً رسمياً من StatsBomb (149 مباراة: مونديال 2022، يورو 2024 وليفركوزن اللاهزيمة) يجمع مصفوفة Markov xT (12×8) ونموذج LightGBM VAEP بدون تسرب وTreeSHAP ونموذج xPass و10 رسوم AMOLED ومحاكي ملعب تفاعلي لايف.',
+    },
+    metrics: ['543,651 Events · 149 Matches', '0.9308 xPass AUC · 0.7839 VAEP AUC', '#1 Messi 1.054 VAEP/90 · 10 AMOLED Visuals'],
+    bullets: {
+      en: [
+        'Exact 12×8 Markov Chain Expected Threat (xT): Solved Bellman Value Iteration from scratch across 291,907 passes & carries (30 iterations: 0.0034 → 0.1840 peak zone xT), decomposing Pass xT/90 vs Carry xT/90 (Raphinha 0.603, Lamine Yamal 0.549 with 0.300 carry xT, Toni Kroos 0.510).',
+        'Zero-Leakage Match-Grouped VAEP (Decroos et al., KDD 2019): Strict GroupShuffleSplit(match_id) across 337,949 on-ball actions with dead-ball/post-goal baseline state resets (LightGBM P(Score) Test AUC 0.7839, Brier 0.00916 + TreeSHAP).',
+        'Authentic World-Class Leaderboards: #1 Outfield Player Lionel Messi (1.054 VAEP/90, 0.389 xT/90), Bruno Fernandes (0.701), Salem Al Dawsari (0.692), Kylian Mbappé (0.618); #1 Team Invincible Bayer Leverkusen (3.025 VAEP/match across 34 matches).',
+        'Expected Pass Completion (xPass) & 10-Visual AMOLED Suite: Modeled 161,617 passes at 0.9308 Test AUC (Brier 0.0720) to separate safe recyclers from high-difficulty creators (PCOE/100 vs xT/100), backed by 10 AMOLED figures, pytest verification & Live Web App.',
+      ],
+      ar: [
+        'مصفوفة Markov xT (12×8): حل معادلة بيلمان التكرارية من الصفر على 291,907 تمريرة وانطلاقة (30 دورة من 0.0034 إلى 0.1840) مع فصل تهديد التمرير عن الجري بالكرة (رافينيا 0.603، لامين يامال 0.549 منها 0.300 انطلاقات، وتوني كروس 0.510).',
+        'نموذج VAEP بدون تسرب بيانات: تقسيم صارم حسب رقم المباراة على 337,949 لمسة مع إعادة تصفير الحالة بعد الأهداف وركلات البداية (دقة 0.7839 Test AUC وتفسير TreeSHAP).',
+        'ترتيب عالمي واقعي: تصدر ليونيل ميسي (1.054 VAEP/90)، وبرونو فيرنانديز (0.701)، وسالم الدوسري (0.692)، وكيليان مبابي (0.618)، وتصدر باير ليفركوزن الفرق (3.025 VAEP/مباراة).',
+        'نموذج xPass و10 رسوم AMOLED: نمذجة 161,617 تمريرة بدقة 0.9308 Test AUC لقياس المخاطرة والعائد مع 10 رسوم AMOLED واختبارات pytest وتطبيق ويب لايف.',
+      ],
+    },
+    tags: ['Markov Chain xT', 'VAEP (KDD 2019)', 'LightGBM + TreeSHAP', 'xPass Risk-Reward', 'StatsBomb Open Data', '10 AMOLED Visuals'],
+    links: [
+      { label: '▶ Live xT Pitch Simulator ↗', url: 'https://mostafasaad91.github.io/football-vaep-xt-action-valuation/', cls: 'repo-link live-bi' },
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/football-vaep-xt-action-valuation', cls: 'repo-link emerald-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/football-vaep-xt-action-valuation/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'TACTICAL INTELLIGENCE · PRESSING & SURVIVAL ANALYSIS', ar: 'الذكاء التكتيكي · الضغط وتحليل البقاء' },
+    title: {
+      en: 'Football Tactical Intelligence — Pressing, Counter-Press Survival & Build-Up Engine',
+      ar: 'الذكاء التكتيكي لكرة القدم — الضغط، بقاء الضغط العكسي وبناء اللعب',
+    },
+    summary: {
+      en: 'Formal statistical investigation of pressing intensity (PPDA), Field Tilt, the 5-Second Counter-Pressing Rule (Kaplan-Meier survival across 19,445 opponent-half losses), high-turnover traps, game-state shifts, and unsupervised tactical archetypes across 149 official StatsBomb matches — with 10 AMOLED visuals & a Live Tactical Intelligence Web App.',
+      ar: 'دراسة إحصائية وتكتيكية شاملة لشدة الضغط (PPDA) والسيطرة الميدانية (Field Tilt) واختبار قاعدة الـ 5 ثوانٍ بتحليل البقاء Kaplan-Meier عبر 19,445 فقداناً للكرة وفخاخ الضغط وأنماط اللعب على 149 مباراة رسمية من StatsBomb مع 10 رسوم AMOLED وتطبيق ويب تفاعلي لايف.',
+    },
+    metrics: ['Field Tilt → xG ρ=0.618 (p=7.8e-33)', 'KM 5s Rule: 34.6% vs 30.4% · Zone 14 49.7%', '81.5% 2D PCA · 10 AMOLED Visuals'],
+    bullets: {
+      en: [
+        'Non-Parametric Tactical Proofs (298 Team-Matches): Field Tilt % correlates with match xG Diff at Spearman ρ=+0.6184 (p=7.84e-33); Top-33% High-Press teams average +0.604 xG Diff/match vs -0.536 for Low-Block sides (+1.14 swing, Mann-Whitney U p=1.01e-8).',
+        'Kaplan-Meier Survival on the 5-Second Rule: Across 19,445 open-play losses in the opponent half, High-Press teams regain possession within 5s on 34.56% of losses (52.37% by 10s) vs 30.44% (45.18% by 10s) for Low-Block teams — led by Argentina (39.4%), England (37.4%) & Leverkusen (36.2%).',
+        'High-Turnover Pressing Traps (3,229 Recoveries ≤40m): Central Zone 14 / Box recoveries generate a shot within 10s on 49.7% of occasions (6.4% goals) — over 3× deadlier than Left Wing (15.3%) or Right Wing (16.5%) traps.',
+        'Unsupervised Tactical Archetypes & 10-Visual Suite: k=4 K-Means (81.5% 2D PCA variance) automatically grouped Invincible Leverkusen, Euro 2024 Spain & WC 2022 Argentina in Dominant High-Press Control (+1.26 xG Diff/M vs Low-Block Direct), plus game-state & 90-min fatigue audits.',
+      ],
+      ar: [
+        'براهين إحصائية (298 أداء فريق): ارتباط Field Tilt بفارق xG (ρ=+0.6184) وتفوق فرق الضغط العالي بـ +1.14 xG/مباراة (+0.604 مقابل -0.536، p=1.01e-8).',
+        'تحليل البقاء Kaplan-Meier لقاعدة الـ 5 ثوانٍ: عبر 19,445 فقداناً للكرة، تستعيد فرق الضغط العالي الكرة خلال 5 ثوانٍ بنسبة 34.56% (52.37% خلال 10 ثوانٍ) بقيادة الأرجنتين (39.4%) وليفركوزن (36.2%).',
+        'فخاخ الضغط العالي (3,229 افتكاكاً): افتكاك الكرة في عمق Zone 14 ينتهي بتسديدة بنسبة 49.7% وهدف 6.4% (أخطر 3 أضعاف من الأطراف).',
+        'تصنيف الأبطال و10 رسوم AMOLED: نموذج K-Means (تباين 81.5% PCA) جمع ليفركوزن وإسبانيا والأرجنتين في عنقود السيطرة والضغط العالي (+1.26 xG ضد الدفاع المتأخر) مع تحليل تغيّر التكتيك حسب النتيجة والإجهاد البدني.',
+      ],
+    },
+    tags: ['Kaplan-Meier Survival', 'PPDA & Field Tilt', 'High-Turnover Traps', 'K-Means + PCA (81.5%)', 'Game-State & Fatigue', '10 AMOLED Visuals'],
+    links: [
+      { label: '▶ Live Tactical Lab App ↗', url: 'https://mostafasaad91.github.io/football-pressing-tactical-intelligence/', cls: 'repo-link live-bi' },
+      { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/football-pressing-tactical-intelligence', cls: 'repo-link emerald-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/football-pressing-tactical-intelligence/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
 ];
@@ -2086,6 +2174,8 @@ function initCommandPalette() {
     { title: 'Launch Live 4-Page 1.067M Retail CLV & Data Science App', hint: '1M+ DS', run: () => { applyTrackMode('all'); document.getElementById('loadRetailBtn')?.click(); document.getElementById('retailLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 4-Page Olist Executive BI & ML Dashboard', hint: 'OLIST', run: () => { applyTrackMode('all'); document.getElementById('loadOlistBtn')?.click(); document.getElementById('olistLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 3,642-Shot StatsBomb xG Explorer Dashboard', hint: 'xG LAB', run: () => { applyTrackMode('all'); document.getElementById('loadSbXgBtn')?.click(); document.getElementById('sbXgLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Launch Live Markov xT Pitch Simulator & VAEP Explorer', hint: 'xT / VAEP', run: () => { applyTrackMode('all'); document.getElementById('loadVaepBtn')?.click(); document.getElementById('vaepLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Launch Live Pressing & Counter-Pressing Survival Lab', hint: 'PRESSING', run: () => { applyTrackMode('all'); document.getElementById('loadPressBtn')?.click(); document.getElementById('pressLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Compare AMOLED vs Print Light Slider', hint: 'UI', run: () => { applyTrackMode('all'); document.getElementById('splitStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Toggle Language (Arabic / English)', hint: 'AR/EN', run: () => applyLanguage(currentLang === 'en' ? 'ar' : 'en') },
     { title: 'Toggle Theme (AMOLED Dark / Light)', hint: 'THEME', run: () => document.getElementById('themeToggle')?.click() },
@@ -2899,6 +2989,18 @@ function initLiveWebDashboards() {
       btnIds: ['loadSbXgBtn', 'loadSbXgOverlayBtn'],
       url: 'https://mostafasaad91.github.io/statsbomb-360-xg-calibration/?embed=1',
       title: 'StatsBomb 360 xG Calibration & 3,642-Shot Explorer Dashboard',
+    },
+    {
+      stageId: 'vaepLiveStage',
+      btnIds: ['loadVaepBtn', 'loadVaepOverlayBtn'],
+      url: 'https://mostafasaad91.github.io/football-vaep-xt-action-valuation/?embed=1',
+      title: 'Football Action Valuation — Live Markov xT, VAEP & xPass Explorer',
+    },
+    {
+      stageId: 'pressLiveStage',
+      btnIds: ['loadPressBtn', 'loadPressOverlayBtn'],
+      url: 'https://mostafasaad91.github.io/football-pressing-tactical-intelligence/?embed=1',
+      title: 'Football Tactical Intelligence — Pressing, Survival & Build-Up Lab',
     },
   ];
 
