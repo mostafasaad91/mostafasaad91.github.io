@@ -107,6 +107,13 @@ build_cv(
     ),
     project_block=[
         {
+            'title': 'Corporate FP&A — Executive P&L, Cash Flow & Margin Intelligence (Live 6-Page Power BI + SQL Server)',
+            'meta': 'github.com/mostafasaad91/corporate-fpa-financial-intelligence  |  SQL Server Star Schema · Power BI PBIP (34 DAX · What-If) · SEC EDGAR',
+            'bullets': [
+                'Engineered a SQL Server Star Schema (CorporateFPnA, 7 pbi tables + 2 T-SQL views) on 21,451 official audited SEC EDGAR XBRL facts across 12 global giants (FY2015–FY2024, $3.01T FY24 revenue, pytest 4/4 GAAP tie-out) powering a live 6-page Power BI PBIP/TMDL suite (54 visuals, 34 DAX, P&L Matrix, DuPont ROE, +55% AI CapEx audit & What-If Margin Simulator).'
+            ]
+        },
+        {
             'title': 'UK Retail — CLV Prediction, Survival & Market Basket Engine (Live 4-Page App)',
             'meta': 'Live App: mostafasaad91.github.io/uk-retail-clv-survival-engine  |  Multi-Sheet Excel · SQLite Star Schema · Stacking + SHAP · 8-Sheet Excel',
             'bullets': [

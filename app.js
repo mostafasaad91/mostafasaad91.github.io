@@ -162,6 +162,9 @@ const TRANSLATIONS = {
     pbi_title: '6-Page Executive Power BI Dashboard (Live)',
     pbi_load_btn: '▶ Load Interactive Dashboard',
     pbi_launch: '▶ Launch Live 6-Page Power BI Report',
+    fpa_live_title: '6-Page Corporate FP&A P&L, Cash Flow & What-If Power BI Suite (Live)',
+    fpa_load_btn: '▶ Load FP&A Power BI',
+    fpa_launch: '▶ Launch Live 6-Page Corporate FP&A Power BI Suite',
     retail_live_title: '4-Page UK Retail 1M+ CLV, Survival, Anomalies & SVD Basket App (Live)',
     retail_load_btn: '▶ Load 1M+ CLV Dashboard',
     retail_launch: '▶ Launch Live 4-Page 1.067M Retail Data Science App',
@@ -382,6 +385,9 @@ const TRANSLATIONS = {
     pbi_title: 'لوحة Power BI التنفيذية التفاعلية (6 صفحات لايف)',
     pbi_load_btn: '▶ تشغيل اللوحة التفاعلية',
     pbi_launch: '▶ افتح تقرير Power BI التفاعلي (6 صفحات)',
+    fpa_live_title: 'لوحة Power BI التنفيذية للـ FP&A والقوائم المالية (6 صفحات لايف · $3.01T)',
+    fpa_load_btn: '▶ تشغيل لوحة FP&A',
+    fpa_launch: '▶ افتح لوحة Corporate FP&A التفاعلية (6 صفحات Power BI)',
     retail_live_title: 'لوحة علم البيانات التفاعلية لـ 1.067 مليون صف (CLV والبقاء والشذوذ وسلة المشتريات لايف)',
     retail_load_btn: '▶ تشغيل لوحة 1M+ CLV',
     retail_launch: '▶ افتح تطبيق علم البيانات التفاعلي (1,067,371 صف حقيقي)',
@@ -795,8 +801,8 @@ const CASE_STUDIES = [
     },
     tags: ['Power BI (PBIP)', 'TMDL & 34 DAX', 'SQL Server', 'SEC EDGAR XBRL', 'P&L Matrix', 'DuPont ROE', 'What-If Simulator'],
     links: [
-      { label: 'GitHub & Power BI PBIP ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence', cls: 'repo-link live-bi' },
-      { label: 'Power BI Setup Guide ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence/blob/main/powerbi/powerbi_guide.md', cls: 'repo-link' },
+      { label: '▶ Live 6-Page Power BI ↗', url: 'https://app.powerbi.com/view?r=eyJrIjoiMjFjMTllYzQtZDcyYi00MGJlLTlmZGYtMTg4NmY5YzdlNDBjIiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9', cls: 'repo-link live-bi' },
+      { label: 'GitHub & Power BI PBIP ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence', cls: 'repo-link' },
       { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
@@ -2076,6 +2082,7 @@ function initCommandPalette() {
     { title: 'Jump to Live xG Pitch Simulator', hint: 'xG', run: () => { applyTrackMode('all'); document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Jump to Live StatsBomb Player Twin Finder (361 Players)', hint: 'SCOUT', run: () => { applyTrackMode('all'); document.getElementById('scouting-widget')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 6-Page Power BI Report', hint: 'BI', run: () => { applyTrackMode('all'); mountPowerBI(); document.getElementById('pbiStage')?.scrollIntoView({ behavior: 'smooth' }); } },
+    { title: 'Launch Live 6-Page Corporate FP&A Power BI Suite ($3.01T)', hint: 'FP&A BI', run: () => { applyTrackMode('all'); document.getElementById('loadFpaPbiBtn')?.click(); document.getElementById('fpaPbiStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 4-Page 1.067M Retail CLV & Data Science App', hint: '1M+ DS', run: () => { applyTrackMode('all'); document.getElementById('loadRetailBtn')?.click(); document.getElementById('retailLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 4-Page Olist Executive BI & ML Dashboard', hint: 'OLIST', run: () => { applyTrackMode('all'); document.getElementById('loadOlistBtn')?.click(); document.getElementById('olistLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
     { title: 'Launch Live 3,642-Shot StatsBomb xG Explorer Dashboard', hint: 'xG LAB', run: () => { applyTrackMode('all'); document.getElementById('loadSbXgBtn')?.click(); document.getElementById('sbXgLiveStage')?.scrollIntoView({ behavior: 'smooth' }); } },
@@ -2869,6 +2876,12 @@ function initScoutingTwinFinder() {
    ========================================================= */
 function initLiveWebDashboards() {
   const configs = [
+    {
+      stageId: 'fpaPbiStage',
+      btnIds: ['loadFpaPbiBtn', 'loadFpaPbiOverlayBtn'],
+      url: 'https://app.powerbi.com/view?r=eyJrIjoiMjFjMTllYzQtZDcyYi00MGJlLTlmZGYtMTg4NmY5YzdlNDBjIiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9',
+      title: 'Corporate FP&A Live 6-Page Power BI Executive Suite',
+    },
     {
       stageId: 'retailLiveStage',
       btnIds: ['loadRetailBtn', 'loadRetailOverlayBtn'],

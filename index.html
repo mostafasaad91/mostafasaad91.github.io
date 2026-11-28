@@ -436,7 +436,8 @@
                 <span class="tech-chip">P&amp;L &amp; DuPont ROE</span>
               </div>
               <div class="project-links multi-links">
-                <a href="https://github.com/mostafasaad91/corporate-fpa-financial-intelligence" target="_blank" rel="noopener" class="repo-link live-bi mono">GitHub &amp; PBIP ↗</a>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiMjFjMTllYzQtZDcyYi00MGJlLTlmZGYtMTg4NmY5YzdlNDBjIiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9" target="_blank" rel="noopener" class="repo-link live-bi mono">▶ Live Power BI ↗</a>
+                <a href="https://github.com/mostafasaad91/corporate-fpa-financial-intelligence" target="_blank" rel="noopener" class="repo-link mono">GitHub &amp; PBIP ↗</a>
                 <a href="https://github.com/mostafasaad91/corporate-fpa-financial-intelligence/blob/main/docs/PROJECT_STORY.md" target="_blank" rel="noopener" class="repo-link mono">Story (EN/AR) ↗</a>
                 <button class="text-link open-modal" data-project="10" type="button" data-i18n="proj_details">Case Study →</button>
               </div>
@@ -579,6 +580,30 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- LIVE INTERACTIVE POWER BI DASHBOARD EMBED (Corporate FP&A — 6 Pages · $3.01T SEC Audited) -->
+        <div class="pbi-embed-card glass" style="margin-bottom:1.8rem;">
+          <div class="pbi-head">
+            <div>
+              <span class="mono meta-tag">LIVE POWER BI EMBED · CORPORATE FP&amp;A ($3.01T AUDITED SEC 10-K)</span>
+              <h3 class="viz-title" data-i18n="fpa_live_title">6-Page Corporate FP&amp;A P&amp;L, Cash Flow &amp; What-If Power BI Suite (Live)</h3>
+            </div>
+            <div class="pbi-actions">
+              <button class="btn btn-sm btn-primary" id="loadFpaPbiBtn" type="button" data-i18n="fpa_load_btn">▶ Load FP&amp;A Power BI</button>
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiMjFjMTllYzQtZDcyYi00MGJlLTlmZGYtMTg4NmY5YzdlNDBjIiwidCI6ImI3YTMxZDI1LWYyMzMtNGM4ZC05ODM0LTdiMjVlZDVlMWU4YSIsImMiOjh9" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Full Screen ↗</a>
+            </div>
+          </div>
+
+          <div class="pbi-stage" id="fpaPbiStage">
+            <div class="pbi-preview" id="fpaPbiPreview">
+              <img src="https://raw.githubusercontent.com/mostafasaad91/corporate-fpa-financial-intelligence/main/assets/social-preview.png" alt="Corporate FP&A Live 6-Page Power BI Dashboard" loading="lazy" />
+              <div class="pbi-overlay">
+                <button class="btn btn-primary btn-lg" id="loadFpaPbiOverlayBtn" type="button" data-i18n="fpa_launch">▶ Launch Live 6-Page Corporate FP&amp;A Power BI Suite</button>
+                <span class="mono pbi-sub">SQL Server Star Schema · 12 SEC EDGAR Giants · 34 DAX Measures · Dynamic P&amp;L Matrix · DuPont ROE · What-If Margin Simulator</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- LIVE INTERACTIVE 1.067M RETAIL DATA SCIENCE & CLV DASHBOARD EMBED -->
@@ -1666,6 +1691,6 @@
     <a href="#hero" class="dock-btn mono" title="Back to Top" aria-label="Back to Top">↑</a>
   </div>
 
-  <script src="app.js?v=14"></script>
+  <script src="app.js?v=15"></script>
 </body>
 </html>
