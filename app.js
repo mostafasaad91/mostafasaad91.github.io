@@ -139,6 +139,9 @@ const TRANSLATIONS = {
     dp_2: 'K-Means RFM clustering, cohort retention heatmaps, market basket lift, and automated QA scripts.',
     dp_3: 'PBIP source-controlled dashboards, DAX time intelligence, Power Query ETL, and Excel workshops.',
     aw_title: 'AdventureWorks — Enterprise SQL, RFM & Power BI Analytics',
+    fpa_title: 'Corporate FP&A — Executive P&L, Cash Flow & Margin Intelligence (Power BI)',
+    fpa_desc:
+      'Boardroom CFO Power BI suite (6-page PBIP + TMDL, 54 visuals, 34 DAX measures, What-If margin simulator & AMOLED theme) powered by SQL Server Star Schema on 10 years of official audited SEC EDGAR XBRL filings across 12 global giants ($3.01T FY24 revenue, +55% Hyperscaler AI CapEx surge to $217.3B, DuPont ROE & P&L Waterfall Bridge).',
     retail_title: 'UK Retail — CLV Prediction, Survival & Market Basket Engine',
     retail_desc:
       'Production Data Science powerhouse built on the official 1,067,371-row multi-sheet UCI Online Retail II Excel dataset: zero-fan-out SQLite Star Schema (9 views, £17.07M GMV), out-of-time Two-Stage CLV (Stacking Ensemble 0.7979 Test AUC; Top 20% VIPs = 73.22% of actual 90d revenue; TreeSHAP), Kaplan-Meier survival (89.4% vs 25.2% M12), Isolation Forest anomaly audit (67.3% of canceled value in 2% accounts), 20D TruncatedSVD market basket (31.63x lift), LightGBM weekly forecast (13.78% MAPE), 8 AMOLED figures, and an 8-sheet live-formula Excel workbook (100+ formulas).',
@@ -356,6 +359,9 @@ const TRANSLATIONS = {
     dp_2: 'تقسيم العملاء بـ K-Means RFM، خرائط الاحتفاظ بالأفواج (Cohorts)، تحليل سلة المشتريات، وفحص الجودة بـ Python.',
     dp_3: 'لوحات Power BI (PBIP)، مقاييس DAX للذكاء الزمني، أتمتة Power Query، وورش عمل Excel متقدمة.',
     aw_title: 'AdventureWorks 2022 — تحليل مبيعات متكامل ($110M)',
+    fpa_title: 'منظومة FP&A التنفيذية وتحليل القوائم المالية (Power BI PBIP + SQL Server)',
+    fpa_desc:
+      'منصة Power BI تنفيذية للـ CFO (6 صفحات PBIP + TMDL، 54 فيجوال، 34 مقياس DAX، محاكي What-If للهوامش وثيم AMOLED) مبنية على SQL Server Star Schema لبيانات SEC EDGAR الرسمية المدققة لـ 12 شركة عالمية على مدار 10 سنوات ($3.01 تريليون إيرادات FY24، قفزة +55% في AI CapEx إلى $217.3B، تحليل DuPont ROE وجسر صافي الربح).',
     retail_title: 'منظومة علم البيانات وتوقع CLV على 1.067 مليون صف (Excel متعدد الشيتات + SQL + Python ML)',
     retail_desc:
       'مشروع علم بيانات متكامل على داتا حقيقية ضخمة من شيتين إكسيل (1,067,371 معاملة بريطانية): مستودع SQLite Star Schema بدون تكرار (£17.07M مبيعات)، نموذج CLV ثنائي المرحلة (Stacking Ensemble بدقة 0.7979 AUC؛ أعلى 20% VIP يحققون 73.22% من إيرادات الـ 90 يوماً) وتفسير TreeSHAP، تحليل البقاء Kaplan-Meier (89.4% مقابل 25.2%)، كشف الشذوذ Isolation Forest (67.3% من الإلغاءات في 2% حسابات)، توصيات 20D TruncatedSVD (رفع 31.63x)، توقع أسبوعي بـ LightGBM (13.78% MAPE)، 8 رسوم AMOLED، وملف Excel تنفيذي من 8 شيتات بأكثر من 100 معادلة حية.',
@@ -760,6 +766,38 @@ const CASE_STUDIES = [
       { label: 'GitHub Repository ↗', url: 'https://github.com/mostafasaad91/uk-retail-clv-survival-engine', cls: 'repo-link' },
       { label: '⬇ 8-Sheet Excel (.xlsx)', url: 'https://github.com/mostafasaad91/uk-retail-clv-survival-engine/raw/main/outputs/Retail_1M_DataScience_Executive_Workbook.xlsx', cls: 'repo-link' },
       { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/uk-retail-clv-survival-engine/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
+    ],
+  },
+  {
+    cat: { en: 'POWER BI PBIP + SQL SERVER · CORPORATE FP&A', ar: 'Power BI PBIP + SQL Server · التحليل المالي FP&A' },
+    title: {
+      en: 'Corporate FP&A — Executive P&L, Cash Flow & Margin Intelligence (Power BI)',
+      ar: 'منظومة FP&A التنفيذية وتحليل القوائم المالية (Power BI + SQL Server)',
+    },
+    summary: {
+      en: 'Boardroom 6-page Power BI Project (PBIP + TMDL, 54 visuals, 34 DAX measures, What-If Margin Simulator & AMOLED theme) connected to a SQL Server Star Schema built on 10 years of official audited SEC EDGAR XBRL filings across 12 global giants ($3.01T FY2024 revenue).',
+      ar: 'منصة Power BI تنفيذية من 6 صفحات (54 فيجوال و34 مقياس DAX ومحاكي What-If) متصلة بمستودع SQL Server Star Schema مبني على 10 سنوات من الإفصاحات المالية الرسمية المدققة (SEC EDGAR XBRL) لـ 12 شركة عالمية كبرى ($3.01 تريليون إيرادات FY2024).',
+    },
+    metrics: ['$3.01T Audited Rev · 12 SEC Giants', '6-Page Power BI PBIP · 34 DAX · What-If', '$432.9B FCF · +55% AI CapEx ($217.3B)'],
+    bullets: {
+      en: [
+        'Official SEC EDGAR XBRL Accounting ETL: Parsed 21,451 audited 10-K/10-Q observations (FY2015–FY2024), deduplicated restatements by latest filing date, and enforced penny-exact GAAP identities (GP = Rev - COGS, Assets = Liabilities + Equity, FCF = OCF - CapEx, 6-step Net Income Waterfall Bridge) verified by pytest.',
+        'SQL Server Star Schema (CorporateFPnA, pbi schema): Deployed 7 tables (DimCompany, daily DimDate, sorted DimAccount P&L hierarchy, FactFinancials, FactPnLStatement, FactVarianceBridge, FactDuPontAnalysis) + 2 T-SQL window-function views.',
+        'Source-Controlled 6-Page Power BI (PBIP + TMDL): Executive Overview, Dynamic P&L Statement (Actual vs Plan), Margins & R&D, Cash Flow & AI CapEx, DuPont ROE Decomposition, and Interactive What-If Margin Expansion Simulator (-500 to +1000 bps).',
+        'Audited CFO Insights: NVIDIA scaled 26.0x in 10 years ($130.5B rev, 62.4% EBIT margin) vs Intel (-22.0% margin, -$15.7B FCF); Hyperscaler AI CapEx surged +55.0% YoY to $217.3B.',
+      ],
+      ar: [
+        'تدقيق بيانات SEC EDGAR XBRL الرسمية: تحليل 21,451 قيداً مدققاً (FY2015–FY2024)، وإزالة تكرار التعديلات المحاسبية، وضبط المعادلات المحاسبية وجسر صافي الربح بدقة كاملة ومختبرة بـ pytest.',
+        'مستودع SQL Server Star Schema: بناء قاعدة بيانات CorporateFPnA بـ 7 جداول وعرضين T-SQL تحت سكيما pbi تشمل جدول تاريخ مستمر وتسلسل هرمي لقائمة الدخل.',
+        'مشروع Power BI من 6 صفحات (PBIP + TMDL): نظرة CFO، قائمة دخل ديناميكية (فعلي مقابل مخطط)، الهوامش و R&D، التدفقات النقدية و AI CapEx، تحليل DuPont ROE، ومحاكي What-If لتمدد الهامش.',
+        'اكتشافات مالية حقيقية: تضاعف إيرادات NVIDIA 26 مرة ($130.5B بهامش 62.4%) مقابل انكماش Intel (-22.0%)، وقفزة AI CapEx بنسبة +55.0% إلى $217.3B.',
+      ],
+    },
+    tags: ['Power BI (PBIP)', 'TMDL & 34 DAX', 'SQL Server', 'SEC EDGAR XBRL', 'P&L Matrix', 'DuPont ROE', 'What-If Simulator'],
+    links: [
+      { label: 'GitHub & Power BI PBIP ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence', cls: 'repo-link live-bi' },
+      { label: 'Power BI Setup Guide ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence/blob/main/powerbi/powerbi_guide.md', cls: 'repo-link' },
+      { label: 'Project Story (EN/AR) ↗', url: 'https://github.com/mostafasaad91/corporate-fpa-financial-intelligence/blob/main/docs/PROJECT_STORY.md', cls: 'repo-link' },
     ],
   },
 ];
